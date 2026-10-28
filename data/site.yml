@@ -179,6 +179,7 @@ produtos_categorias:
   - {id: artigos, titulo: "Artigos e trabalhos", texto: "Artigos científicos e trabalhos submetidos ou aceitos em periódicos, anais e eventos.", cor: verde, icone: jornal}
 # Cada item: categoria (id acima), titulo, texto (descrição ou referência completa), ano, eixo (1, 2, 3 ou vazio),
 # status (aparece quando não há url) e url (quando preenchida, aparece o botão de acesso).
+# Para mais de um link no mesmo item, use  links: [{rotulo: "Versão impressa", url: "..."}, {rotulo: "Versão digital", url: "..."}]
 produtos:
   - {categoria: plataformas, titulo: "Geoportal ClimaPampa", texto: "Mapas e camadas territoriais sobre clima, vulnerabilidades socioambientais e saúde em Uruguaiana, para apoiar a vigilância e a decisão no território.", ano: "", eixo: 3, status: "Em desenvolvimento", url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"}
   - {categoria: plataformas, titulo: "Painéis de monitoramento", texto: "Dashboards interativos com indicadores ambientais, territoriais e epidemiológicos, atualizados de forma contínua.", ano: "", eixo: 3, status: "Em desenvolvimento", url: ""}
@@ -203,7 +204,7 @@ produtos:
   - {categoria: artigos, titulo: "Sífilis em jogo: desenvolvimento de uma tecnologia educativa para ações de educação em saúde", texto: "Trabalho submetido à JIICEU (on-line, 26 a 30 de outubro de 2026). Autores: Arima JD; Bastiani LP; Tavares JPM; Schäfer AG; Prates LA.", ano: 2026, eixo: 3, url: ""}
   - {categoria: artigos, titulo: "Salve sua Casa: desenvolvimento de um jogo de tabuleiro para educação em saúde diante das enchentes", texto: "Trabalho submetido à JIICEU (on-line, 26 a 30 de outubro de 2026). Autores: Bortolazzo MD; Ribeiro BC; Fonseca SD; Oliveira HLR; Prates LA.", ano: 2026, eixo: 3, url: ""}
   # --- Jogos, box e materiais (GAT 5) ---
-  - {categoria: materiais, titulo: "Box Lia: letramento interativo em apoio às mulheres", texto: "Box educativo para o letramento interativo em apoio às mulheres, voltado ao reconhecimento e ao enfrentamento da violência.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: materiais, titulo: "Box Lia: letramento interativo em apoio às mulheres", texto: "Box educativo para o letramento interativo em apoio às mulheres, voltado ao reconhecimento e ao enfrentamento da violência. Disponível na versão impressa e na versão digital.", ano: 2026, eixo: 3, url: "", links: [{rotulo: "Versão impressa", url: "https://repositorio.unipampa.edu.br/handle/123456789/11401"}, {rotulo: "Versão digital", url: "https://liaeduca.base44.app/"}]}
   - {categoria: materiais, titulo: "Jogo Vira a Carta", texto: "Jogo de cartas, tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres.", ano: 2026, eixo: 3, url: ""}
   - {categoria: materiais, titulo: "Dominó da Dengue", texto: "Jogo educativo para promoção da saúde e prevenção da dengue.", ano: 2026, eixo: 3, url: ""}
   - {categoria: materiais, titulo: "Sífilis em jogo", texto: "Tecnologia educativa para ações de educação em saúde sobre a sífilis.", ano: 2026, eixo: 3, url: ""}

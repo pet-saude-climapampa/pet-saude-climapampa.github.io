@@ -11,4 +11,17 @@
     <a class="btn btn--sec" href="{{ root }}noticias/">Notícias</a>
   </div>
 </section>
+{% if agenda_prox %}
+<section class="home-agenda" aria-labelledby="t-agenda">
+  <div class="home-agenda__cab"><h2 id="t-agenda">Próximas atividades</h2><a href="{{ root }}agenda/">Ver agenda completa {{ i.icon("seta", 16) }}</a></div>
+  <div class="home-agenda__lista">
+    {% for a in agenda_prox[:3] %}
+    <a class="home-ativ cor-verde" href="{{ root }}agenda/">
+      <span class="home-ativ__data"><strong>{{ a.dia }}</strong>{{ a.mes }}</span>
+      <span class="home-ativ__txt"><small>{{ a.tipo }}{% if a.horario %} · {{ a.horario }}{% endif %}</small>{{ a.titulo }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 {% endblock %}

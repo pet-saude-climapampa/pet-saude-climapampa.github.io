@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * *"   # todo dia às 00h30 (Brasília): move atividades passadas para "Realizadas"
 
 permissions:
   contents: read

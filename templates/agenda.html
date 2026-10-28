@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% macro cartao(a, destaque=False) -%}
+<article class="ativ{% if not a.futura %} ativ--passada{% endif %}">
+  <div class="ativ__data" aria-hidden="true"><strong>{{ a.dia }}</strong><span>{{ a.mes }}</span></div>
+  <div class="ativ__corpo">
+    <p class="ativ__tipo">{{ a.tipo }}</p>
+    <h3>{{ a.titulo }}</h3>
+    <ul class="ativ__info">
+      <li><span>Data</span>{{ a.data_br }}{% if a.dia_semana %} ({{ a.dia_semana }}){% endif %}</li>
+      {% if a.horario %}<li><span>Horário</span>{{ a.horario }}</li>{% endif %}
+      {% if a.modalidade %}<li><span>Modalidade</span>{{ a.modalidade }}</li>{% endif %}
+      {% if a.certificacao %}<li><span>Certificação</span>{{ a.certificacao }}</li>{% endif %}
+    </ul>
+    {% if a.html and a.futura %}<div class="ativ__texto">{{ a.html | safe }}</div>{% endif %}
+    {% if a.futura %}
+    <div class="ativ__acoes">
+      {% if a.inscricao %}<a class="btn btn--primario" href="{{ a.inscricao }}" target="_blank" rel="noopener">Inscrever-se {{ i.icon("externo", 18) }}</a>{% endif %}
+      {% if a.link %}<a class="btn btn--sec" href="{{ a.link }}" target="_blank" rel="noopener">Entrar na reunião {{ i.icon("externo", 18) }}</a>{% endif %}
+      <a class="btn btn--sec" href="{{ root }}agenda/{{ a.id }}.ics" download>Adicionar ao calendário</a>
+    </div>
+    {% endif %}
+  </div>
+  {% if a.cartaz %}<a class="ativ__cartaz" href="{{ root }}static/img/agenda/{{ a.cartaz }}" target="_blank" rel="noopener"><img src="{{ root }}static/img/agenda/{{ a.cartaz }}" alt="Cartaz: {{ a.titulo }}" width="400" height="400" loading="lazy"></a>{% endif %}
+</article>
+{%- endmacro %}
+{% block conteudo %}
+{{ p.cabecalho("Agenda", "Próximas atividades", "Seminários, minicursos, oficinas e encontros do ClimaPampa. Inscreva-se e acompanhe.", "verde") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    {% if agenda_prox %}
+    <div class="agenda">{% for a in agenda_prox %}{{ cartao(a) }}{% endfor %}</div>
+    {% else %}
+    <p class="prod-vazio">No momento não há atividades marcadas. Acompanhe as <a href="{{ root }}noticias/">notícias</a> e o Instagram do projeto.</p>
+    {% endif %}
+    {% if agenda_real %}
+    <h2 class="num-tit">Realizadas</h2>
+    <div class="agenda agenda--passadas">{% for a in agenda_real %}{{ cartao(a) }}{% endfor %}</div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

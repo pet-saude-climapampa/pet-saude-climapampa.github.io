@@ -9,9 +9,15 @@ Site estático, gerado em Python e publicado no GitHub Pages.
 | Textos do projeto, eixos, GATs, equipe, plataformas | `data/site.yml` |
 | Notícias | um arquivo `.md` por notícia em `noticias/` (veja o exemplo) |
 | Galeria | fotos em `galeria/<id>/` + entrada em `data/galeria.yml` (o build reduz as fotos e cria miniaturas; requer `pip install pillow`) |
+| Agenda (próximas atividades) | `data/agenda.yml` (copie um bloco e preencha; o cartaz vai em `static/img/agenda/`) |
 | Aparência | `static/css/style.css` |
 | Estrutura das páginas | `templates/` |
 | Fotos da equipe e logos | `static/img/` |
+
+### Nova atividade na agenda
+Em `data/agenda.yml`, copie o bloco do exemplo, mude `id`, `titulo`, `data` (AAAA-MM-DD), horários, links e `cartaz`.
+Depois do `git push`, ela aparece em **Agenda** e na página inicial. A atividade vai sozinha para "Realizadas" no dia seguinte
+(o site é refeito todo dia às 00h30, horário de Brasília).
 
 ### Nova notícia
 Crie `noticias/2026-11-05-titulo-da-noticia.md`:

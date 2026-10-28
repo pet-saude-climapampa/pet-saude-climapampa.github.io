@@ -34,6 +34,60 @@ def data_br(d):
     return f"{d.day} de {MESES[d.month - 1]} de {d.year}"
 
 
+DIAS_SEMANA = ["segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo"]
+MESES_ABREV = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
+
+
+def hora_br(h):
+    """'19:00' -> '19h', '19:30' -> '19h30'."""
+    hh, mm = str(h).split(":")
+    return f"{int(hh)}h" + ("" if mm == "00" else mm)
+
+
+def carregar_agenda(hoje):
+    """Lê data/agenda.yml e separa em próximas e realizadas (pela data, no horário de Brasília)."""
+    arq = ROOT / "data" / "agenda.yml"
+    itens = (yaml.safe_load(arq.read_text(encoding="utf-8")) or []) if arq.exists() else []
+    for a in itens:
+        d = a["data"]
+        if isinstance(d, str):
+            d = dt.date.fromisoformat(d)
+        a["data"] = d
+        a["dia"], a["mes"] = d.day, MESES_ABREV[d.month - 1]
+        a["data_br"] = data_br(d)
+        a["dia_semana"] = DIAS_SEMANA[d.weekday()]
+        a["horario"] = hora_br(a["inicio"]) + (f" às {hora_br(a['fim'])}" if a.get("fim") else "") if a.get("inicio") else ""
+        a["html"] = markdown.markdown(a.get("descricao", ""), extensions=["extra", "sane_lists"])
+        a["futura"] = d >= hoje
+    proximas = sorted([a for a in itens if a["futura"]], key=lambda a: (a["data"], a.get("inicio", "")))
+    realizadas = sorted([a for a in itens if not a["futura"]], key=lambda a: a["data"], reverse=True)
+    return proximas, realizadas
+
+
+def ics_atividade(a, site):
+    """Arquivo .ics (calendário) de uma atividade. Horário de Brasília convertido para UTC."""
+    from zoneinfo import ZoneInfo
+    def utc(d, h):
+        hh, mm = map(int, str(h).split(":"))
+        return dt.datetime(d.year, d.month, d.day, hh, mm, tzinfo=ZoneInfo("America/Sao_Paulo")).astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    def esc(t):
+        return str(t).replace("\\", "\\\\").replace(";", "\\;").replace(",", "\\,").replace("\n", "\\n")
+    desc = [a.get("resumo", "")]
+    if a.get("link"):
+        desc.append("Link da reunião: " + a["link"])
+    if a.get("inscricao"):
+        desc.append("Inscrição: " + a["inscricao"])
+    ini = a.get("inicio", "09:00")
+    fim = a.get("fim") or ini
+    linhas = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ClimaPampa//Agenda//PT-BR", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
+              f"UID:{a['id']}@pet-saude-climapampa.github.io",
+              "DTSTAMP:" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ"),
+              "DTSTART:" + utc(a["data"], ini), "DTEND:" + utc(a["data"], fim),
+              "SUMMARY:" + esc(a["titulo"]), "DESCRIPTION:" + esc("\n".join(x for x in desc if x)),
+              "LOCATION:" + esc(a.get("modalidade", "")), "END:VEVENT", "END:VCALENDAR"]
+    return "\r\n".join(linhas) + "\r\n"
+
+
 def carregar_site():
     with open(ROOT / "data" / "site.yml", encoding="utf-8") as f:
         site = yaml.safe_load(f)
@@ -212,13 +266,16 @@ def gerar():
                       autoescape=select_autoescape(["html"]),
                       trim_blocks=True, lstrip_blocks=True)
     ano = dt.date.today().year
+    from zoneinfo import ZoneInfo
+    hoje = dt.datetime.now(ZoneInfo("America/Sao_Paulo")).date()
+    ag_prox, ag_real = carregar_agenda(hoje)
 
     def render(template, destino, base_abs=None, **ctx):
         # destino: caminho relativo dentro de dist/, ex.: "grupos/gat-1/index.html"
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, gats=gats, eixos=eixos, pessoas=pessoas,
+            site=site, noticias=noticias, agenda_prox=ag_prox, agenda_real=ag_real, gats=gats, eixos=eixos, pessoas=pessoas,
             root=root, ano=ano, **ctx)
         saida = DIST / destino
         saida.parent.mkdir(parents=True, exist_ok=True)
@@ -246,6 +303,10 @@ def gerar():
     for a in albuns:
         render("galeria_album.html", f"galeria/{a['id']}/index.html", active="galeria",
                title=a["titulo"], album=a)
+    render("agenda.html", "agenda/index.html", active="agenda", title="Agenda")
+    for a in ag_prox + ag_real:
+        (DIST / "agenda").mkdir(parents=True, exist_ok=True)
+        (DIST / "agenda" / f"{a['id']}.ics").write_text(ics_atividade(a, site), encoding="utf-8", newline="")
     render("noticias.html", "noticias/index.html", active="noticias", title="Notícias")
     for p in noticias:
         render("post.html", f"noticias/{p['slug']}/index.html", active="noticias",

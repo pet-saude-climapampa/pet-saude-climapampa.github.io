@@ -14,6 +14,11 @@
         <h3>{% if it.url %}<a class="prod__link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.titulo }}<span class="sr"> (abre em nova aba)</span></a>{% else %}{{ it.titulo }}{% endif %}</h3>
         <p>{{ it.texto }}</p>
         {% if it.url %}<span class="btn btn--primario" aria-hidden="true">Acessar {{ i.icon("externo", 18) }}</span>{% endif %}
+        {% if it.links %}
+        <div class="prod__links">
+          {% for l in it.links %}<a class="btn {{ 'btn--primario' if loop.first else 'btn--sec' }}" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.rotulo }} {{ i.icon("externo", 18) }}<span class="sr"> (abre em nova aba)</span></a>{% endfor %}
+        </div>
+        {% endif %}
       </article>
       {% endfor %}
     </div>
