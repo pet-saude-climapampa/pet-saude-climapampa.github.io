@@ -13,9 +13,7 @@ version: "1.0.0"
 date-released: "2026-10-28"
 url: "https://pet-saude-climapampa.github.io/"
 repository-code: "https://github.com/pet-saude-climapampa/pet-saude-climapampa.github.io"
-license:
-  - MIT
-  - CC-BY-4.0
+license: CC-BY-4.0
 keywords:
   - PET-Saúde
   - mudanças climáticas

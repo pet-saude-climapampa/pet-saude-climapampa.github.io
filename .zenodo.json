@@ -1,0 +1,28 @@
+{
+  "title": "Site do ClimaPampa — PET-Saúde: Clima (Unipampa)",
+  "upload_type": "software",
+  "description": "Site institucional do projeto PET-Saúde: Clima na Unipampa, em parceria com a Secretaria Municipal de Saúde de Uruguaiana. Reúne a estrutura do projeto, a equipe, a agenda de atividades, notícias, galeria e produtos. Código sob licença MIT e textos sob CC BY 4.0 (veja LICENSE.md). Fotografias de pessoas, logotipos e cartazes de terceiros não estão incluídos nessas licenças.",
+  "creators": [
+    {
+      "name": "Schäfer, Alexandro Gularte",
+      "affiliation": "Universidade Federal do Pampa (Unipampa)"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "language": "por",
+  "access_right": "open",
+  "keywords": [
+    "PET-Saúde",
+    "mudanças climáticas",
+    "saúde",
+    "Unipampa",
+    "Uruguaiana"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://pet-saude-climapampa.github.io/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}
