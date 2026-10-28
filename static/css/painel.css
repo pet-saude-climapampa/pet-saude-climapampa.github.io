@@ -363,3 +363,4 @@ body{background:var(--fundo-pagina)}
 .estrut__col .etiqueta{margin:0;font-size:.74rem}
 .estrut__col h2{margin:0 0 2px;font-size:1.05rem;line-height:1.25}
 @media (max-width:760px){.estrut{grid-template-columns:1fr}}
+.area-card--faixa>span:first-child{display:flex;flex-direction:column;gap:3px}
