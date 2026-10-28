@@ -11,6 +11,12 @@ descricao_curta: >-
   enfrentar os impactos das emergências climáticas na saúde em Uruguaiana/RS.
 edital: "Edital SGTES/MS nº 23/2026"
 base_url: "/"            # usado só na página 404. Em GitHub Pages de projeto: "/nome-do-repositorio/"
+sobre:
+  responsavel_site: "Alexandro Gularte Schäfer"
+  responsavel_funcao: "tutor do GAT 5 (Eixo 3), Unipampa"
+  desenvolvimento: "Este site foi desenvolvido com apoio de ferramenta de inteligência artificial (Claude Code, Anthropic), com curadoria e revisão da equipe."
+  repositorio: "https://github.com/pet-saude-climapampa/pet-saude-climapampa.github.io"
+
 contato:
   email: ""              # PENDENTE: e-mail institucional do projeto
   instagram: "https://www.instagram.com/petsaudeclimaunipampa/"

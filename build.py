@@ -287,6 +287,7 @@ def gerar():
         saida.write_text(html, encoding="utf-8")
 
     render("home.html", "index.html", active="home")
+    render("sobre.html", "sobre/index.html", active="sobre", title="Sobre o site")
     render("projeto.html", "o-projeto/index.html", active="projeto", title="O projeto")
     ordem=sorted(eixos)
     for i,n in enumerate(ordem):

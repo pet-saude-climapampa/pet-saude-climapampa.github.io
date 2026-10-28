@@ -52,3 +52,11 @@ python build.py --serve      # abre em http://localhost:8000
 4. Se o endereço for `usuario.github.io/nome-do-repo/`, ajuste `base_url` em `data/site.yml` (só afeta a página 404).
 
 Os links internos são relativos, então o site funciona em qualquer endereço (inclusive domínio próprio).
+
+
+## Autoria, licença e como citar
+- **Autoria:** Alexandro Gularte Schäfer (Unipampa), com a equipe do PET-Saúde: Clima.
+- **Uso de IA:** o site foi desenvolvido com apoio de uma ferramenta de inteligência artificial (Claude Code, Anthropic), com curadoria e revisão da equipe.
+- **Licença:** código sob MIT e textos sob CC BY 4.0; fotos de pessoas, logotipos e cartazes de terceiros ficam de fora (veja `LICENSE.md`).
+- **Como citar:** SCHÄFER, A. G. *Site do ClimaPampa — PET-Saúde: Clima (Unipampa)*. 2026. Disponível em: https://pet-saude-climapampa.github.io/. Acesso em: ___.
+  O GitHub também oferece o botão "Cite this repository", a partir do arquivo `CITATION.cff`.

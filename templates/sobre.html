@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{% set coord = pessoas[site.equipe.coordenacao] %}
+{{ p.cabecalho("Sobre o site", "Responsáveis e contato", "Quem responde pelo projeto e pelo site, como falar com a equipe e como citar.") }}
+<section class="secao secao--curta">
+  <div class="wrap sobre">
+    <div class="sobre__bloco">
+      <h2>Responsáveis</h2>
+      <ul class="sobre__lista">
+        <li><span>Coordenação geral</span>{{ coord.nome }}</li>
+        <li><span>Responsável pelo site</span>{{ site.sobre.responsavel_site }}, {{ site.sobre.responsavel_funcao }}</li>
+        <li><span>Instituição</span>Universidade Federal do Pampa (Unipampa), em parceria com a Secretaria Municipal de Saúde de Uruguaiana</li>
+      </ul>
+    </div>
+    <div class="sobre__bloco">
+      <h2>Contato</h2>
+      <ul class="sobre__lista">
+        {% if site.contato.email %}<li><span>E-mail</span><a href="mailto:{{ site.contato.email }}">{{ site.contato.email }}</a></li>{% endif %}
+        {% if site.contato.instagram %}<li><span>Instagram</span><a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">@petsaudeclimaunipampa</a></li>{% endif %}
+        <li><span>Local</span>{{ site.local }}</li>
+      </ul>
+    </div>
+    <div class="sobre__bloco">
+      <h2>Como o site foi feito</h2>
+      <p>{{ site.sobre.desenvolvimento }}</p>
+      <p>O código e os textos estão no <a href="{{ site.sobre.repositorio }}" target="_blank" rel="noopener">repositório do projeto</a>. O código usa licença MIT e os textos, CC BY 4.0. Fotos de pessoas, logotipos e cartazes de terceiros não estão incluídos nessas licenças.</p>
+    </div>
+    <div class="sobre__bloco">
+      <h2>Como citar</h2>
+      <p class="sobre__cita">SCHÄFER, A. G. <em>Site do ClimaPampa — PET-Saúde: Clima (Unipampa)</em>. 2026. Disponível em: https://pet-saude-climapampa.github.io/.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
