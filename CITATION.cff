@@ -9,8 +9,9 @@ authors:
   - family-names: "Schäfer"
     given-names: "Alexandro Gularte"
     affiliation: "Universidade Federal do Pampa (Unipampa)"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-10-28"
+doi: 10.5281/zenodo.23748574
 url: "https://pet-saude-climapampa.github.io/"
 repository-code: "https://github.com/pet-saude-climapampa/pet-saude-climapampa.github.io"
 license: CC-BY-4.0

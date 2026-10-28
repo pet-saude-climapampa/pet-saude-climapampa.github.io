@@ -58,5 +58,5 @@ Os links internos são relativos, então o site funciona em qualquer endereço (
 - **Autoria:** Alexandro Gularte Schäfer (Unipampa), com a equipe do PET-Saúde: Clima.
 - **Uso de IA:** o site foi desenvolvido com apoio de uma ferramenta de inteligência artificial (Claude Code, Anthropic), com curadoria e revisão da equipe.
 - **Licença:** código sob MIT e textos sob CC BY 4.0; fotos de pessoas, logotipos e cartazes de terceiros ficam de fora (veja `LICENSE.md`).
-- **Como citar:** SCHÄFER, A. G. *Site do ClimaPampa — PET-Saúde: Clima (Unipampa)*. 2026. Disponível em: https://pet-saude-climapampa.github.io/. Acesso em: ___.
+- **Como citar:** SCHÄFER, A. G. *Site do ClimaPampa — PET-Saúde: Clima (Unipampa)*. 2026. Versão 1.0.1. Disponível em: https://pet-saude-climapampa.github.io/. DOI: https://doi.org/10.5281/zenodo.23748574. Acesso em: ___.
   O GitHub também oferece o botão "Cite this repository", a partir do arquivo `CITATION.cff`.
