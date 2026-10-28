@@ -1,6 +1,6 @@
 ---
 titulo: "O site do ClimaPampa está no ar"
-data: 2026-10-27
+data: 2026-10-28
 categoria: "Institucional"
 autor: "Equipe ClimaPampa"
 resumo: "Este é o espaço para acompanhar as ações, os grupos de trabalho e as produções do PET-Saúde: Clima na Unipampa."
