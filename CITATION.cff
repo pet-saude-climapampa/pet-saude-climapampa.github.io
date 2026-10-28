@@ -9,6 +9,7 @@ authors:
   - family-names: "Schäfer"
     given-names: "Alexandro Gularte"
     affiliation: "Universidade Federal do Pampa (Unipampa)"
+    orcid: "https://orcid.org/0000-0001-8700-0860"
 version: "1.0.1"
 date-released: "2026-10-28"
 doi: 10.5281/zenodo.23748574
