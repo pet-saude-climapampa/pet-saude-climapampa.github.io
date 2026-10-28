@@ -1,29 +1,25 @@
-# Agenda de atividades do ClimaPampa.
-# Para divulgar uma atividade nova, copie um bloco abaixo e preencha. A ordem não importa:
-# o site separa sozinho "Próximas atividades" e "Realizadas" pela data (atualiza todo dia à meia-noite).
+# Agenda de atividades do ClimaPampa  —  MODELO ÚNICO: copie um bloco, preencha e publique.
+# A ordem não importa: o site separa "Próximas atividades" e "Realizadas" pela data (atualiza todo dia à meia-noite).
 #
-#   id:            nome curto sem espaços nem acentos (usado no arquivo do calendário)
-#   titulo, tipo:  título da atividade e tipo (Seminário, Minicurso, Oficina, Reunião...)
-#   data:          AAAA-MM-DD      inicio / fim: "HH:MM" (fim é opcional)
-#   modalidade:    ex.: "On-line, via Google Meet" ou "Presencial, Salão de Atos"
-#   link:          link da reunião (opcional)     inscricao: link do formulário (opcional)
-#   certificacao:  texto curto (opcional)         cartaz: arquivo em static/img/agenda/ (opcional)
-#   resumo:        uma frase, aparece nos cartões  descricao: texto completo (opcional)
+#   id            nome curto, sem espaços nem acentos (ex.: oficina-mapas)
+#   tipo          Seminário, Minicurso, Oficina, Reunião, Roda de conversa...
+#   titulo        só o nome da atividade (o tipo já aparece acima dele; não repita "Seminário sobre...")
+#   data          AAAA-MM-DD            inicio / fim   "19:00" (fim é opcional)
+#   modalidade    "On-line, Google Meet"  ou  "Presencial, Salão de Atos"
+#   certificacao  curto: "Certificado de horas" (opcional)
+#   resumo        1 ou 2 frases: do que se trata e quem pode participar
+#   inscricao     link do formulário (opcional)     link   link da reunião (opcional)
+#   cartaz        arquivo em static/img/agenda/ (opcional)
+#   descricao     texto longo (opcional): aparece só em "Saiba mais"; deixe de fora se o resumo bastar
 - id: seminario-adapta-sus
-  titulo: "Seminário sobre o Plano Setorial de Adaptação à Mudança do Clima do Setor Saúde – Adapta-SUS"
   tipo: Seminário
+  titulo: "Plano Setorial de Adaptação à Mudança do Clima do Setor Saúde – Adapta-SUS"
   data: 2026-10-30
   inicio: "19:00"
   fim: "21:00"
-  modalidade: "On-line, via Google Meet"
-  link: "https://meet.google.com/dwc-efda-kfu"
+  modalidade: "On-line, Google Meet"
+  certificacao: "Certificado de horas"
+  resumo: "Encontro de reflexão e diálogo sobre o Adapta-SUS e os desafios das mudanças climáticas para o setor saúde. Aberto a participantes de todos os eixos."
   inscricao: "https://docs.google.com/forms/d/e/1FAIpQLSefor-hl9WpPzGuDfRwKtA4_xRxn7EK6th2zDgISwAFwrYY8A/viewform"
-  certificacao: "Aberta a todos os eixos do projeto, com certificação de horas"
+  link: "https://meet.google.com/dwc-efda-kfu"
   cartaz: seminario-adapta-sus.jpg
-  resumo: "Encontro on-line de reflexão e diálogo sobre o Adapta-SUS e os desafios das mudanças climáticas para o setor saúde."
-  descricao: |
-    O PET-Saúde/Clima – UNIPAMPA convida estudantes e participantes de todos os eixos para um encontro on-line de reflexão e diálogo sobre o Adapta-SUS e os desafios das mudanças climáticas para o setor saúde.
-
-    Será um espaço de integração, troca de conhecimentos e partilha de experiências, fortalecendo o diálogo entre saúde, meio ambiente e mudanças climáticas.
-
-    Esperamos vocês para construir esse momento de aprendizado coletivo!

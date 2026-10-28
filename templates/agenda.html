@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 {% import "_icons.html" as i %}
 {% import "_partes.html" as p %}
-{% macro cartao(a, destaque=False) -%}
+{% macro cartao(a) -%}
 <article class="ativ{% if not a.futura %} ativ--passada{% endif %}">
   <div class="ativ__data" aria-hidden="true"><strong>{{ a.dia }}</strong><span>{{ a.mes }}</span></div>
   <div class="ativ__corpo">
     <p class="ativ__tipo">{{ a.tipo }}</p>
     <h3>{{ a.titulo }}</h3>
-    <ul class="ativ__info">
-      <li><span>Data</span>{{ a.data_br }}{% if a.dia_semana %} ({{ a.dia_semana }}){% endif %}</li>
-      {% if a.horario %}<li><span>Horário</span>{{ a.horario }}</li>{% endif %}
-      {% if a.modalidade %}<li><span>Modalidade</span>{{ a.modalidade }}</li>{% endif %}
-      {% if a.certificacao %}<li><span>Certificação</span>{{ a.certificacao }}</li>{% endif %}
+    <ul class="ativ__chips" aria-label="Detalhes">
+      <li>{{ a.dia_semana[:3] | capitalize }}, {{ a.dia }} de {{ a.data_br.split(" de ")[1] }}</li>
+      {% if a.horario %}<li>{{ a.horario }}</li>{% endif %}
+      {% if a.modalidade %}<li>{{ a.modalidade }}</li>{% endif %}
+      {% if a.certificacao %}<li class="ativ__cert">{{ a.certificacao }}</li>{% endif %}
     </ul>
-    {% if a.html and a.futura %}<div class="ativ__texto">{{ a.html | safe }}</div>{% endif %}
+    {% if a.resumo %}<p class="ativ__resumo">{{ a.resumo }}</p>{% endif %}
+    {% if a.html and a.descricao_longa %}<details class="ativ__mais"><summary>Saiba mais</summary><div>{{ a.html | safe }}</div></details>{% endif %}
     {% if a.futura %}
     <div class="ativ__acoes">
       {% if a.inscricao %}<a class="btn btn--primario" href="{{ a.inscricao }}" target="_blank" rel="noopener">Inscrever-se {{ i.icon("externo", 18) }}</a>{% endif %}
       {% if a.link %}<a class="btn btn--sec" href="{{ a.link }}" target="_blank" rel="noopener">Entrar na reunião {{ i.icon("externo", 18) }}</a>{% endif %}
-      <a class="btn btn--sec" href="{{ root }}agenda/{{ a.id }}.ics" download>Adicionar ao calendário</a>
+      <a class="ativ__lk" href="{{ root }}agenda/{{ a.id }}.ics" download>Adicionar ao calendário</a>
+      {% if a.cartaz %}<a class="ativ__lk" href="{{ root }}static/img/agenda/{{ a.cartaz }}" target="_blank" rel="noopener">Ver cartaz</a>{% endif %}
     </div>
+    {% elif a.cartaz %}
+    <div class="ativ__acoes"><a class="ativ__lk" href="{{ root }}static/img/agenda/{{ a.cartaz }}" target="_blank" rel="noopener">Ver cartaz</a></div>
     {% endif %}
   </div>
-  {% if a.cartaz %}<a class="ativ__cartaz" href="{{ root }}static/img/agenda/{{ a.cartaz }}" target="_blank" rel="noopener"><img src="{{ root }}static/img/agenda/{{ a.cartaz }}" alt="Cartaz: {{ a.titulo }}" width="400" height="400" loading="lazy"></a>{% endif %}
 </article>
 {%- endmacro %}
 {% block conteudo %}

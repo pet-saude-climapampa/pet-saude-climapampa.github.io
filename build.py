@@ -58,6 +58,7 @@ def carregar_agenda(hoje):
         a["dia_semana"] = DIAS_SEMANA[d.weekday()]
         a["horario"] = hora_br(a["inicio"]) + (f" às {hora_br(a['fim'])}" if a.get("fim") else "") if a.get("inicio") else ""
         a["html"] = markdown.markdown(a.get("descricao", ""), extensions=["extra", "sane_lists"])
+        a["descricao_longa"] = bool(a.get("descricao"))
         a["futura"] = d >= hoje
     proximas = sorted([a for a in itens if a["futura"]], key=lambda a: (a["data"], a.get("inicio", "")))
     realizadas = sorted([a for a in itens if not a["futura"]], key=lambda a: a["data"], reverse=True)
