@@ -349,3 +349,17 @@ body{background:var(--fundo-pagina)}
 .estrut-eixo--coord{margin-top:0}
 .estrut-eixo--coord .gat-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:600px){.estrut-eixo--coord .gat-cards{grid-template-columns:1fr}}
+
+/* Equipe: estrutura compacta, visível sem rolar */
+.secao--compacta{padding-top:20px}
+.area-card--mini{min-height:0;padding:14px 18px 12px;border-radius:18px;gap:2px}
+.area-card--mini strong{font-size:1.1rem;margin-top:0}
+.area-card--mini .area-card__txt{font-size:.8rem;line-height:1.3}
+.area-card--mini .area-card__n{padding-top:4px;font-size:.8rem}
+.area-card--faixa{flex-direction:row;align-items:center;justify-content:space-between;margin:0 0 18px}
+.area-card--faixa .area-card__n{margin-top:0;padding-top:0}
+.estrut{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.estrut__col{display:grid;gap:10px}
+.estrut__col .etiqueta{margin:0;font-size:.74rem}
+.estrut__col h2{margin:0 0 2px;font-size:1.05rem;line-height:1.25}
+@media (max-width:760px){.estrut{grid-template-columns:1fr}}

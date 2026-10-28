@@ -2,37 +2,31 @@
 {% import "_icons.html" as i %}
 {% import "_partes.html" as p %}
 {% block conteudo %}
-{{ p.cabecalho("Equipe", "Quem faz o ClimaPampa", "A estrutura do projeto: coordenação, eixos e grupos de aprendizagem tutorial. Escolha um GAT para conhecer a equipe.") }}
-<section class="secao secao--curta">
+{{ p.cabecalho("Equipe", "Quem faz o ClimaPampa", "Escolha a coordenação ou um GAT para conhecer a equipe.") }}
+<section class="secao secao--curta secao--compacta">
   <div class="wrap">
     {% set coord = pessoas[site.equipe.coordenacao] %}
-    <section class="estrut-eixo estrut-eixo--coord">
-      <h2 class="num-tit num-tit--topo">Coordenação geral</h2>
-      <div class="gat-cards">
-        <a class="area-card cor-verde" href="{{ root }}equipe/coordenacao/">
-          <strong>Coordenação geral</strong>
-          <span class="area-card__txt">{{ coord.funcao }}: {{ coord.nome }}</span>
-          <span class="area-card__n">Conhecer a coordenação<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
-        </a>
-      </div>
-    </section>
+    <a class="area-card area-card--mini area-card--faixa cor-verde" href="{{ root }}equipe/coordenacao/">
+      <span><strong>Coordenação geral</strong><span class="area-card__txt">{{ coord.funcao }}: {{ coord.nome }}</span></span>
+      <span class="area-card__n">Ver<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+    </a>
 
-    {% for bloco in estrutura %}
-    {% set e = bloco.eixo %}
-    <section id="eixo-{{ e.n }}" class="estrut-eixo">
-      <p class="etiqueta">Eixo {{ e.n }}</p>
-      <h2 class="num-tit">{{ e.curto }}</h2>
-      <div class="gat-cards">
+    <div class="estrut">
+      {% for bloco in estrutura %}
+      {% set e = bloco.eixo %}
+      <section id="eixo-{{ e.n }}" class="estrut__col cor-{{ e.cor }}">
+        <p class="etiqueta">Eixo {{ e.n }}</p>
+        <h2>{{ e.curto }}</h2>
         {% for g in bloco.gats %}
-        <a class="area-card cor-{{ e.cor }}" href="{{ root }}equipe/gat-{{ g.n }}/">
+        <a class="area-card area-card--mini cor-{{ e.cor }}" href="{{ root }}equipe/gat-{{ g.n }}/">
           <strong>GAT {{ g.n }}</strong>
-          <span class="area-card__txt">Tutoria: {{ g.tutores | join(" e ") }}</span>
-          <span class="area-card__n">{{ g.total }} pessoas · {{ g.estudantes }} estudantes<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+          <span class="area-card__txt">{{ g.tutores | join(" e ") }}</span>
+          <span class="area-card__n">{{ g.total }} pessoas<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
         </a>
         {% endfor %}
-      </div>
-    </section>
-    {% endfor %}
+      </section>
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% endblock %}
