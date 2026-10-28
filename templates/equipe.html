@@ -5,10 +5,17 @@
 {{ p.cabecalho("Equipe", "Quem faz o ClimaPampa", "A estrutura do projeto: coordenação, eixos e grupos de aprendizagem tutorial. Escolha um GAT para conhecer a equipe.") }}
 <section class="secao secao--curta">
   <div class="wrap">
-    <nav class="prod-nav" aria-label="Seções da equipe"><a href="{{ root }}equipe/" aria-current="page">Quem somos</a><a href="{{ root }}equipe/em-numeros/">A equipe em números</a></nav>
     {% set coord = pessoas[site.equipe.coordenacao] %}
-    <h2 class="num-tit num-tit--topo">Coordenação geral</h2>
-    <div class="pessoas pessoas--uma">{{ p.cartao(coord, root) }}</div>
+    <section class="estrut-eixo estrut-eixo--coord">
+      <h2 class="num-tit num-tit--topo">Coordenação geral</h2>
+      <div class="gat-cards">
+        <a class="area-card cor-verde" href="{{ root }}equipe/coordenacao/">
+          <strong>Coordenação geral</strong>
+          <span class="area-card__txt">{{ coord.funcao }}: {{ coord.nome }}</span>
+          <span class="area-card__n">Conhecer a coordenação<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+        </a>
+      </div>
+    </section>
 
     {% for bloco in estrutura %}
     {% set e = bloco.eixo %}

@@ -230,10 +230,11 @@ def gerar():
     for i,n in enumerate(ordem):
         render("eixo.html",f"eixos/eixo-{n}/index.html",active="eixos",title=f"Eixo {n}: {eixos[n]['curto']}",eixo=eixos[n],anterior=eixos[ordem[i-1]] if i>0 else None,proximo=eixos[ordem[i+1]] if i<len(ordem)-1 else None)
     render("equipe.html", "equipe/index.html", active="equipe", title="Equipe", estrutura=estrutura_equipe(site))
+    render("equipe_coordenacao.html", "equipe/coordenacao/index.html", active="equipe", title="Coordenação geral")
     for e in site["eixos"]:
         for g in e["gats"]:
             render("equipe_gat.html", f"equipe/gat-{g}/index.html", active="equipe", title=f"Equipe do GAT {g}", eixo=e, gat=g)
-    render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe", title="A equipe em números", n=estatisticas(site))
+    render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:
         itens = [p for p in site["produtos"] if p["categoria"] == cat["id"]]
         itens.sort(key=lambda p: int(p.get("ano") or 0), reverse=True)

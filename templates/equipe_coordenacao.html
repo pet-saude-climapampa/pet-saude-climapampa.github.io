@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Equipe", "Coordenação geral", "Quem coordena o PET-Saúde: Clima na Unipampa.", "verde") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}equipe/">← Equipe</a></p>
+    {% set coord = pessoas[site.equipe.coordenacao] %}
+    <div class="pessoas pessoas--uma">{{ p.cartao(coord, root, "verde") }}</div>
+  </div>
+</section>
+{% endblock %}

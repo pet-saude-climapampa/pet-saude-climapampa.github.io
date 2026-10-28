@@ -346,3 +346,6 @@ body{background:var(--fundo-pagina)}
 .seg--coordenacao{background:#CDB9EA}
 .num-sub{margin:22px 0 10px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinta-2)}
 .pessoa__info{margin:2px 0 0;font-size:.82rem;line-height:1.35;color:var(--tinta-2)}
+.estrut-eixo--coord{margin-top:0}
+.estrut-eixo--coord .gat-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:600px){.estrut-eixo--coord .gat-cards{grid-template-columns:1fr}}

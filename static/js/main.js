@@ -15,16 +15,18 @@
   });
 })();
 
-/* Menu lateral: Eixos abre ao passar o mouse (telas com mouse) e ao clicar */
+/* Menu lateral: grupos (Eixos, Equipe) abrem ao passar o mouse (telas com mouse) e ao clicar */
 (function(){
-  var d=document.querySelector('.lnav__det');
-  if(!d||!window.matchMedia)return;
+  var ds=document.querySelectorAll('.lnav__det');
+  if(!ds.length||!window.matchMedia)return;
   var hover=window.matchMedia('(hover:hover) and (min-width:901px)');
-  var t;
-  d.addEventListener('mouseenter',function(){if(!hover.matches)return;clearTimeout(t);d.open=true});
-  d.addEventListener('mouseleave',function(){
-    if(!hover.matches||d.hasAttribute('data-fixo'))return;
-    t=setTimeout(function(){d.open=false},350);
+  ds.forEach(function(d){
+    var t;
+    d.addEventListener('mouseenter',function(){if(!hover.matches)return;clearTimeout(t);d.open=true});
+    d.addEventListener('mouseleave',function(){
+      if(!hover.matches||d.hasAttribute('data-fixo'))return;
+      t=setTimeout(function(){d.open=false},350);
+    });
   });
 })();
 
