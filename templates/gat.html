@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{% set e = eixos[gat.eixo] %}
+{{ p.cabecalho("GAT " ~ gat.n ~ " · Eixo " ~ e.n, gat.foco, gat.resumo) }}
+
+<section class="secao secao--curta">
+  <div class="wrap prosa">
+    <h2>Ações em destaque</h2>
+    <ul class="lista-acoes">{% for a in gat.acoes %}<li>{{ a }}</li>{% endfor %}</ul>
+    <h2>Território de atuação</h2>
+    <p>{{ gat.territorio }}.</p>
+    <h2>Sobre o eixo</h2>
+    <div class="caixa cor-{{ e.cor }}">
+      <p class="card__rotulo">Eixo {{ e.n }}</p>
+      <h3>{{ e.titulo }}</h3>
+      <p>{{ e.objetivo }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--bruma">
+  <div class="wrap">
+    <header class="secao__cab"><p class="etiqueta">Quem faz</p><h2>Equipe do GAT {{ gat.n }}</h2>
+      {% if e.gats|length > 1 %}<p>A tutoria e a preceptoria são compartilhadas pelos GATs {{ e.gats|join(" e ") }}.</p>{% endif %}</header>
+    {% for papel, rotulo in site.equipe.papeis.items() if papel != "coordenacao" %}
+    {% set grupo = site.equipe.pessoas | selectattr("papel", "equalto", papel) | list %}
+    {% set doGat = [] %}
+    {% for pe in grupo %}{% if (pe.gats is defined and gat.n in pe.gats) or (pe.gats is not defined and pe.eixo == gat.eixo) %}{% if doGat.append(pe) %}{% endif %}{% endif %}{% endfor %}
+    {% if doGat %}
+    <h3 class="sub">{{ rotulo }}</h3>
+    <div class="pessoas">
+      {% for pe in doGat %}{{ p.cartao(pe, root, e.cor) }}{% endfor %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<nav class="wrap gat-nav" aria-label="Outros grupos">
+  {% if anterior %}<a href="{{ root }}grupos/gat-{{ anterior.n }}/">← GAT {{ anterior.n }}</a>{% else %}<span></span>{% endif %}
+  <a href="{{ root }}grupos/">Todos os grupos</a>
+  {% if proximo %}<a href="{{ root }}grupos/gat-{{ proximo.n }}/">GAT {{ proximo.n }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

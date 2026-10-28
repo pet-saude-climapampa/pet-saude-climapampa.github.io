@@ -1,0 +1,234 @@
+# Dados do site ClimaPampa — edite aqui textos, equipe, GATs e plataformas.
+nome: ClimaPampa
+programa: "PET-Saúde: Clima"
+instituicao: Unipampa
+local: Uruguaiana/RS
+logo_unipampa: static/img/logo-unipampa.png
+titulo_longo: Produção do Cuidado Integral no Território e Inovação em Saúde
+periodo: "2026–2028"
+descricao_curta: >-
+  ClimaPampa (PET-Saúde: Clima, Unipampa): ensino, serviço e comunidade juntos para
+  enfrentar os impactos das emergências climáticas na saúde em Uruguaiana/RS.
+edital: "Edital SGTES/MS nº 23/2026"
+base_url: "/"            # usado só na página 404. Em GitHub Pages de projeto: "/nome-do-repositorio/"
+contato:
+  email: ""              # PENDENTE: e-mail institucional do projeto
+  instagram: "https://www.instagram.com/petsaudeclimaunipampa/"
+
+numeros:
+  - {valor: "3", rotulo: "eixos temáticos"}
+  - {valor: "5", rotulo: "grupos de aprendizagem tutorial"}
+  - {valor: "8", rotulo: "cursos de graduação"}
+  - {valor: "24", rotulo: "meses de execução"}
+
+cursos: [Ciência da Computação, Engenharia de Computação, Engenharia de Aquicultura,
+         Enfermagem, Fisioterapia, Educação Física, Farmácia, Medicina]
+
+publicos: [Populações ribeirinhas, Campo e águas, Mulheres, Pessoas idosas, Crianças,
+           Pessoas com doenças crônicas]
+
+etapas:
+  - {titulo: "Planejamento e alinhamento", texto: "Integração da equipe e organização pedagógica dos grupos de trabalho."}
+  - {titulo: "Formação em saúde e clima", texto: "Estudos, oficinas e seminários sobre os impactos climáticos na saúde regional."}
+  - {titulo: "Territorialização e diagnóstico", texto: "Reconhecimento do território, articulação com a rede de saúde e diagnóstico ambiental e de saúde coletiva."}
+  - {titulo: "Intervenção e ações de campo", texto: "Ações educativas com a comunidade e profissionais e estratégias de vigilância em saúde ambiental."}
+  - {titulo: "Monitoramento e extensão", texto: "Relatórios, indicadores, artigos, materiais educativos e apresentação dos resultados."}
+
+eixos:
+  - n: 1
+    cor: azul
+    icone: territorio
+    curto: "Cuidado no território"
+    chamada: "Vigilância em saúde, cartografia social e educação em saúde junto às comunidades."
+    titulo: "Produção do cuidado no território e vigilância em saúde"
+    objetivo: >-
+      Qualificar o cuidado nos territórios com ações interprofissionais de vigilância em saúde,
+      educação em saúde e integração entre vigilância e Atenção Primária, com atenção às populações
+      ribeirinhas, do campo e das águas, mulheres e pessoas idosas.
+    gats: [1, 2]
+  - n: 2
+    cor: vermelho
+    icone: rede
+    curto: "Acesso e integralidade"
+    titulo: "Acesso à atenção especializada e integralidade do cuidado"
+    objetivo: >-
+      Qualificar o acesso à atenção especializada e a organização dos fluxos na Rede de Atenção à Saúde,
+      garantindo cuidado integral às populações vulneráveis em situações de emergência climática.
+    gats: [3, 4]
+  - n: 3
+    cor: amarelo
+    icone: dados
+    curto: "Comunicação e inovação"
+    titulo: "Comunicação e inovação em saúde"
+    objetivo: >-
+      Desenvolver soluções digitais, geoespaciais e comunicacionais para análise territorial,
+      monitoramento de eventos climáticos e divulgação de informação em saúde, apoiando a vigilância
+      e a decisão baseada em evidências.
+    gats: [5]
+
+gats:
+  - n: 1
+    eixo: 1
+    foco: "Cartografia social, vigilância territorial e educação em saúde"
+    resumo: "Mapeia riscos e vulnerabilidades junto às comunidades e transforma o saber do território em cuidado e vigilância."
+    territorio: "ESFs 2, 23 e 7 de Uruguaiana"
+    acoes:
+      - "Cartografia social e oficinas de mapeamento participativo nas ESFs, escolas e espaços comunitários."
+      - "Monitoramento de agravos cruzando os mapas do território com e-SUS APS, SINAN e SIM."
+      - "Rodas de conversa, oficinas e materiais educativos acessíveis sobre riscos climáticos."
+      - "Planos de cuidado e acompanhamento de pessoas com doenças crônicas e mobilidade reduzida."
+      - "Qualificação de agentes comunitários e lideranças locais; estudos de caso e simulações de emergência."
+  - n: 2
+    eixo: 1
+    foco: "Cartografia social, vigilância territorial e educação em saúde"
+    resumo: "Atua junto ao GAT 1 na leitura do território, na vigilância de agravos e na educação em saúde com a comunidade."
+    territorio: "ESFs 2, 23 e 7 de Uruguaiana"
+    acoes:
+      - "Pesquisa cartográfica conjunta com os demais grupos e definição das ESFs de referência."
+      - "Identificação de grupos prioritários e dos itinerários terapêuticos nos territórios vulneráveis."
+      - "Segurança medicamentosa e continuidade do tratamento em eventos climáticos extremos."
+      - "Grupo de estudos sobre emergências climáticas, justiça ambiental e determinantes sociais em saúde."
+      - "Boletins informativos e alertas comunitários na linguagem e na memória do território."
+  - n: 3
+    eixo: 2
+    foco: "Fluxos de cuidado, referência e contrarreferência"
+    resumo: "Fortalece o caminho do cuidado entre a atenção primária e os serviços especializados em situações de emergência climática."
+    territorio: "ESFs 17, 7, 14 e 19 e serviços especializados da rede"
+    acoes:
+      - "Reuniões quinzenais e estudos dirigidos com discussão de casos e situações-problema."
+      - "Oficinas de educação permanente com equipes de saúde e defesa civil sobre ondas de calor e frio, regulação e encaminhamento."
+      - "Guias rápidos e infográficos sobre vigilância em saúde ambiental."
+      - "Linhas de cuidado interprofissionais para agravos relacionados às emergências climáticas."
+  - n: 4
+    eixo: 2
+    foco: "Fluxos de cuidado, referência e contrarreferência"
+    resumo: "Trabalha a comunicação entre os pontos da rede de saúde e o acesso equitativo aos serviços especializados."
+    territorio: "ESFs 17, 7, 14 e 19 e serviços especializados da rede"
+    acoes:
+      - "Mapeamento de fluxos entre a atenção primária e a clínica renal, oncologia, pronto-socorro, saúde da mulher, saúde mental e policlínica infantil."
+      - "Sensibilização para o uso coordenado de referência e contrarreferência."
+      - "Educação permanente para profissionais e gestores da rede."
+      - "Produção de materiais didáticos para as equipes."
+  - n: 5
+    eixo: 3
+    foco: "Tecnologias digitais e comunicação para vigiar, decidir e cuidar diante das emergências climáticas"
+    foco_texto:
+      - "O eixo desenvolve as ferramentas digitais do projeto e os conteúdos que levam a informação a quem cuida e a quem vive no território. A frente tecnológica reúne um geoportal, que integra clima, território, vulnerabilidades e agravos em saúde, e painéis interativos com indicadores ambientais, territoriais e epidemiológicos, para apoiar a vigilância em saúde e as decisões baseadas em evidências."
+      - "Outra frente estuda como os eventos climáticos extremos se relacionam com a violência contra mulheres nos territórios da atenção primária, combinando a análise espacial dos dados com entrevistas a mulheres e a profissionais, para indicar áreas prioritárias de vigilância e intervenção."
+      - "A partir disso, o eixo produz materiais e tecnologias educativas, como cartilha, guia para profissionais, boxes, jogos, vídeos, podcasts e chatbots, e oferece formação em geoprocessamento, análise espacial e saúde digital para estudantes, profissionais e gestores."
+    resumo: "Constrói as ferramentas digitais do projeto — plataforma geoespacial e painéis — e os conteúdos educativos sobre clima, território e proteção de mulheres."
+    territorio: "Município de Uruguaiana"
+    acoes:
+      - "Plataforma geoespacial (geoportal) integrando clima, território, vulnerabilidades e agravos à saúde."
+      - "Painéis interativos (dashboards) com indicadores ambientais, territoriais e epidemiológicos."
+      - "Mapeamento de áreas expostas a alagamentos, inundações, estiagens e ondas de calor, urbanas e rurais."
+      - "Estudo de vulnerabilidades de mulheres em áreas de risco climático, com entrevistas a mulheres e profissionais da APS."
+      - "Cartilha, guia para profissionais da APS, boxes educativos, vídeos, podcasts e chatbots."
+      - "Formação em geoprocessamento, análise espacial e saúde digital."
+
+equipe:
+  # papel: coordenacao | tutoria | preceptoria | orientacao   (formacao: graduação; atuacao: curso em que atua; aparecem no card)
+  # eixo: define em quais GATs a pessoa aparece (ou use  gats: [3]  para um GAT específico)
+  # lattes: cole o link do currículo; o botão só aparece quando preenchido
+  # foto: arquivo em static/img/equipe/ (sem foto, aparecem as iniciais)
+  coordenacao: samuel
+  papeis:
+    coordenacao: "Coordenação geral"
+    tutoria: "Tutoria"
+    preceptoria: "Preceptoria"
+    orientacao: "Orientação de serviço"
+  pessoas:
+    - {id: samuel,      nome: "Samuel Salvi Romero",           papel: coordenacao, funcao: "Coordenador geral", foto: samuel.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: camila-pase, nome: "Camila Simonetti Pase Ferrão", papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-pase.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
+    - {id: camila-sissa,nome: "Camila Sissa Antunes",         papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-sissa.jpg, lattes: "", campus: Uruguaiana, formacao: "Ciências Sociais", atuacao: "Fisioterapia"}
+    - {id: shana,       nome: "Shana Hastenpflug Wottrich",   papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: shana.jpg, lattes: "", campus: Uruguaiana, formacao: "Psicologia", atuacao: "Medicina"}
+    - {id: vinicia,     nome: "Vinícia Garzella Metz",        papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: vinicia.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
+    - {id: suzan,       nome: "Suzan Gonçalves Rosa",         papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: suzan.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Farmácia"}
+    - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: bruna,       nome: "Bruna Cristiane Furtado Gomes",papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: bruna.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: elitiele,    nome: "Elitiele Ortiz dos Santos",    papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: elitiele.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
+    - {id: alexandro,   nome: "Alexandro Gularte Schäfer",    papel: tutoria, funcao: "Tutor",  eixo: 3, gat: 5, foto: alexandro.jpg, lattes: "", campus: Bagé, formacao: "Engenharia Civil e Ciência de Dados", atuacao: "Engenharias"}
+    - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto: alyni.jpg}
+    - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto: ana-thalita.jpg}
+    - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto: patricia.jpg}
+    - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto: laura.jpg}
+    - {id: heitor,      nome: "Heitor da Mata Xavier",        papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 3, lattes: "", formacao: "Medicina", foto: heitor.jpg}
+    - {id: raquel,      nome: "Raquel Cristina Braun da Silva",papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 3, lattes: "", formacao: "Fisioterapia"}
+    - {id: jessica,     nome: "Jéssica Alves Corrêa",        papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 4, lattes: "", formacao: "Nutrição", foto: jessica.jpg}
+    - {id: eduardo,     nome: "Eduardo Massoco Rios",                 papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 4, lattes: "", formacao: "Enfermagem"}
+    - {id: helter,      nome: "Helter Luiz da Rosa Oliveira", papel: preceptoria, funcao: "Preceptor",  eixo: 3, gat: 5, lattes: "", formacao: "Educação Física", foto: helter.jpg}
+    - {id: silvia,      nome: "Silvia Muller de Moura Sarmento",       papel: preceptoria, funcao: "Preceptora", eixo: 3, gat: 5, lattes: "", formacao: "Biomedicina", foto: silvia.jpg}
+    - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", gat: 5, lattes: "", formacao: "Enfermagem", foto: francisco.jpg}
+    - {id: mariele,     nome: "Mariele Castro Charão",         papel: orientacao, funcao: "Orientadora de serviço", gat: 4, lattes: "", formacao: "Enfermagem"}
+    - {id: mariane,     nome: "Mariane Acordi Silveira",       papel: orientacao, funcao: "Orientadora de serviço", gat: 1, lattes: "", formacao: "Nutrição"}
+    # Orientadores de serviço — um por GAT (campo gat). Acrescente outros aqui:
+    # - {id: fulano, nome: "Nome", papel: orientacao, funcao: "Orientador(a) de serviço", gat: 2, lattes: ""}
+# Produtos do projeto. categoria: id de produtos_categorias; eixo: 1, 2, 3 ou vazio (todos)
+# url: quando preenchida, aparece o botão de acesso; sem url, aparece o status.
+# Áreas da página Produtos (cada uma vira um cartão colorido e uma subpágina).
+# cor: azul | vermelho | amarelo | verde   categorias: ids de produtos_categorias, na ordem de exibição
+produtos_categorias:
+  - {id: plataformas, titulo: "Plataformas, sistemas e softwares", texto: "Ferramentas digitais para consultar o território e acompanhar indicadores.", cor: azul, icone: mapa}
+  - {id: materiais, titulo: "Materiais educativos", texto: "Cartilhas, guias, infográficos, vídeos, podcasts, jogos e kits (box) para profissionais, estudantes e comunidade.", cor: verde, icone: grade}
+  - {id: ensino, titulo: "Projetos de ensino", texto: "Projetos que reúnem várias atividades formativas, como cursos, minicursos e rodas de estudo.", cor: amarelo, icone: formacao}
+  - {id: minicursos, titulo: "Minicursos e cursos", texto: "Minicursos, oficinas e cursos de educação permanente ofertados pelo projeto.", cor: vermelho, icone: calendario}
+  - {id: pesquisa, titulo: "Projetos de pesquisa", texto: "Diagnósticos, estudos e pesquisas feitos no território, com os GATs.", cor: amarelo, icone: dados}
+  - {id: eventos, titulo: "Participação em eventos", texto: "Trabalhos apresentados e participação em congressos, seminários, cursos e outros eventos.", cor: vermelho, icone: pessoas}
+  - {id: livros, titulo: "Livros e capítulos", texto: "Livros, e-books e capítulos de livros produzidos ou publicados pelo projeto.", cor: azul, icone: livro}
+  - {id: artigos, titulo: "Artigos e trabalhos", texto: "Artigos científicos e trabalhos submetidos ou aceitos em periódicos, anais e eventos.", cor: verde, icone: jornal}
+# Cada item: categoria (id acima), titulo, texto (descrição ou referência completa), ano, eixo (1, 2, 3 ou vazio),
+# status (aparece quando não há url) e url (quando preenchida, aparece o botão de acesso).
+produtos:
+  - {categoria: plataformas, titulo: "Geoportal ClimaPampa", texto: "Mapas e camadas territoriais sobre clima, vulnerabilidades socioambientais e saúde em Uruguaiana, para apoiar a vigilância e a decisão no território.", ano: "", eixo: 3, status: "Em desenvolvimento", url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"}
+  - {categoria: plataformas, titulo: "Painéis de monitoramento", texto: "Dashboards interativos com indicadores ambientais, territoriais e epidemiológicos, atualizados de forma contínua.", ano: "", eixo: 3, status: "Em desenvolvimento", url: ""}
+  - {categoria: materiais, titulo: "Cartilhas e guias", texto: "Guias para profissionais e cartilhas para a comunidade sobre cuidado em emergências climáticas.", ano: "", eixo: "", status: "Em produção", url: ""}
+  - {categoria: materiais, titulo: "Vídeos, podcasts e infográficos", texto: "Comunicação de risco e educação em saúde em formatos acessíveis.", ano: "", eixo: 3, status: "Em produção", url: ""}
+  - {categoria: ensino, titulo: "GRUPET: Grupo de Estudos do PET-Saúde Clima", texto: "Projeto de ensino que organiza atividades como encontros de estudo, oficinas, minicursos e cursos sobre mudanças climáticas, saúde e território, abertas aos grupos tutoriais.", ano: "", eixo: "", status: "Em planejamento", url: ""}
+  - {categoria: pesquisa, titulo: "Cartografia social e etnografia (AdaptaSUS Pampa)", texto: "Oficinas comunitárias de mapeamento nos territórios das Estratégias Saúde da Família para compreender como as pessoas vivem e enfrentam os riscos climáticos.", ano: "", eixo: 1, status: "Em andamento", url: ""}
+  - {categoria: pesquisa, titulo: "Diagnóstico de Uruguaiana em situações de enchentes", texto: "Análise do impacto das enchentes na rede de saúde e no acesso aos serviços especializados.", ano: "", eixo: 2, status: "Em andamento", url: ""}
+  - {categoria: pesquisa, titulo: "Mulheres, território e clima", texto: "Pesquisa sobre a proteção de mulheres e meninas em situações de emergência climática, com a atenção primária e a rede de proteção.", ano: "", eixo: 3, status: "Em andamento", url: ""}
+  # --- Participação em eventos ---
+  - {categoria: eventos, titulo: "XIII COBEON e VII COBENEO", texto: "Teresina/PI, 24 a 26 de setembro de 2026. Dois trabalhos submetidos, em comunicação oral e e-pôster dialogado.", ano: 2026, eixo: "", url: ""}
+  - {categoria: eventos, titulo: "18º SIEPE: Salão de Inovação, Ensino, Pesquisa e Extensão da Unipampa", texto: "Campus Jaguarão, 6 a 8 de outubro de 2026. Um trabalho aceito.", ano: 2026, eixo: "", url: ""}
+  - {categoria: eventos, titulo: "JIICEU: Jornada Internacional de Iniciação Científica e Extensão Universitária", texto: "On-line, 26 a 30 de outubro de 2026. Quatro trabalhos submetidos.", ano: 2026, eixo: "", url: ""}
+  - {categoria: eventos, titulo: "76º CBEn: Congresso Brasileiro de Enfermagem", texto: "Brasília/DF, 8 a 12 de novembro de 2026. Um trabalho submetido.", ano: 2026, eixo: "", url: ""}
+  # --- Trabalhos apresentados em eventos (artigos) ---
+  - {categoria: artigos, titulo: "Painel interativo sobre violência contra mulheres", texto: "Trabalho submetido ao XIII COBEON e VII COBENEO (Teresina/PI, 24 a 26 de setembro de 2026), na modalidade comunicação oral e e-pôster dialogado. Autores: Prates LA; Schäfer AG; Fernandes MA; Schäfer LP; Rocha HWB; Gutierres JF.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Box educativo sobre violência contra mulheres em contextos de mudanças climáticas", texto: "Trabalho submetido ao XIII COBEON e VII COBENEO (Teresina/PI, 24 a 26 de setembro de 2026), na modalidade comunicação oral e e-pôster dialogado. Autores: Fernandes MA; Lemos DL; Ribeiro Junior VP; Bortoluzzi Neto F; Schäfer AG; Prates LA.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Desenvolvimento de jogo educativo para o reconhecimento das formas de violência contra as mulheres", texto: "Trabalho submetido ao 76º CBEn (Brasília/DF, 8 a 12 de novembro de 2026), eixo II: ética, novas fronteiras científicas, transformação digital e impacto social. Autores: Prates LA; Fernandes MA; Arima JD; Lemos DL; Ribeiro Junior VP; Gutierres JF; Bortoluzzi Neto F; Fonseca SD; Ribeiro BC; Schäfer AG.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Jogo Vira a Carta: tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres", texto: "Trabalho aceito no 18º SIEPE, Salão de Inovação, Ensino, Pesquisa e Extensão da Unipampa (Campus Jaguarão, 6 a 8 de outubro de 2026). Autores: Maria Antonia Dutra Fernandes, Alexandro Gularte Schäfer, Davi Lopes Lemos, Valdir Paz Ribeiro Junior, Francisco Bortoluzzi Neto e Lisie Alende Prates.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Dominó da Dengue: tecnologia educativa para promoção da saúde no contexto do PET-Saúde Clima", texto: "Trabalho submetido à JIICEU, Jornada Internacional de Iniciação Científica e Extensão Universitária (on-line, 26 a 30 de outubro de 2026). Autores: Ribeiro BC; Bortolazzo MD; Sarmento SMM; Schäfer AG; Prates LA.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Tecnologia educativa digital sobre violência contra a mulher no contexto do PET-Saúde Clima", texto: "Trabalho submetido à JIICEU (on-line, 26 a 30 de outubro de 2026). Autores: Bortoluzzi Neto F; Fernandes MA; Ribeiro Junior VP; Schäfer AG; Prates LA.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Sífilis em jogo: desenvolvimento de uma tecnologia educativa para ações de educação em saúde", texto: "Trabalho submetido à JIICEU (on-line, 26 a 30 de outubro de 2026). Autores: Arima JD; Bastiani LP; Tavares JPM; Schäfer AG; Prates LA.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: artigos, titulo: "Salve sua Casa: desenvolvimento de um jogo de tabuleiro para educação em saúde diante das enchentes", texto: "Trabalho submetido à JIICEU (on-line, 26 a 30 de outubro de 2026). Autores: Bortolazzo MD; Ribeiro BC; Fonseca SD; Oliveira HLR; Prates LA.", ano: 2026, eixo: 3, url: ""}
+  # --- Jogos, box e materiais (GAT 5) ---
+  - {categoria: materiais, titulo: "Box Lia: letramento interativo em apoio às mulheres", texto: "Box educativo para o letramento interativo em apoio às mulheres, voltado ao reconhecimento e ao enfrentamento da violência.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: materiais, titulo: "Jogo Vira a Carta", texto: "Jogo de cartas, tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: materiais, titulo: "Dominó da Dengue", texto: "Jogo educativo para promoção da saúde e prevenção da dengue.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: materiais, titulo: "Sífilis em jogo", texto: "Tecnologia educativa para ações de educação em saúde sobre a sífilis.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: materiais, titulo: "Salve sua Casa", texto: "Jogo de tabuleiro para educação em saúde diante das enchentes.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: plataformas, titulo: "Portal sobre violência contra mulheres no RS", texto: "Painel interativo para apoiar a compreensão da violência contra mulheres no Rio Grande do Sul.", ano: "", eixo: 3, status: "Em desenvolvimento", url: "https://alexandrogschafer.github.io/violencia-mulheres-rs/"}
+  # --- Minicursos e oficinas de formação ---
+  - {categoria: minicursos, titulo: "Minicurso Canva: como fazer apresentações no Canva", texto: "2 de setembro de 2026, às 19h, pelo Google Meet. Conduzido pelas monitoras Manuella Bortolazzo e Maria Antonia Dutra. Temas: recursos e ferramentas do Canva, criação de apresentações atrativas, dicas práticas e aplicações no ensino, na pesquisa e na extensão.", ano: 2026, eixo: 3, url: ""}
+  - {categoria: minicursos, titulo: "Minicurso: criação, preenchimento e atualização do currículo Lattes", texto: "18 de setembro de 2026, às 19h, pelo Google Meet, com certificação. Com a preceptora Silvia Muller de Moura Sarmento.", ano: 2026, eixo: "", url: ""}
+  - {categoria: minicursos, titulo: "Oficina sobre cartografia social", texto: "28 de setembro de 2026, às 14h e às 20h, on-line, em duas turmas.", ano: 2026, eixo: 1, url: ""}
+  - {categoria: minicursos, titulo: "Minicurso: criação de aplicativos", texto: "30 de setembro de 2026, às 19h, pelo Google Meet, com certificação. Com o orientador de serviço Francisco Bortoluzzi Neto.", ano: 2026, eixo: "", url: ""}
+  # Exemplo de artigo:
+  # - {categoria: artigos, titulo: "Título do artigo", texto: "Autores. Periódico, v. 1, n. 2, 2027.", ano: 2027, eixo: 1, url: "https://doi.org/..."}
+
+# Campus da Unipampa deduzido pelo curso de graduação (fonte: sites.unipampa.edu.br/prograd/cursos-de-graduacao).
+# Direito foi atribuído a São Borja por decisão da coordenação (o curso existe também em Santana do Livramento). Cursos sem correspondência ficam de fora e aparecem como "Não informado".
+# Para corrigir um caso, coloque  campus: Nome  na pessoa em data/estudantes.yml (tem prioridade sobre este mapa).
+campus_por_curso:
+  Medicina: Uruguaiana
+  Fisioterapia: Uruguaiana
+  Enfermagem: Uruguaiana
+  Farmácia: Uruguaiana
+  Engenharia da computação: Bagé
+  Ciência da computação: Alegrete
+  Ciências sociais: São Borja
+  Direito: São Borja
+  Mestrado em Computação Aplicada: Bagé
+  Engenharia de energia: Bagé
+  Engenharia de aquicultura: Uruguaiana

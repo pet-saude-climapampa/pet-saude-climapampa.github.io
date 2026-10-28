@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% block conteudo %}
+<section class="inicio" aria-labelledby="t-titulo">
+  <p class="etiqueta">{{ site.programa }} · {{ site.instituicao }} · {{ site.local }}</p>
+  <h1 id="t-titulo">{{ site.nome[:5] }}<span>{{ site.nome[5:] }}</span></h1>
+  <p class="inicio__sub">{{ site.titulo_longo }}</p>
+  <p class="inicio__txt">{{ site.descricao_curta }}</p>
+  <div class="inicio__acoes">
+    <a class="btn btn--primario" href="{{ root }}o-projeto/">Conheça o projeto {{ i.icon("seta", 18) }}</a>
+    <a class="btn btn--sec" href="{{ root }}noticias/">Notícias</a>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Galeria", album.titulo, album.legenda ~ ((" " ~ album.data_br) if album.data_br and not album.legenda else "")) }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}galeria/">← Todos os álbuns</a></p>
+    {% if album.fotos %}
+    <div class="gal-grade">
+      {% for f in album.fotos %}
+      <a class="gal-foto" href="{{ root }}{{ f.full }}" data-legenda="{{ f.legenda }}">
+        <img src="{{ root }}{{ f.thumb }}" alt="{{ f.legenda or album.titulo }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="prod-vazio">Este álbum ainda não tem fotos.</p>
+    {% endif %}
+  </div>
+</section>
+<dialog class="lightbox" id="lightbox" aria-label="Visualização da foto">
+  <button type="button" class="lightbox__fechar" aria-label="Fechar">{{ i.icon("fechar", 24) }}</button>
+  <button type="button" class="lightbox__nav lightbox__nav--ant" aria-label="Foto anterior">‹</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button type="button" class="lightbox__nav lightbox__nav--prox" aria-label="Próxima foto">›</button>
+</dialog>
+{% endblock %}

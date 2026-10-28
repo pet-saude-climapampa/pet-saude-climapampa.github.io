@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Produções", "Plataformas e materiais", "As ferramentas do projeto são desenvolvidas em plataformas próprias. Aqui você encontra o caminho para cada uma.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <div class="cards cards--2">
+      {% for p in site.plataformas %}
+      <article class="card card--plat card--grande reveal">
+        <span class="card__icone card__icone--neutro">{{ i.icon(p.icone, 26) }}</span>
+        <h2 class="card__tit">{{ p.titulo }}</h2>
+        <p>{{ p.texto }}</p>
+        {% if p.url %}
+        <a class="btn btn--primario" href="{{ p.url }}" target="_blank" rel="noopener">Acessar {{ i.icon("externo", 18) }}</a>
+        {% else %}
+        <span class="status">{{ p.status }}</span>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

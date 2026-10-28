@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Grupos de aprendizagem tutorial", "Cinco GATs, três eixos", "Cada grupo reúne tutores, preceptores e estudantes de diferentes cursos para atuar em um eixo do projeto.") }}
+
+{% for e in site.eixos %}
+<section class="secao secao--curta {% if loop.index is even %}secao--bruma{% endif %}">
+  <div class="wrap">
+    <header class="secao__cab reveal">
+      <p class="etiqueta">Eixo {{ e.n }}</p>
+      <h2>{{ e.titulo }}</h2>
+    </header>
+    <div class="cards cards--gat">
+      {% for n in e.gats %}
+      {% set g = gats[n] %}
+      <a class="card card--gat cor-{{ e.cor }} reveal" href="{{ root }}grupos/gat-{{ g.n }}/">
+        <span class="gat__num">{{ g.n }}</span>
+        <p class="card__rotulo">GAT {{ g.n }}</p>
+        <h3>{{ g.foco }}</h3>
+        <p>{{ g.resumo }}</p>
+        <span class="card__mais">Ver o grupo {{ i.icon("seta", 16) }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

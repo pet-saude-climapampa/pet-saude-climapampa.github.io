@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Notícias", "Acompanhe o ClimaPampa", "Ações no território, oficinas, eventos e resultados do projeto.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <div class="cards cards--3">
+      {% for n in noticias %}
+      <a class="card card--noticia reveal" href="{{ root }}noticias/{{ n.slug }}/">
+        <p class="meta">{{ i.icon("calendario", 16) }} {{ n.data_br }} · {{ n.categoria }}</p>
+        <h2 class="card__tit">{{ n.titulo }}</h2>
+        <p>{{ n.resumo }}</p>
+        <span class="card__mais">Ler {{ i.icon("seta", 16) }}</span>
+      </a>
+      {% else %}
+      <p>Ainda não há notícias publicadas.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

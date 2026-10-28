@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Produtos", area.titulo, area.texto, area.cor) }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}produtos/">← Todas as áreas</a></p>
+    {% if area.secoes|length > 1 %}
+    <nav class="prod-nav" aria-label="Categorias desta área">
+      {% for s in area.secoes %}<a href="#{{ s.cat.id }}">{{ s.cat.titulo }}</a>{% endfor %}
+    </nav>
+    {% endif %}
+    {% for s in area.secoes %}
+    <section id="{{ s.cat.id }}" class="prod-grupo cor-{{ area.cor }}">
+      <header class="prod-grupo__cab prod-grupo__cab--area">
+        <div><h2>{{ s.cat.titulo }}</h2><p>{{ s.cat.texto }}</p></div>
+      </header>
+      {% if s.itens %}
+      <div class="prod-grade">
+        {% for it in s.itens %}
+        <article class="prod{% if it.url %} prod--link{% endif %}">
+          {% if it.ano or (not it.url and it.status) %}<div class="prod__meta"><span class="status">{{ it.ano if it.ano else it.status }}</span></div>{% endif %}
+          <h3>{% if it.url %}<a class="prod__link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.titulo }}<span class="sr"> (abre em nova aba)</span></a>{% else %}{{ it.titulo }}{% endif %}</h3>
+          <p>{{ it.texto }}</p>
+          {% if it.url %}<span class="btn btn--primario" aria-hidden="true">Acessar {{ i.icon("externo", 18) }}</span>{% endif %}
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="prod-vazio">Ainda não há registros nesta categoria. As produções aparecerão aqui à medida que forem publicadas.</p>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

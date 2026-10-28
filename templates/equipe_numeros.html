@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% macro pluralizar(n, um, varios) %}{{ n }} {{ um if n == 1 else varios }}{% endmacro %}
+{% macro segmentos(seg, total) -%}
+<div class="seg" role="img" aria-label="{% for s in seg if s.n %}{{ s.rotulo }}: {{ s.n }}. {% endfor %}">
+  {% for s in seg if s.n %}<span class="seg__p seg--{{ s.id }}" style="flex:{{ s.n }}">{{ s.n }}</span>{% endfor %}
+</div>
+<ul class="legenda">
+  {% for s in seg if s.n %}<li><span class="legenda__cor seg--{{ s.id }}" aria-hidden="true"></span>{{ s.rotulo }} <strong>{{ s.n }}</strong></li>{% endfor %}
+</ul>
+{%- endmacro %}
+{% block conteudo %}
+{{ p.cabecalho("Equipe", "A equipe em números", "Quem compõe o ClimaPampa e como as pessoas se distribuem entre os grupos de aprendizagem tutorial.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <nav class="prod-nav" aria-label="Seções da equipe"><a href="{{ root }}equipe/">Quem somos</a><a href="{{ root }}equipe/em-numeros/" aria-current="page">A equipe em números</a></nav>
+
+    <div class="kpis">
+      <div class="kpi cor-azul"><strong>{{ n.total }}</strong><span>pessoas na equipe</span></div>
+      <div class="kpi cor-verde"><strong>{{ n.estudantes }}</strong><span>estudantes ({{ n.bolsistas }} bolsistas e {{ n.voluntarios }} voluntários)</span></div>
+      <div class="kpi cor-amarelo"><strong>{{ n.total - n.estudantes }}</strong><span>professores, preceptores, orientadores de serviço e coordenação</span></div>
+      <div class="kpi cor-vermelho"><strong>{{ n.ndcursos }}</strong><span>cursos e {{ n.ncampi }} campi representados</span></div>
+    </div>
+
+    <h2 class="num-tit">Por grupo de aprendizagem tutorial</h2>
+    <div class="gat-nums">
+      {% for g in n.gats %}
+      <article class="gat-num cor-{{ g.cor }}">
+        <header>
+          <p class="etiqueta">Eixo: {{ g.eixo }}</p>
+          <h3>GAT {{ g.n }}</h3>
+          <p class="gat-num__tot"><strong>{{ g.total }}</strong> pessoas · {{ g.estudantes }} estudantes</p>
+        </header>
+        {{ segmentos(g.seg, g.total) }}
+        <h4>Campus dos estudantes</h4>
+        <ul class="chips">
+          {% for c, q in g.campi %}<li>{{ c }} <strong>{{ q }}</strong></li>{% endfor %}
+        </ul>
+        <h4>Cursos dos estudantes</h4>
+        <ul class="chips">
+          {% for c, q in g.cursos %}<li>{{ c }} <strong>{{ q }}</strong></li>{% endfor %}
+        </ul>
+      </article>
+      {% endfor %}
+    </div>
+
+    <h2 class="num-tit">Equipe completa por papel</h2>
+    <div class="num-bloco">{{ segmentos(n.seg, n.total) }}</div>
+
+    <h2 class="num-tit">Pessoas por campus</h2>
+    <h3 class="num-sub">Estudantes ({{ n.estudantes }})</h3>
+    <ul class="barras">
+      {% for c, q in n.campi %}
+      <li><span class="barras__rot">{{ c }}</span><span class="barras__trilho"><span class="barras__fill" style="width:{{ (q / n.campi[0][1] * 100) | round(1) }}%"></span></span><strong>{{ q }}</strong></li>
+      {% endfor %}
+    </ul>
+    <h3 class="num-sub">Coordenação e tutoria ({{ n.ndoc }} docentes)</h3>
+    <ul class="barras">
+      {% for c, q in n.campi_doc %}
+      <li><span class="barras__rot">{{ c }}</span><span class="barras__trilho"><span class="barras__fill" style="width:{{ (q / n.campi_doc[0][1] * 100) | round(1) }}%"></span></span><strong>{{ q }}</strong></li>
+      {% endfor %}
+    </ul>
+    <p class="num-nota">Estudantes: o campus foi deduzido pelo curso de graduação, segundo a oferta de cursos da Unipampa. Cursos oferecidos em mais de um campus, ou ainda sem informação, aparecem como "Não informado".</p>
+
+    <h2 class="num-tit">Curso de graduação por papel</h2>
+    <h3 class="num-sub">Estudantes ({{ n.estudantes }})</h3>
+    <ul class="barras">
+      {% for c, q in n.cursos %}
+      <li><span class="barras__rot">{{ c }}</span><span class="barras__trilho"><span class="barras__fill" style="width:{{ (q / n.maxcurso * 100) | round(1) }}%"></span></span><strong>{{ q }}</strong></li>
+      {% endfor %}
+    </ul>
+    <p class="num-nota">A contagem inclui bolsistas e voluntários. Cursos marcados como "Não informado" ainda não foram preenchidos no cadastro.</p>
+
+    <h3 class="num-sub">Preceptores e orientadores de serviço ({{ n.nserv }})</h3>
+    <ul class="barras">
+      {% for c, q in n.cursos_serv %}
+      <li><span class="barras__rot">{{ c }}</span><span class="barras__trilho"><span class="barras__fill" style="width:{{ (q / n.cursos_serv[0][1] * 100) | round(1) }}%"></span></span><strong>{{ q }}</strong></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

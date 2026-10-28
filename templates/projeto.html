@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("O projeto", "Preparar o cuidado e a comunidade para as emergências climáticas", "O " ~ site.nome ~ " é o projeto da Unipampa, em parceria com a Secretaria Municipal de Saúde de Uruguaiana, no programa " ~ site.programa ~ ", do Ministério da Saúde.") }}
+
+<section class="secao secao--curta">
+  <div class="wrap prosa">
+    <h2>O que é o {{ site.nome }}</h2>
+    <p>O PET-Saúde é um programa do Ministério da Saúde que aproxima a formação de estudantes da realidade dos serviços de saúde. Na edição <strong>Clima</strong> ({{ site.edital }}), o foco é o enfrentamento das emergências climáticas e ambientais no Sistema Único de Saúde (SUS).</p>
+    <p>O {{ site.nome }} é a nossa proposta para essa edição. Durante dois anos ({{ site.periodo }}), estudantes, professores da Unipampa e profissionais da rede municipal de saúde trabalham juntos em Uruguaiana para cuidar melhor das pessoas em um território exposto a enchentes, calor extremo e outros eventos climáticos.</p>
+
+    <h2>Por que clima e saúde</h2>
+    <p>As mudanças climáticas aprofundam desigualdades que já existem. Entre os efeitos estão doenças respiratórias, arboviroses, risco de contaminação da água, insegurança alimentar e nutricional e sofrimento psicológico. As inundações agravam doenças infecciosas e crônicas e dificultam o acesso aos serviços.</p>
+    <p>Mulheres e meninas são atingidas de forma mais intensa: assumem mais trabalho de cuidado e ficam mais expostas à violência durante deslocamentos e em abrigos temporários. Responder a isso exige equipes de saúde preparadas, informação confiável sobre o território e trabalho lado a lado com a comunidade.</p>
+
+    <h2>Por que Uruguaiana</h2>
+    <p>Uruguaiana fica na fronteira oeste do Rio Grande do Sul, às margens do rio Uruguai. Ali o problema é concreto, e existe uma rede de saúde para aprender e testar respostas:</p>
+    <ul class="lista-acoes">
+      <li>Cerca de 117 mil habitantes (IBGE, 2022), com desigualdades socioeconômicas, população que envelhece e grande dependência do SUS.</li>
+      <li>O rio Uruguai causa inundações recorrentes, agravadas pela ocupação de áreas de várzea.</li>
+      <li>Extensas áreas rurais, comunidades de difícil acesso e populações ribeirinhas, com dificuldade de acesso aos serviços especializados.</li>
+      <li>Uma rede estruturada: 21 Estratégias Saúde da Família, serviços de média e alta complexidade e ações de vigilância em saúde.</li>
+      <li>As enchentes de 2024 no Rio Grande do Sul mostraram como os serviços ficam sobrecarregados e como são importantes a prevenção, os planos de contingência e a vigilância.</li>
+    </ul>
+    <p>Por isso Uruguaiana é o <strong>território piloto</strong> do projeto. Aqui desenvolvemos, testamos e validamos estratégias, métodos de análise do território e ferramentas digitais que possam ser replicados em outros municípios, sobretudo os de fronteira, os ribeirinhos e os expostos a enchentes e estiagens.</p>
+
+    <h2>Como funciona</h2>
+    <p>Estudantes de diferentes cursos aprendem trabalhando nos serviços de saúde e nos territórios, junto com profissionais da rede. O trabalho é organizado em <strong>cinco grupos de aprendizagem tutorial (GATs)</strong>. Cada grupo tem 2 tutores (professores da Unipampa), 2 preceptores (profissionais dos serviços) e 8 estudantes bolsistas, além de voluntários. Orientadores de serviço, também profissionais da rede, acompanham os grupos.</p>
+  </div>
+</section>
+
+<section class="secao secao--bruma">
+  <div class="wrap">
+    <header class="secao__cab"><p class="etiqueta">Eixos</p><h2>Três frentes de trabalho</h2><p>Os cinco grupos se distribuem em três eixos temáticos do programa.</p></header>
+    <div class="eixo-cards">
+      {% for e in site.eixos %}
+      <a class="eixo-card cor-{{ e.cor }}" href="{{ root }}eixos/eixo-{{ e.n }}/">
+        <span class="eixo-card__num" aria-hidden="true">{{ e.n }}</span>
+        <span class="eixo-card__rot">Eixo {{ e.n }} · {% if e.gats|length > 1 %}GATs {{ e.gats|join(" e ") }}{% else %}GAT {{ e.gats[0] }}{% endif %}</span>
+        <strong>{{ e.curto }}</strong>
+        <span class="eixo-card__txt">{{ e.chamada }}</span>
+        <span class="eixo-card__ir">Ver o eixo {{ i.icon("seta", 16) }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--curta">
+  <div class="wrap duas-col">
+    <div>
+      <p class="etiqueta">O que vamos entregar</p>
+      <h2>Ferramentas e conhecimento para o território</h2>
+      <ul class="lista-acoes">
+        <li><strong>Materiais educativos</strong>: cartilhas, guias para profissionais, infográficos, vídeos e podcasts.</li>
+        <li><strong>Formação</strong> interprofissional e em saúde digital para estudantes e equipes dos serviços.</li>
+        <li><strong>Fluxos e protocolos de cuidado</strong> para situações de emergência climática, junto à rede e à Defesa Civil.</li>
+        <li><strong>Painéis interativos</strong> com indicadores ambientais, territoriais e epidemiológicos, atualizados de forma contínua.</li>
+        <li>Um <strong>geoportal</strong> que reúne clima, território, vulnerabilidades e agravos em saúde, para apoiar a vigilância e as decisões.</li>
+      </ul>
+      <p><a class="btn btn--sec" href="{{ root }}produtos/">Ver os produtos {{ i.icon("seta", 18) }}</a></p>
+    </div>
+    <div>
+      <p class="etiqueta">Quem cuidamos</p>
+      <h2>Públicos prioritários</h2>
+      <p>As ações dão atenção especial a quem é mais atingido pelas emergências climáticas, com foco na equidade em saúde.</p>
+      <ul class="tags">{% for t in site.publicos %}<li>{{ t }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao--bruma">
+  <div class="wrap">
+    <header class="secao__cab"><p class="etiqueta">Como trabalhamos</p><h2>Etapas do projeto</h2><p>Um ciclo de formação, território, ação e devolutiva ao longo dos 24 meses.</p></header>
+    <ol class="etapas">{% for e in site.etapas %}<li><h3>{{ e.titulo }}</h3><p>{{ e.texto }}</p></li>{% endfor %}</ol>
+  </div>
+</section>
+{% endblock %}

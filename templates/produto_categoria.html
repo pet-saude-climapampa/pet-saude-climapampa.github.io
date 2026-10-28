@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Produtos", cat.titulo, cat.texto, cat.cor) }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}produtos/">← Todos os produtos</a></p>
+    {% if itens %}
+    <div class="prod-grade cor-{{ cat.cor }}">
+      {% for it in itens %}
+      <article class="prod{% if it.url %} prod--link{% endif %}">
+        {% if it.ano or (not it.url and it.status) %}<div class="prod__meta"><span class="status">{{ it.ano if it.ano else it.status }}</span></div>{% endif %}
+        <h3>{% if it.url %}<a class="prod__link" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.titulo }}<span class="sr"> (abre em nova aba)</span></a>{% else %}{{ it.titulo }}{% endif %}</h3>
+        <p>{{ it.texto }}</p>
+        {% if it.url %}<span class="btn btn--primario" aria-hidden="true">Acessar {{ i.icon("externo", 18) }}</span>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="prod-vazio">Ainda não há registros nesta categoria. As produções aparecerão aqui à medida que forem publicadas.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

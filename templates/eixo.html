@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{% set e = eixo %}
+{% set gl = e.gats | map("string") | list %}
+{{ p.cabecalho("Eixo " ~ e.n ~ " · " ~ ("GATs " ~ e.gats|join(" e ") if e.gats|length > 1 else "GAT " ~ e.gats[0]), e.titulo, e.objetivo, e.cor) }}
+{% set ns = namespace(acoes=[], terr=[], focos=[], txt=[]) %}
+{% for n in e.gats %}
+  {% set g = gats[n] %}
+  {% if g.foco not in ns.focos %}{% set ns.focos = ns.focos + [g.foco] %}{% endif %}
+  {% for x in g.foco_texto or [] %}{% if x not in ns.txt %}{% set ns.txt = ns.txt + [x] %}{% endif %}{% endfor %}
+  {% if g.territorio not in ns.terr %}{% set ns.terr = ns.terr + [g.territorio] %}{% endif %}
+  {% for a in g.acoes %}{% if a not in ns.acoes %}{% set ns.acoes = ns.acoes + [a] %}{% endif %}{% endfor %}
+{% endfor %}
+<section class="secao secao--curta">
+  <div class="wrap prosa">
+    <h2>Foco do eixo</h2>
+    {% for f in ns.focos %}<p class="foco">{{ f }}</p>{% endfor %}
+    {% for x in ns.txt %}<p>{{ x }}</p>{% endfor %}
+    <h2>Ações em destaque</h2>
+    <ul class="lista-acoes">{% for a in ns.acoes %}<li>{{ a }}</li>{% endfor %}</ul>
+    <h2>Território de atuação</h2>
+    {% for t in ns.terr %}<p>{{ t }}.</p>{% endfor %}
+  </div>
+</section>
+<section class="secao secao--bruma">
+  <div class="wrap">
+    <header class="secao__cab"><p class="etiqueta">Quem faz</p><h2>Equipe do eixo {{ e.n }}</h2>
+      <p>Tutores, preceptores e estudantes {{ ("dos GATs " ~ e.gats|join(" e ")) if e.gats|length > 1 else ("do GAT " ~ e.gats[0]) }} estão na página da equipe.</p></header>
+    <a class="btn btn--primario" href="{{ root }}equipe/#eixo-{{ e.n }}">Ver a equipe do eixo {{ e.n }} {{ i.icon("seta", 18) }}</a>
+  </div>
+</section>
+<nav class="wrap gat-nav" aria-label="Outros eixos">
+  {% if anterior %}<a href="{{ root }}eixos/eixo-{{ anterior.n }}/">← Eixo {{ anterior.n }}</a>{% else %}<span></span>{% endif %}
+  <a href="{{ root }}equipe/">Toda a equipe</a>
+  {% if proximo %}<a href="{{ root }}eixos/eixo-{{ proximo.n }}/">Eixo {{ proximo.n }} →</a>{% else %}<span></span>{% endif %}
+</nav>
+{% endblock %}

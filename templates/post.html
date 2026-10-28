@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho(post.categoria, post.titulo) }}
+<article class="secao secao--curta">
+  <div class="wrap prosa prosa--post">
+    <p class="meta">{{ i.icon("calendario", 16) }} {{ post.data_br }}{% if post.autor %} · {{ post.autor }}{% endif %}</p>
+    {{ post.html | safe }}
+    <p class="post-volta"><a class="link-seta" href="{{ root }}noticias/">← Todas as notícias</a></p>
+  </div>
+</article>
+{% endblock %}

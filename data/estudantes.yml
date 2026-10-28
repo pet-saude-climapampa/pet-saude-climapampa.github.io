@@ -1,0 +1,245 @@
+# Estudantes por GAT (nome e curso; extraído dos termos). voluntario: true = voluntário(a), sem bolsa.
+# Para ocultar do site, apague este arquivo ou deixe a lista vazia.
+- gat: 1
+  nome: Alexandre Cavalcante Pinheiro
+  curso: Medicina
+  voluntario: false
+  foto: e-alexandre-cavalcante-pinheiro.jpg
+- gat: 1
+  nome: Maria Eduarda Santos Arouche
+  curso: Medicina
+  voluntario: false
+  foto: e-maria-eduarda-santos-arouche.jpg
+- gat: 1
+  nome: Maria Luisa Hipolito Gundim dos Santos
+  curso: Medicina
+  voluntario: false
+  foto: e-maria-luisa-hipolito-gundim-dos-santos.jpg
+- gat: 1
+  nome: Maria Luiza Vega Bidinotto
+  curso: Farmácia
+  voluntario: false
+- gat: 1
+  nome: Mariana Elizabete Missio Saldanha
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-mariana-elizabete-missio-saldanha.jpg
+- gat: 1
+  nome: Nathalia Dobler Debus
+  curso: Enfermagem
+  voluntario: true
+  foto: e-nathalia-dobler-debus.jpg
+- gat: 1
+  nome: Rafaela Hoffmann Rodrigues
+  curso: Ciências sociais
+  voluntario: false
+  foto: e-rafaela-hoffmann-rodrigues.jpg
+- gat: 1
+  nome: Rubler Peres Rocha
+  curso: Engenharia de aquicultura
+  voluntario: false
+  foto: e-rubler-peres-rocha.jpg
+- gat: 1
+  nome: Stephany Raisa Machado Pereira
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-stephany-raisa-machado-pereira.jpg
+- gat: 1
+  nome: Túlio Amaral Santos
+  curso: Medicina
+  voluntario: true
+  foto: e-tulio-amaral-santos.jpg
+- gat: 1
+  nome: Vinícius Rafael Bonilha Rao
+  curso: Fisioterapia
+  voluntario: true
+  foto: e-vinicius-rafael-bonilha-rao.jpg
+- gat: 1
+  nome: Enzo Augusto Rosa Mafra
+  curso: Medicina
+  voluntario: true
+  foto: e-enzo-augusto-rosa-mafra.jpg
+- gat: 1
+  nome: Nadyne Rotta Engroff
+  curso: Fisioterapia
+  voluntario: true
+  foto: e-nadyne-rotta-engroff.jpg
+- gat: 2
+  nome: Cynthia Marques de Souza Rocha
+  curso: Medicina
+  voluntario: false
+  foto: e-cynthia-marques-de-souza-rocha.jpg
+- gat: 2
+  nome: Dhiego Santos Brito
+  curso: Medicina
+  voluntario: false
+  foto: e-dhiego-santos-brito.jpg
+- gat: 2
+  nome: Letícia dos Santos Fogliato
+  curso: Enfermagem
+  voluntario: false
+  foto: e-leticia-dos-santos-fogliato.jpg
+- gat: 2
+  nome: Nicolas Petroceli Aguirre
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-nicolas-petroceli-aguirre.jpg
+- gat: 2
+  nome: Otávio Felipe Pereira
+  curso: Medicina
+  voluntario: false
+  foto: e-otavio-felipe-pereira.jpg
+- gat: 2
+  nome: Peterson Silveira da Silva
+  curso: Direito
+  voluntario: false
+  foto: e-peterson-silveira-da-silva.jpg
+- gat: 2
+  nome: Rafaelly de Paula
+  curso: Direito
+  voluntario: false
+  foto: e-rafaelly-de-paula.jpg
+- gat: 2
+  nome: Talita Cristina Marinho Pereira
+  curso: Medicina
+  voluntario: false
+  foto: e-talita-cristina-marinho-pereira.jpg
+- gat: 3
+  nome: Ana Carolina Vieira
+  curso: Medicina
+  voluntario: false
+  foto: e-ana-carolina-vieira.jpg
+- gat: 3
+  nome: Bianca de Oliveira Durgante
+  curso: Engenharia da computação
+  voluntario: false
+  foto: e-bianca-de-oliveira-durgante.jpg
+- gat: 3
+  nome: Fernanda Emanuelli Dias Tito
+  curso: Enfermagem
+  voluntario: false
+  foto: e-fernanda-emanuelli-dias-tito.jpg
+- gat: 3
+  nome: João Vitor Mas Urtado Rodrigues
+  curso: Medicina
+  voluntario: false
+  foto: e-joao-vitor-mas-urtado-rodrigues.jpg
+- gat: 3
+  nome: Júlia Isabelli dos Santos Fumagalli
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-julia-isabelli-dos-santos-fumagalli.jpg
+- gat: 3
+  nome: Larissa Lima do Carmo Rios
+  curso: Medicina
+  voluntario: false
+  foto: e-larissa-lima-do-carmo-rios.jpg
+- gat: 3
+  nome: Marcos Paulo Fernandes Lobato
+  curso: Medicina
+  voluntario: false
+  foto: e-marcos-paulo-fernandes-lobato.jpg
+- gat: 3
+  nome: Rebecca Bezerra da Silva
+  curso: Direito
+  voluntario: false
+- gat: 4
+  nome: Agnes Goulart Nunes
+  curso: Farmácia
+  voluntario: false
+  foto: e-agnes-goulart-nunes.jpg
+- gat: 4
+  nome: Bruno Panciera
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-bruno-panciera.jpg
+- gat: 4
+  nome: Fabiano de Freitas Mion
+  curso: Ciência da computação
+  voluntario: false
+  foto: e-fabiano-de-freitas-mion.jpg
+- gat: 4
+  nome: Laís Miranda de Oliveira
+  curso: Medicina
+  voluntario: false
+  foto: e-lais-miranda-de-oliveira.jpg
+- gat: 4
+  nome: Luiza Martins Loureiro
+  curso: Direito
+  voluntario: false
+  foto: e-luiza-martins-loureiro.jpg
+- gat: 4
+  nome: Raquel Comin Franca
+  curso: Medicina
+  voluntario: false
+  foto: e-raquel-comin-franca.jpg
+- gat: 4
+  nome: Sara Jalilah Costa Melo
+  curso: Medicina
+  voluntario: false
+  foto: e-sara-jalilah-costa-melo.jpg
+- gat: 4
+  nome: Thiago Alejandro Vazquez Canteros
+  curso: Medicina
+  voluntario: false
+  foto: e-thiago-alejandro-vazquez-canteros.jpg
+- gat: 5
+  nome: Bruna da Costa Ribeiro
+  curso: Enfermagem
+  voluntario: false
+  foto: e-bruna-da-costa-ribeiro.jpg
+- gat: 5
+  nome: Davi Lopes Lemos
+  curso: Engenharia da computação
+  voluntario: false
+  foto: e-davi-lopes-lemos.jpg
+- gat: 5
+  nome: Heduardo Witkoski Barcelos da Rocha
+  curso: Engenharia da computação
+  voluntario: false
+  foto: e-heduardo-witkoski-barcelos-da-rocha.jpg
+- gat: 5
+  nome: João Pedro Marchesi Tavares
+  curso: Medicina
+  voluntario: false
+  foto: e-joao-pedro-marchesi-tavares.jpg
+- gat: 5
+  nome: Leonardo Porto de Bastiani
+  curso: Fisioterapia
+  voluntario: false
+  foto: e-leonardo-porto-de-bastiani.jpg
+- gat: 5
+  nome: Manuella Dutra Bortolazzo
+  curso: Enfermagem
+  voluntario: false
+  foto: e-manuella-dutra-bortolazzo.jpg
+- gat: 5
+  nome: Maria Antonia Dutra Fernandes
+  curso: Enfermagem
+  voluntario: false
+  foto: e-maria-antonia-dutra-fernandes.jpg
+- gat: 5
+  nome: Valdir Paz Ribeiro Junior
+  curso: Medicina
+  voluntario: false
+  foto: e-valdir-paz-ribeiro-junior.jpg
+- gat: 5
+  nome: Jennifer Ferreira Guterres
+  curso: Mestrado em Computação Aplicada
+  voluntario: true
+  foto: e-jennifer-ferreira-guterres.jpg
+- gat: 5
+  nome: Julia Dantas Arima
+  curso: Enfermagem
+  voluntario: true
+  foto: e-julia-dantas-arima.jpg
+- gat: 5
+  nome: Manuela Penner Hubert
+  curso: Engenharia de energia
+  voluntario: true
+  foto: e-manuela-penner-hubert.jpg
+- gat: 5
+  nome: Sofia Delatorre Fonseca
+  curso: Medicina
+  voluntario: true
+  foto: e-sofia-delatorre-fonseca.jpg

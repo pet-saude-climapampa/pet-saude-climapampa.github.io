@@ -1,0 +1,24 @@
+{% macro cabecalho(rotulo, titulo, texto="", cor="azul") -%}
+<section class="pagina-cab cor-{{ cor }}">
+  <div class="wrap">
+    <p class="etiqueta">{{ rotulo }}</p>
+    <h1>{{ titulo }}</h1>
+    {% if texto %}<p class="pagina-cab__texto">{{ texto }}</p>{% endif %}
+  </div>
+  <svg class="pagina-cab__onda" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 30C260 70 520 0 780 30S1200 62 1440 24V60H0z" fill="#fff"/></svg>
+</section>
+{%- endmacro %}
+
+{% macro cartao(pe, root, cor="verde") -%}
+<article class="pessoa cor-{{ cor }}">
+  {% if pe.foto %}
+  <img src="{{ root }}static/img/equipe/{{ pe.foto }}" alt="Foto de {{ pe.nome }}" width="720" height="720" loading="lazy">
+  {% else %}
+  <span class="pessoa__avatar" aria-hidden="true">{{ pe.nome.split()[0][0] }}{{ pe.nome.split()[-1][0] }}</span>
+  {% endif %}
+  <h3>{{ pe.nome }}</h3>
+  <p class="pessoa__funcao">{{ pe.funcao }}</p>
+  {% if pe.formacao and pe.atuacao and pe.formacao == pe.atuacao %}<p class="pessoa__info">Formação e atuação: {{ pe.formacao }}</p>{% else %}{% if pe.formacao %}<p class="pessoa__info">Formação: {{ pe.formacao }}</p>{% endif %}{% if pe.atuacao %}<p class="pessoa__info">Atua em: {{ pe.atuacao }}</p>{% endif %}{% endif %}
+  {% if pe.lattes %}<a class="pessoa__lattes" href="{{ pe.lattes }}" target="_blank" rel="noopener">Currículo Lattes<span class="sr"> de {{ pe.nome }}</span> ↗</a>{% endif %}
+</article>
+{%- endmacro %}

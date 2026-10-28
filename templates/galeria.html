@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Galeria", "Momentos do projeto", "Registros das atividades, encontros e ações do PET-Saúde Clima Unipampa.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    {% if albuns %}
+    <div class="gal-albuns">
+      {% for a in albuns %}
+      <a class="gal-album" href="{{ root }}galeria/{{ a.id }}/">
+        <span class="gal-album__img">{% if a.capa_foto %}<img src="{{ root }}{{ a.capa_foto.thumb }}" alt="" loading="lazy">{% else %}{{ i.icon("foto", 40) }}{% endif %}</span>
+        <strong>{{ a.titulo }}</strong>
+        <span class="gal-album__meta">{% if a.data_br %}{{ a.data_br }} · {% endif %}{% if a.fotos|length == 1 %}1 foto{% else %}{{ a.fotos|length }} fotos{% endif %}</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="prod-vazio">As fotos aparecerão aqui à medida que as atividades acontecerem.</p>
+    {% endif %}
+    <p class="gal-aviso">Imagens publicadas com autorização das pessoas retratadas. Para pedir a retirada de uma imagem, fale conosco pelo <a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">Instagram</a>.</p>
+  </div>
+</section>
+{% endblock %}

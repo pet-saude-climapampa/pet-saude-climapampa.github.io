@@ -1,0 +1,21 @@
+# Galeria de fotos. Cada álbum é uma atividade ou evento (não um grupo).
+#
+# Como acrescentar um álbum:
+#   1. Crie a pasta  galeria/<id>/  (na raiz do projeto, ao lado de build.py) e coloque as fotos lá.
+#   2. Acrescente uma entrada abaixo com o mesmo <id>.
+#   3. Rode  python build.py  . O build reduz as fotos e cria as miniaturas sozinho.
+#
+# Campos: id (nome da pasta), titulo, data (AAAA-MM-DD), legenda (opcional),
+#         capa (opcional: nome do arquivo da foto de capa; padrão: a primeira),
+#         legendas (opcional: legenda por foto, "arquivo.jpg": "texto").
+# Publique somente fotos de pessoas que autorizaram o uso de imagem.
+albuns:
+  - id: cartazes
+    titulo: "Cartazes das atividades"
+    data: 2026-09-21
+    legenda: "Cartazes de divulgação da palestra de abertura e dos minicursos de formação."
+    capa: palestra-de-abertura.png
+    legendas:
+      palestra-de-abertura.png: "Palestra de abertura, 21 de setembro de 2026"
+      minicurso-canva.png: "Minicurso Canva, 2 de setembro de 2026"
+      minicurso-lattes.png: "Minicurso sobre o currículo Lattes, 18 de setembro de 2026"

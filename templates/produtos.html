@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Produtos", "O que produzimos", "Publicações, materiais, plataformas, cursos e pesquisas que nascem do trabalho dos grupos tutoriais. Escolha o tipo de produção.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <div class="areas">
+      {% for a in site.produtos_categorias %}
+      <a class="area-card cor-{{ a.cor }}" href="{{ root }}produtos/{{ a.id }}/">
+        <span class="area-card__icone">{{ i.icon(a.icone, 28) }}</span>
+        <strong>{{ a.titulo }}</strong>
+        <span class="area-card__txt">{{ a.texto }}</span>
+        <span class="area-card__n">{% if a.total == 0 %}Em breve{% elif a.total == 1 %}1 item{% else %}{{ a.total }} itens{% endif %}<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

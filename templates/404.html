@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Erro 404", "Página não encontrada", "O endereço que você tentou abrir não existe ou mudou de lugar.") }}
+<section class="secao secao--curta"><div class="wrap prosa"><p><a class="btn btn--primario" href="{{ root }}">Voltar ao início</a></p></div></section>
+{% endblock %}
