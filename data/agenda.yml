@@ -10,6 +10,7 @@
 #   resumo        1 ou 2 frases: do que se trata e quem pode participar
 #   inscricao     link do formulário (opcional)     link   link da reunião (opcional)
 #   cartaz        arquivo em static/img/agenda/ (opcional)
+#   destaque      false = não aparece no bloco da página inicial (use em reuniões internas)
 #   descricao     texto longo (opcional): aparece só em "Saiba mais"; deixe de fora se o resumo bastar
 - id: seminario-adapta-sus
   tipo: Seminário
@@ -23,3 +24,39 @@
   inscricao: "https://docs.google.com/forms/d/e/1FAIpQLSefor-hl9WpPzGuDfRwKtA4_xRxn7EK6th2zDgISwAFwrYY8A/viewform"
   link: "https://meet.google.com/dwc-efda-kfu"
   cartaz: seminario-adapta-sus.jpg
+
+# --- Reuniões gerais do PET (horário e link ainda não definidos) ---
+- id: reuniao-geral-2026-11-03
+  tipo: Reunião
+  titulo: "Reunião geral do PET-Saúde: Clima"
+  data: 2026-11-03
+  destaque: false
+- id: reuniao-geral-2026-11-25
+  tipo: Reunião
+  titulo: "Reunião geral do PET-Saúde: Clima"
+  data: 2026-11-25
+  destaque: false
+- id: reuniao-geral-2026-12-09
+  tipo: Reunião
+  titulo: "Reunião geral do PET-Saúde: Clima"
+  data: 2026-12-09
+  destaque: false
+- id: reuniao-geral-2027-01-22
+  tipo: Reunião
+  titulo: "Reunião geral do PET-Saúde: Clima"
+  data: 2027-01-22
+  destaque: false
+
+# --- Reuniões do GAT 5 ---
+- id: reuniao-gat5-2026-10-31
+  tipo: Reunião
+  titulo: "Reunião do GAT 5"
+  data: 2026-10-31
+  inicio: "10:00"
+  destaque: false
+- id: reuniao-gat5-2026-12-12
+  tipo: Reunião
+  titulo: "Reunião do GAT 5"
+  data: 2026-12-12
+  inicio: "10:00"
+  destaque: false

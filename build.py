@@ -79,11 +79,15 @@ def ics_atividade(a, site):
     if a.get("inscricao"):
         desc.append("Inscrição: " + a["inscricao"])
     ini = a.get("inicio", "09:00")
-    fim = a.get("fim") or ini
+    fim = a.get("fim")
+    if not fim:  # sem horário de término: 1 hora
+        hh, mm = map(int, str(ini).split(":"))
+        fim = f"{min(hh + 1, 23):02d}:{mm:02d}"
     linhas = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ClimaPampa//Agenda//PT-BR", "CALSCALE:GREGORIAN", "BEGIN:VEVENT",
               f"UID:{a['id']}@pet-saude-climapampa.github.io",
               "DTSTAMP:" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ"),
-              "DTSTART:" + utc(a["data"], ini), "DTEND:" + utc(a["data"], fim),
+              *(["DTSTART;VALUE=DATE:" + a["data"].strftime("%Y%m%d"), "DTEND;VALUE=DATE:" + (a["data"] + dt.timedelta(days=1)).strftime("%Y%m%d")]
+                if not a.get("inicio") else ["DTSTART:" + utc(a["data"], ini), "DTEND:" + utc(a["data"], fim)]),
               "SUMMARY:" + esc(a["titulo"]), "DESCRIPTION:" + esc("\n".join(x for x in desc if x)),
               "LOCATION:" + esc(a.get("modalidade", "")), "END:VEVENT", "END:VCALENDAR"]
     return "\r\n".join(linhas) + "\r\n"
@@ -276,7 +280,7 @@ def gerar():
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, agenda_prox=ag_prox, agenda_real=ag_real, gats=gats, eixos=eixos, pessoas=pessoas,
+            site=site, noticias=noticias, agenda_prox=ag_prox, agenda_home=[a for a in ag_prox if a.get("destaque", True)][:3], agenda_real=ag_real, gats=gats, eixos=eixos, pessoas=pessoas,
             root=root, ano=ano, **ctx)
         saida = DIST / destino
         saida.parent.mkdir(parents=True, exist_ok=True)

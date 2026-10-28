@@ -8,7 +8,7 @@
     <p class="ativ__tipo">{{ a.tipo }}</p>
     <h3>{{ a.titulo }}</h3>
     <ul class="ativ__chips" aria-label="Detalhes">
-      <li>{{ a.dia_semana[:3] | capitalize }}, {{ a.dia }} de {{ a.data_br.split(" de ")[1] }}</li>
+      <li>{{ a.dia_semana[:3] | capitalize }}, {{ a.dia }} de {{ a.data_br.split(" de ")[1] }}{% if a.data.year != ano %} de {{ a.data.year }}{% endif %}</li>
       {% if a.horario %}<li>{{ a.horario }}</li>{% endif %}
       {% if a.modalidade %}<li>{{ a.modalidade }}</li>{% endif %}
       {% if a.certificacao %}<li class="ativ__cert">{{ a.certificacao }}</li>{% endif %}
