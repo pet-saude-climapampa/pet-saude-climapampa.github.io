@@ -11,7 +11,7 @@
   <meta property="og:title" content="{% if title %}{{ title }} · {% endif %}{{ site.nome }}">
   <meta property="og:description" content="{{ description or site.descricao_curta }}">
   <meta property="og:locale" content="pt_BR">
-  <link rel="icon" type="image/png" href="{{ root }}static/img/favicon.png">
+  <link rel="icon" type="image/png" href="{{ root }}static/img/favicon-climapampa.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
@@ -31,7 +31,7 @@
 
   <div class="app">
     <aside class="lateral-nav" id="menu">
-      <a class="lateral-nav__marca" href="{{ root }}" aria-label="{{ site.nome }} — página inicial"><img src="{{ root }}static/img/logo-vertical.png" width="600" height="644" alt="PET-Saúde Clima"></a>
+      <a class="lateral-nav__marca" href="{{ root }}" aria-label="{{ site.nome }} — página inicial"><img src="{{ root }}static/img/logo-climapampa.png" width="603" height="800" alt="PET-Saúde Clima — Unipampa"></a>
       <nav aria-label="Principal">
         <ul class="lnav">
           <li><a href="{{ root }}"{% if active == "home" %} aria-current="page"{% endif %}>{{ i.icon("casa", 20) }}Início</a></li>
@@ -76,8 +76,8 @@
         <div class="wrap rodape__linha">
           {% if site.logo_unipampa %}<img class="rodape__unipampa" src="{{ root }}{{ site.logo_unipampa }}" alt="Universidade Federal do Pampa" width="704" height="127" loading="lazy">{% else %}<strong class="rodape__unipampa-txt">Unipampa</strong>{% endif %}
           <p class="rodape__contato">{{ site.local }}{% if site.contato.email %} · {{ site.contato.email }}{% endif %}{% if site.contato.instagram %} · <a href="{{ site.contato.instagram }}" target="_blank" rel="noopener">@petsaudeclimaunipampa</a>{% endif %}</p>
+          <p class="rodape__copy">© {{ ano }} {{ site.nome }} · {{ site.programa }}</p>
         </div>
-        <div class="wrap rodape__base"><span>© {{ ano }} {{ site.nome }} · {{ site.programa }}</span><a href="{{ root }}sobre/">Sobre o site</a></div>
       </footer>
     </div>
   </div>

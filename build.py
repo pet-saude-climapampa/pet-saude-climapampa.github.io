@@ -280,7 +280,7 @@ def gerar():
         profundidade = len(Path(destino).parts) - 1
         root = base_abs if base_abs is not None else "../" * profundidade
         html = env.get_template(template).render(
-            site=site, noticias=noticias, agenda_prox=ag_prox, agenda_home=[a for a in ag_prox if a.get("destaque", True)][:3], agenda_real=ag_real, gats=gats, eixos=eixos, pessoas=pessoas,
+            site=site, noticias=noticias, agenda_prox=ag_prox, agenda_home=[a for a in ag_prox if a.get("destaque", True)][:1], agenda_real=ag_real, gats=gats, eixos=eixos, pessoas=pessoas,
             root=root, ano=ano, **ctx)
         saida = DIST / destino
         saida.parent.mkdir(parents=True, exist_ok=True)
