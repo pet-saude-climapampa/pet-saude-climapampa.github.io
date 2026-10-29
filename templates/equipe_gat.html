@@ -17,7 +17,7 @@
     {% if alunos %}
     <h3 class="sub">Estudantes</h3>
     <div class="pessoas">
-      {% for s in alunos %}{{ p.cartao({"nome": s.nome, "funcao": [s.curso, "Voluntário(a)" if s.voluntario else ""] | select | join(" · "), "foto": s.foto}, root, eixo.cor) }}{% endfor %}
+      {% for s in alunos %}{{ p.cartao({"nome": s.nome, "funcao": s.curso or "", "foto": s.foto}, root, eixo.cor) }}{% endfor %}
     </div>
     {% endif %}
   </div>
