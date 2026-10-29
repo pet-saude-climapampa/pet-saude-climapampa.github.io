@@ -514,3 +514,7 @@ body{background:var(--fundo-pagina)}
   .inicio__logo{height:auto;width:min(170px,44vw)}
   .home-agenda{margin:0 12px 12px}
 }
+
+/* Página "Envie conteúdo" */
+.sobre-lista{margin:0;padding-left:1.2em;display:grid;gap:8px;line-height:1.5}
+.sobre-lista li::marker{color:var(--primaria)}

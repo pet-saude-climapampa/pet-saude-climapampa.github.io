@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Para a equipe", "Envie conteúdo para o site", "Membros de todos os GATs, da coordenação, da preceptoria e da orientação de serviço podem enviar material para o site do ClimaPampa.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <div class="sobre-grade">
+      <article class="sobre-card cor-azul">
+        <h2>O que dá para enviar</h2>
+        <ul class="sobre-lista">
+          <li><strong>Atividades</strong> para a agenda: seminários, minicursos, oficinas, rodas de conversa.</li>
+          <li><strong>Produtos</strong> do projeto: materiais, plataformas, artigos, livros, participação em eventos.</li>
+          <li><strong>Notícias</strong> sobre o que o grupo está fazendo.</li>
+          <li><strong>Fotos</strong> para a galeria.</li>
+        </ul>
+      </article>
+      <article class="sobre-card cor-verde">
+        <h2>Como funciona</h2>
+        <ol class="sobre-lista">
+          <li>Preencha o formulário. Ele pede seu nome, seu grupo e o tipo de envio.</li>
+          <li>Para cartazes, fotos e arquivos, cole o link do Drive e compartilhe o arquivo com o e-mail do projeto, indicado no formulário.</li>
+          <li>A equipe de curadoria revisa o envio e a coordenação do site publica.</li>
+        </ol>
+      </article>
+      <article class="sobre-card sobre-card--larga cor-amarelo">
+        <h2>Antes de enviar</h2>
+        <p>Envie imagens apenas de pessoas que assinaram o termo de autorização de uso de imagem do projeto. Nada é publicado automaticamente: todo envio passa por revisão e pode levar alguns dias.</p>
+        {% if site.envios and site.envios.url %}
+        <p><a class="btn btn--primario" href="{{ site.envios.url }}" target="_blank" rel="noopener">Abrir o formulário {{ i.icon("externo", 18) }}</a></p>
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock %}

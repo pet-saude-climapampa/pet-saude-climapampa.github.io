@@ -240,3 +240,7 @@ campus_por_curso:
   Mestrado em Computação Aplicada: Bagé
   Engenharia de energia: Bagé
   Engenharia de aquicultura: Uruguaiana
+
+# Página "Envie conteúdo" (para a equipe do PET): formulário de envio de atividades, produtos, notícias e fotos
+envios:
+  url: "https://docs.google.com/forms/d/e/1FAIpQLSfQetddlM63eo2K2q0qUrcYV53OHT1UC8WSP5pNJy_hA3sp9g/viewform"
