@@ -297,6 +297,7 @@ def gerar():
     for e in site["eixos"]:
         for g in e["gats"]:
             render("equipe_gat.html", f"equipe/gat-{g}/index.html", active="equipe", title=f"Equipe do GAT {g}", eixo=e, gat=g)
+    render("equipe_orientadores.html", "equipe/orientadores/index.html", active="equipe", title="Orientação de serviço")
     render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:
         itens = [p for p in site["produtos"] if p["categoria"] == cat["id"]]

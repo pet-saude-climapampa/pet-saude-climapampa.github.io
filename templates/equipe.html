@@ -6,10 +6,17 @@
 <section class="secao secao--curta secao--compacta">
   <div class="wrap">
     {% set coord = pessoas[site.equipe.coordenacao] %}
-    <a class="area-card area-card--mini area-card--faixa cor-verde" href="{{ root }}equipe/coordenacao/">
-      <span><strong>Coordenação geral</strong><span class="area-card__txt">{{ coord.funcao }}: {{ coord.nome }}</span></span>
-      <span class="area-card__n">Ver<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
-    </a>
+    {% set orient = site.equipe.pessoas | selectattr("papel", "equalto", "orientacao") | list %}
+    <div class="faixas">
+      <a class="area-card area-card--mini area-card--faixa cor-verde" href="{{ root }}equipe/coordenacao/">
+        <span><strong>Coordenação geral</strong><span class="area-card__txt">{{ coord.funcao }}: {{ coord.nome }}</span></span>
+        <span class="area-card__n">Ver<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+      </a>
+      <a class="area-card area-card--mini area-card--faixa cor-amarelo" href="{{ root }}equipe/orientadores/">
+        <span><strong>Orientação de serviço</strong><span class="area-card__txt">{{ orient | length }} orientadores, ligados ao projeto como um todo</span></span>
+        <span class="area-card__n">Ver<span aria-hidden="true">{{ i.icon("seta", 16) }}</span></span>
+      </a>
+    </div>
 
     <div class="estrut">
       {% for bloco in estrutura %}

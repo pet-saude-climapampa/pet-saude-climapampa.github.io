@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("Equipe", "Orientação de serviço", "Profissionais dos serviços de saúde que orientam o trabalho do projeto como um todo. Não pertencem a um GAT específico.", "amarelo") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}equipe/">← Equipe</a></p>
+    {% set lista = site.equipe.pessoas | selectattr("papel", "equalto", "orientacao") | list %}
+    <div class="pessoas">{% for pe in lista %}{{ p.cartao(pe, root, "amarelo") }}{% endfor %}</div>
+  </div>
+</section>
+{% endblock %}

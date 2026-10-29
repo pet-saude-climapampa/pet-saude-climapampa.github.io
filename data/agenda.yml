@@ -25,6 +25,16 @@
   link: "https://meet.google.com/dwc-efda-kfu"
   cartaz: seminario-adapta-sus.jpg
 
+- id: minicurso-pesquisa-cientifica
+  tipo: Minicurso
+  titulo: "Pesquisa científica na prática: ferramentas para buscar, organizar e escrever"
+  data: 2026-11-04
+  inicio: "19:30"
+  fim: "21:00"
+  modalidade: "On-line, Google Meet"
+  resumo: "Ferramentas em foco: Connected Papers, Zotero, Overleaf e Consensus. Mediação: Francisco Bortoluzzi Neto (orientador de serviço) e Jennifer Ferreira Guterres (voluntária). Promoção: GAT 5, Eixo 3."
+  cartaz: minicurso-pesquisa-cientifica.jpg
+
 # --- Reuniões gerais do PET (horário e link ainda não definidos) ---
 - id: reuniao-geral-2026-11-03
   tipo: Reunião
