@@ -35,14 +35,15 @@
       <nav aria-label="Principal">
         <ul class="lnav">
           <li><a href="{{ root }}"{% if active == "home" %} aria-current="page"{% endif %}>{{ i.icon("casa", 20) }}Início</a></li>
-          <li><a href="{{ root }}o-projeto/"{% if active == "projeto" %} aria-current="page"{% endif %}>{{ i.icon("info", 20) }}O projeto</a></li>
           <li>
-            <details class="lnav__det"{% if active == "eixos" %} open data-fixo{% endif %}>
-              <summary class="lnav__grupo">{{ i.icon("grade", 20) }}<span>Eixos</span><svg class="lnav__seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <details class="lnav__det"{% if active in ["projeto", "eixos", "documentos"] %} open data-fixo{% endif %}>
+              <summary class="lnav__grupo">{{ i.icon("info", 20) }}<span>O projeto</span><svg class="lnav__seta" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
               <ul class="lnav__eixos">
+                <li><a class="cor-azul" href="{{ root }}o-projeto/"{% if active == "projeto" %} aria-current="page"{% endif %}><span class="pt" aria-hidden="true"></span>Apresentação</a></li>
                 {% for e in site.eixos %}
-                <li><a class="cor-{{ e.cor }}" href="{{ root }}eixos/eixo-{{ e.n }}/"{% if active == "eixos" and eixo is defined and eixo.n == e.n %} aria-current="page"{% endif %}><span class="pt" aria-hidden="true"></span>{{ e.curto }}</a></li>
+                <li><a class="cor-{{ e.cor }}" href="{{ root }}eixos/eixo-{{ e.n }}/"{% if active == "eixos" and eixo is defined and eixo.n == e.n %} aria-current="page"{% endif %}><span class="pt" aria-hidden="true"></span>Eixo {{ e.n }} · {{ e.curto }}</a></li>
                 {% endfor %}
+                <li><a class="cor-azul" href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}><span class="pt" aria-hidden="true"></span>Documentos</a></li>
               </ul>
             </details>
           </li>
@@ -56,7 +57,6 @@
             </details>
           </li>
           <li><a href="{{ root }}produtos/"{% if active == "produtos" %} aria-current="page"{% endif %}>{{ i.icon("livro", 20) }}Produtos</a></li>
-          <li><a href="{{ root }}documentos/"{% if active == "documentos" %} aria-current="page"{% endif %}>{{ i.icon("formacao", 20) }}Documentos</a></li>
           <li><a href="{{ root }}agenda/"{% if active == "agenda" %} aria-current="page"{% endif %}>{{ i.icon("calendario", 20) }}Agenda</a></li>
           <li><a href="{{ root }}noticias/"{% if active == "noticias" %} aria-current="page"{% endif %}>{{ i.icon("jornal", 20) }}Notícias</a></li>
           <li><a href="{{ root }}galeria/"{% if active == "galeria" %} aria-current="page"{% endif %}>{{ i.icon("foto", 20) }}Galeria</a></li>
