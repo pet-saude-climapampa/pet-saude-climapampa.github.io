@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% macro lista(g) %}
+<ul class="docs-lista">
+  {% for d in g.itens %}
+  <li class="doc">
+    <div class="doc__corpo">
+      <p class="doc__meta">{{ d.fonte }}{% if d.data %} · {{ d.data }}{% endif %}</p>
+      <h3>{{ d.titulo }}</h3>
+      {% if d.texto %}<p>{{ d.texto }}</p>{% endif %}
+    </div>
+    {% if d.url %}
+    <a class="btn btn--sec doc__btn" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.rotulo | default("Abrir") }} {{ i.icon("externo", 16) }}</a>
+    {% elif d.interno %}
+    <a class="btn btn--sec doc__btn" href="{{ root }}{{ d.interno }}">{{ d.rotulo | default("Abrir") }} {{ i.icon("seta", 16) }}</a>
+    {% elif d.arquivo %}
+    <a class="btn btn--sec doc__btn" href="{{ root }}{{ d.arquivo }}" target="_blank" rel="noopener">{{ d.rotulo | default("Abrir") }} {{ i.icon("externo", 16) }}</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+{% block conteudo %}
+{{ p.cabecalho("Documentos", "Documentos do programa e do projeto", "Normas e documentos oficiais do PET-Saúde: Clima e do ClimaPampa.") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    {% for g in site.documentos %}
+    {% if g.recolhido %}
+    <details class="docs-mais cor-{{ g.cor | default('verde') }}">
+      <summary>{{ g.grupo }} <span>({{ g.itens | length }})</span></summary>
+      {{ lista(g) }}
+    </details>
+    {% else %}
+    <section class="docs-grupo cor-{{ g.cor | default('azul') }}">
+      <h2 class="docs-grupo__tit">{{ g.grupo }}</h2>
+      {% if g.texto %}<p class="docs-grupo__txt">{{ g.texto }}</p>{% endif %}
+      {{ lista(g) }}
+    </section>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

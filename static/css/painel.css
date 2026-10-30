@@ -518,3 +518,25 @@ body{background:var(--fundo-pagina)}
 /* Página "Envie conteúdo" */
 .sobre-lista{margin:0;padding-left:1.2em;display:grid;gap:8px;line-height:1.5}
 .sobre-lista li::marker{color:var(--primaria)}
+
+/* Página "Documentos" */
+.docs-grupo{margin:0 0 34px}
+.docs-grupo__tit{margin:0 0 6px;font-size:1.3rem}
+.docs-grupo__txt{margin:0 0 14px;max-width:46rem;color:var(--tinta-2);line-height:1.55}
+.docs-lista{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.doc{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 20px;border-radius:18px;background:var(--cor-fundo,#fff);border:1px solid var(--linha)}
+.doc__meta{margin:0 0 4px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--cor-tom,var(--tinta-2))}
+.doc h3{margin:0 0 4px;font-size:1.05rem;line-height:1.3}
+.doc p{margin:0;color:var(--tinta-2);line-height:1.5;font-size:.94rem}
+.doc .doc__meta{margin-bottom:4px}
+.doc__btn{flex:0 0 auto;white-space:nowrap}
+@media(max-width:700px){.doc{flex-direction:column;align-items:flex-start}}
+
+/* Documentos: bloco recolhido */
+.docs-mais{margin:0 0 30px}
+.docs-mais>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--cor-fundo,#fff);border:1px solid var(--linha);font-weight:700;color:var(--tinta)}
+.docs-mais>summary::-webkit-details-marker{display:none}
+.docs-mais>summary::before{content:"+";font-weight:800;color:var(--cor-tom,var(--primaria))}
+.docs-mais[open]>summary::before{content:"\2212"}
+.docs-mais>summary span{font-weight:500;color:var(--tinta-2)}
+.docs-mais .docs-lista{margin-top:14px}

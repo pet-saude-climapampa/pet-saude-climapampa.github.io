@@ -244,3 +244,55 @@ campus_por_curso:
 # Página "Envie conteúdo" (para a equipe do PET): formulário de envio de atividades, produtos, notícias e fotos
 envios:
   url: "https://docs.google.com/forms/d/e/1FAIpQLSfQetddlM63eo2K2q0qUrcYV53OHT1UC8WSP5pNJy_hA3sp9g/viewform"
+
+# Página "Documentos": só normas e documentos oficiais. (O que o grupo produz vai em "produtos"; uso interno fica no Drive.)
+# Cada item: titulo, texto, fonte, data (opcional), rotulo (botão) e UM destes: url (link externo), interno (página do site) ou arquivo (em static/docs/)
+# grupo com "recolhido: true" aparece fechado, em "Mais documentos".
+documentos:
+  - grupo: "Para conhecer o programa e o projeto"
+    texto: "Os documentos que regem o PET-Saúde: Clima e a apresentação do ClimaPampa."
+    cor: azul
+    itens:
+      - titulo: "Edital nº 23/2026 — PET-Saúde: Clima (13ª edição)"
+        texto: "Regras da seleção dos projetos, com os eixos temáticos, o modelo de projeto, o termo de compromisso e o instrumento de avaliação (anexos I a IV)."
+        fonte: "Ministério da Saúde · SGTES"
+        data: "23/03/2026"
+        url: "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-16-2026-sgtes/edital"
+        rotulo: "Abrir o edital"
+      - titulo: "Portaria Interministerial MS/MEC nº 421/2010"
+        texto: "Norma que institui o PET-Saúde, citada como base legal no edital."
+        fonte: "Ministério da Saúde · Biblioteca Virtual em Saúde"
+        data: "03/03/2010"
+        url: "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2010/pri0421_03_03_2010.html"
+        rotulo: "Ler a portaria"
+      - titulo: "Resultado final — Portaria SGTES/MS nº 322"
+        texto: "Resultado final da seleção dos projetos da 13ª edição do PET-Saúde: Clima."
+        fonte: "Diário Oficial da União"
+        data: "16/06/2026"
+        url: "https://www.in.gov.br/web/dou/-/portaria-sgtes/ms-n-322-de-16-de-junho-de-2026-712676133"
+        rotulo: "Ver no DOU"
+      - titulo: "Projeto ClimaPampa"
+        texto: "Produção do Cuidado Integral no Território e Inovação em Saúde: objetivos, eixos e parceiros do projeto em Uruguaiana."
+        fonte: "Unipampa · Secretaria Municipal de Saúde de Uruguaiana"
+        interno: "o-projeto/"
+        rotulo: "Ver o projeto"
+  - grupo: "Mais documentos"
+    cor: verde
+    recolhido: true
+    itens:
+      - titulo: "Extrato do Edital nº 23/2026"
+        texto: "Publicação do edital no Diário Oficial da União."
+        fonte: "Diário Oficial da União"
+        data: "23/03/2026"
+        url: "https://www.in.gov.br/web/dou/-/edital-n-23/2026-694669098"
+        rotulo: "Ver no DOU"
+      - titulo: "Chamamento Público nº 16/2026 — SGTES"
+        texto: "Página do processo seletivo, com cronograma, perguntas frequentes e a lista de projetos homologados."
+        fonte: "Ministério da Saúde · SGTES"
+        url: "https://www.gov.br/saude/pt-br/acesso-a-informacao/participacao-social/chamamentos-publicos/2026/chamamento-publico-no-16-2026-sgtes"
+        rotulo: "Abrir a página"
+      - titulo: "Plano Setorial de Saúde para Adaptação à Mudança do Clima (AdaptaSUS)"
+        texto: "Plano do setor saúde para enfrentar os efeitos das mudanças climáticas, tema do seminário realizado pelo ClimaPampa."
+        fonte: "Ministério da Saúde"
+        url: "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/vigilancia-ambiental/plano-setorial-de-saude-adaptasus.pdf"
+        rotulo: "Abrir o plano (PDF)"

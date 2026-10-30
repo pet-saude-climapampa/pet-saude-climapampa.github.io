@@ -287,6 +287,7 @@ def gerar():
         saida.write_text(html, encoding="utf-8")
 
     render("home.html", "index.html", active="home")
+    render("documentos.html", "documentos/index.html", active="documentos", title="Documentos")
     render("enviar.html", "enviar/index.html", active="enviar", title="Envie conteúdo")
     render("sobre.html", "sobre/index.html", active="sobre", title="Sobre o site")
     render("projeto.html", "o-projeto/index.html", active="projeto", title="O projeto")
