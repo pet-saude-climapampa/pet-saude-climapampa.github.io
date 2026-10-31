@@ -115,7 +115,6 @@
   curso: Medicina
   voluntario: false
   foto: e-talita-cristina-marinho-pereira.jpg
-  oculto: true
 - gat: 3
   nome: Ana Carolina Vieira
   curso: Medicina
@@ -238,7 +237,6 @@
   curso: Fisioterapia
   voluntario: false
   foto: e-leonardo-porto-de-bastiani.jpg
-  oculto: true
 - gat: 5
   nome: Manuella Dutra Bortolazzo
   curso: Enfermagem
