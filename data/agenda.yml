@@ -37,10 +37,13 @@
   cartaz: minicurso-pesquisa-cientifica.jpg
 
 # --- Reuniões gerais do PET (horário e link ainda não definidos) ---
-- id: reuniao-geral-2026-11-03
+- id: reuniao-geral-2026-11
   tipo: Reunião
   titulo: "Reunião geral do PET-Saúde: Clima"
-  data: 2026-11-03
+  data: 2026-11-11            # data provisória (a reunião de 03/11 foi adiada); ordena o cartão e vira "Realizadas" depois dela
+  data_texto: "11 ou 12 de novembro"
+  a_confirmar: true
+  resumo: "A reunião prevista para 3 de novembro foi adiada. A data (11 ou 12 de novembro) e o horário serão confirmados em breve."
   destaque: false
 - id: reuniao-geral-2026-11-25
   tipo: Reunião

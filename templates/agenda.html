@@ -8,7 +8,7 @@
     <p class="ativ__tipo">{{ a.tipo }}</p>
     <h3>{{ a.titulo }}</h3>
     <ul class="ativ__chips" aria-label="Detalhes">
-      <li>{{ a.dia_semana[:3] | capitalize }}, {{ a.dia }} de {{ a.data_br.split(" de ")[1] }}{% if a.data.year != ano %} de {{ a.data.year }}{% endif %}</li>
+      {% if a.data_texto %}<li>{{ a.data_texto }}{% if a.a_confirmar %} (a confirmar){% endif %}</li>{% else %}<li>{{ a.dia_semana[:3] | capitalize }}, {{ a.dia }} de {{ a.data_br.split(" de ")[1] }}{% if a.data.year != ano %} de {{ a.data.year }}{% endif %}</li>{% endif %}
       {% if a.horario %}<li>{{ a.horario }}</li>{% endif %}
       {% if a.modalidade %}<li>{{ a.modalidade }}</li>{% endif %}
       {% if a.certificacao %}<li class="ativ__cert">{{ a.certificacao }}</li>{% endif %}
@@ -19,7 +19,7 @@
     <div class="ativ__acoes">
       {% if a.inscricao %}<a class="btn btn--primario" href="{{ a.inscricao }}" target="_blank" rel="noopener">Inscrever-se {{ i.icon("externo", 18) }}</a>{% endif %}
       {% if a.link %}<a class="btn btn--sec" href="{{ a.link }}" target="_blank" rel="noopener">Entrar na reunião {{ i.icon("externo", 18) }}</a>{% endif %}
-      <a class="ativ__lk" href="{{ root }}agenda/{{ a.id }}.ics" download>Adicionar ao calendário</a>
+      {% if not a.a_confirmar %}<a class="ativ__lk" href="{{ root }}agenda/{{ a.id }}.ics" download>Adicionar ao calendário</a>{% endif %}
       {% if a.cartaz %}<a class="ativ__lk" href="{{ root }}static/img/agenda/{{ a.cartaz }}" target="_blank" rel="noopener">Ver cartaz</a>{% endif %}
     </div>
     {% elif a.cartaz %}
