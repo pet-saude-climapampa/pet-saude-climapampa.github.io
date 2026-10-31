@@ -13,11 +13,14 @@
     <div class="pessoas">{% for pe in lista %}{{ p.cartao(pe, root, eixo.cor) }}{% endfor %}</div>
     {% endif %}
     {% endfor %}
-    {% set alunos = site.estudantes | selectattr("gat", "equalto", gat) | list %}
-    {% if alunos %}
+    {% set todos = site.estudantes_todos | selectattr("gat", "equalto", gat) | list %}
+    {% set alunos = todos | rejectattr("oculto") | list %}
+    {% set ocultos = todos | selectattr("oculto") | list %}
+    {% if todos %}
     <h3 class="sub">Estudantes</h3>
     <div class="pessoas">
       {% for s in alunos %}{{ p.cartao({"nome": s.nome, "funcao": s.curso or "", "foto": s.foto}, root, eixo.cor) }}{% endfor %}
+      {% for s in ocultos %}{{ p.cartao({"nome": "Estudante", "funcao": "Divulgação aguardando autorização", "anonimo": true}, root, eixo.cor) }}{% endfor %}
     </div>
     {% endif %}
   </div>

@@ -147,28 +147,28 @@ equipe:
   pessoas:
     - {id: samuel,      nome: "Samuel Salvi Romero",           papel: coordenacao, funcao: "Coordenador geral", foto: samuel.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: camila-pase, nome: "Camila Simonetti Pase Ferrão", papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-pase.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
-    - {id: camila-sissa,nome: "Camila Sissa Antunes",         papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-sissa.jpg, lattes: "", campus: Uruguaiana, formacao: "Ciências Sociais", atuacao: "Fisioterapia"}
-    - {id: shana,       nome: "Shana Hastenpflug Wottrich",   papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: shana.jpg, lattes: "", campus: Uruguaiana, formacao: "Psicologia", atuacao: "Medicina"}
+    - {id: camila-sissa,nome: "Camila Sissa Antunes",         papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto_pendente: camila-sissa.jpg, lattes: "", campus: Uruguaiana, formacao: "Ciências Sociais", atuacao: "Fisioterapia"}
+    - {id: shana,       nome: "Shana Hastenpflug Wottrich",   papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto_pendente: shana.jpg, lattes: "", campus: Uruguaiana, formacao: "Psicologia", atuacao: "Medicina"}
     - {id: vinicia,     nome: "Vinícia Garzella Metz",        papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: vinicia.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
     - {id: suzan,       nome: "Suzan Gonçalves Rosa",         papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: suzan.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Farmácia"}
-    - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
-    - {id: bruna,       nome: "Bruna Cristiane Furtado Gomes",papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: bruna.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
-    - {id: elitiele,    nome: "Elitiele Ortiz dos Santos",    papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: elitiele.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
-    - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
+    - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto_pendente: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: bruna,       nome: "Bruna Cristiane Furtado Gomes",papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto_pendente: bruna.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: elitiele,    nome: "Elitiele Ortiz dos Santos",    papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto_pendente: elitiele.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto_pendente: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
     - {id: alexandro,   nome: "Alexandro Gularte Schäfer",    papel: tutoria, funcao: "Tutor",  eixo: 3, gat: 5, foto: alexandro.jpg, lattes: "", campus: Bagé, formacao: "Engenharia Civil e Ciência de Dados", atuacao: "Engenharias"}
-    - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto: alyni.jpg}
-    - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto: ana-thalita.jpg}
-    - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto: patricia.jpg}
-    - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto: laura.jpg}
+    - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto_pendente: alyni.jpg}
+    - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto_pendente: ana-thalita.jpg}
+    - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto_pendente: patricia.jpg}
+    - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto_pendente: laura.jpg}
     - {id: heitor,      nome: "Heitor da Mata Xavier",        papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 3, lattes: "", formacao: "Medicina", foto: heitor.jpg}
     - {id: raquel,      nome: "Raquel Cristina Braun da Silva",papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 3, lattes: "", formacao: "Fisioterapia"}
-    - {id: jessica,     nome: "Jéssica Alves Corrêa",        papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 4, lattes: "", formacao: "Nutrição", foto: jessica.jpg}
+    - {id: jessica,     nome: "Jéssica Alves Corrêa",        papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 4, lattes: "", formacao: "Nutrição", foto_pendente: jessica.jpg}
     - {id: eduardo,     nome: "Eduardo Massoco Rios",                 papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 4, lattes: "", formacao: "Enfermagem"}
     - {id: helter,      nome: "Helter Luiz da Rosa Oliveira", papel: preceptoria, funcao: "Preceptor",  eixo: 3, gat: 5, lattes: "", formacao: "Educação Física", foto: helter.jpg}
     - {id: silvia,      nome: "Silvia Muller de Moura Sarmento",       papel: preceptoria, funcao: "Preceptora", eixo: 3, gat: 5, lattes: "", formacao: "Biomedicina", foto: silvia.jpg}
-    - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Enfermagem", foto: francisco.jpg}
+    - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Enfermagem", foto_pendente: francisco.jpg}
     - {id: mariele,     nome: "Mariele Castro Charão",         papel: orientacao, funcao: "Orientadora de serviço", lattes: "", formacao: "Enfermagem"}
-    - {id: mariane,     nome: "Mariane Acordi Silveira",       papel: orientacao, funcao: "Orientadora de serviço", lattes: "", formacao: "Nutrição", foto: mariane.jpg}
+    - {id: mariane,     nome: "Mariane Acordi Silveira",       papel: orientacao, funcao: "Orientadora de serviço", lattes: "", formacao: "Nutrição", foto_pendente: mariane.jpg}
     # Orientadores de serviço — não pertencem a um GAT (aparecem na caixa "Orientação de serviço" da Equipe). Acrescente outros aqui:
     # - {id: fulano, nome: "Nome", papel: orientacao, funcao: "Orientador(a) de serviço", lattes: ""}
 # Produtos do projeto. categoria: id de produtos_categorias; eixo: 1, 2, 3 ou vazio (todos)

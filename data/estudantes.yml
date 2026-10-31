@@ -5,6 +5,7 @@
   curso: Medicina
   voluntario: false
   foto: e-alexandre-cavalcante-pinheiro.jpg
+  oculto: true
 - gat: 1
   nome: Maria Eduarda Santos Arouche
   curso: Medicina
@@ -19,6 +20,7 @@
   nome: Maria Luiza Vega Bidinotto
   curso: Farmácia
   voluntario: false
+  oculto: true
 - gat: 1
   nome: Mariana Elizabete Missio Saldanha
   curso: Fisioterapia
@@ -34,36 +36,43 @@
   curso: Ciências sociais
   voluntario: false
   foto: e-rafaela-hoffmann-rodrigues.jpg
+  oculto: true
 - gat: 1
   nome: Rubler Peres Rocha
   curso: Engenharia de aquicultura
   voluntario: false
   foto: e-rubler-peres-rocha.jpg
+  oculto: true
 - gat: 1
   nome: Stephany Raisa Machado Pereira
   curso: Fisioterapia
   voluntario: false
   foto: e-stephany-raisa-machado-pereira.jpg
+  oculto: true
 - gat: 1
   nome: Túlio Amaral Santos
   curso: Medicina
   voluntario: true
   foto: e-tulio-amaral-santos.jpg
+  oculto: true
 - gat: 1
   nome: Vinícius Rafael Bonilha Rao
   curso: Fisioterapia
   voluntario: true
   foto: e-vinicius-rafael-bonilha-rao.jpg
+  oculto: true
 - gat: 1
   nome: Enzo Augusto Rosa Mafra
   curso: Medicina
   voluntario: true
   foto: e-enzo-augusto-rosa-mafra.jpg
+  oculto: true
 - gat: 1
   nome: Nadyne Rotta Engroff
   curso: Fisioterapia
   voluntario: true
   foto: e-nadyne-rotta-engroff.jpg
+  oculto: true
 - gat: 2
   nome: Cynthia Marques de Souza Rocha
   curso: Medicina
@@ -74,6 +83,7 @@
   curso: Medicina
   voluntario: false
   foto: e-dhiego-santos-brito.jpg
+  oculto: true
 - gat: 2
   nome: Letícia dos Santos Fogliato
   curso: Enfermagem
@@ -89,6 +99,7 @@
   curso: Medicina
   voluntario: false
   foto: e-otavio-felipe-pereira.jpg
+  oculto: true
 - gat: 2
   nome: Peterson Silveira da Silva
   curso: Direito
@@ -104,6 +115,7 @@
   curso: Medicina
   voluntario: false
   foto: e-talita-cristina-marinho-pereira.jpg
+  oculto: true
 - gat: 3
   nome: Ana Carolina Vieira
   curso: Medicina
@@ -119,21 +131,25 @@
   curso: Enfermagem
   voluntario: false
   foto: e-fernanda-emanuelli-dias-tito.jpg
+  oculto: true
 - gat: 3
   nome: João Vitor Mas Urtado Rodrigues
   curso: Medicina
   voluntario: false
   foto: e-joao-vitor-mas-urtado-rodrigues.jpg
+  oculto: true
 - gat: 3
   nome: Júlia Isabelli dos Santos Fumagalli
   curso: Fisioterapia
   voluntario: false
   foto: e-julia-isabelli-dos-santos-fumagalli.jpg
+  oculto: true
 - gat: 3
   nome: Larissa Lima do Carmo Rios
   curso: Medicina
   voluntario: false
   foto: e-larissa-lima-do-carmo-rios.jpg
+  oculto: true
 - gat: 3
   nome: Marcos Paulo Fernandes Lobato
   curso: Medicina
@@ -143,36 +159,43 @@
   nome: Rebecca Bezerra da Silva
   curso: Direito
   voluntario: false
+  oculto: true
 - gat: 4
   nome: Agnes Goulart Nunes
   curso: Farmácia
   voluntario: false
   foto: e-agnes-goulart-nunes.jpg
+  oculto: true
 - gat: 4
   nome: Bruno Panciera
   curso: Fisioterapia
   voluntario: false
   foto: e-bruno-panciera.jpg
+  oculto: true
 - gat: 4
   nome: Fabiano de Freitas Mion
   curso: Ciência da computação
   voluntario: false
   foto: e-fabiano-de-freitas-mion.jpg
+  oculto: true
 - gat: 4
   nome: Laís Miranda de Oliveira
   curso: Medicina
   voluntario: false
   foto: e-lais-miranda-de-oliveira.jpg
+  oculto: true
 - gat: 4
   nome: Luiza Martins Loureiro
   curso: Direito
   voluntario: false
   foto: e-luiza-martins-loureiro.jpg
+  oculto: true
 - gat: 4
   nome: Raquel Comin Franca
   curso: Medicina
   voluntario: false
   foto: e-raquel-comin-franca.jpg
+  oculto: true
 - gat: 4
   nome: Sara Jalilah Costa Melo
   curso: Medicina
@@ -183,6 +206,11 @@
   curso: Medicina
   voluntario: false
   foto: e-thiago-alejandro-vazquez-canteros.jpg
+  oculto: true
+- gat: 4
+  nome: Flávia Alessandra Rolão Furtado
+  curso: Farmácia
+  voluntario: true
 - gat: 5
   nome: Bruna da Costa Ribeiro
   curso: Enfermagem
@@ -193,6 +221,7 @@
   curso: Engenharia da computação
   voluntario: false
   foto: e-davi-lopes-lemos.jpg
+  oculto: true
 - gat: 5
   nome: Heduardo Witkoski Barcelos da Rocha
   curso: Engenharia da computação
@@ -203,21 +232,25 @@
   curso: Medicina
   voluntario: false
   foto: e-joao-pedro-marchesi-tavares.jpg
+  oculto: true
 - gat: 5
   nome: Leonardo Porto de Bastiani
   curso: Fisioterapia
   voluntario: false
   foto: e-leonardo-porto-de-bastiani.jpg
+  oculto: true
 - gat: 5
   nome: Manuella Dutra Bortolazzo
   curso: Enfermagem
   voluntario: false
   foto: e-manuella-dutra-bortolazzo.jpg
+  oculto: true
 - gat: 5
   nome: Maria Antonia Dutra Fernandes
   curso: Enfermagem
   voluntario: false
   foto: e-maria-antonia-dutra-fernandes.jpg
+  oculto: true
 - gat: 5
   nome: Valdir Paz Ribeiro Junior
   curso: Medicina
@@ -238,8 +271,15 @@
   curso: Engenharia de energia
   voluntario: true
   foto: e-manuela-penner-hubert.jpg
+  oculto: true
 - gat: 5
   nome: Sofia Delatorre Fonseca
   curso: Medicina
   voluntario: true
   foto: e-sofia-delatorre-fonseca.jpg
+# Sem termo de autorização assinado: conta nos números, não aparece no site. GAT a definir (Eixo 2).
+  oculto: true
+- nome: Luis Gustavo Alves
+  curso: Farmácia
+  voluntario: false
+  oculto: true

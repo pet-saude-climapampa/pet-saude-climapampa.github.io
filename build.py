@@ -97,7 +97,10 @@ def carregar_site():
     with open(ROOT / "data" / "site.yml", encoding="utf-8") as f:
         site = yaml.safe_load(f)
     est = ROOT / "data" / "estudantes.yml"
-    site["estudantes"] = (yaml.safe_load(est.read_text(encoding="utf-8")) or []) if est.exists() else []
+    todos = (yaml.safe_load(est.read_text(encoding="utf-8")) or []) if est.exists() else []
+    # oculto: true = conta nos números, mas não aparece nas páginas da equipe (sem termo de autorização assinado)
+    site["estudantes_todos"] = todos
+    site["estudantes"] = [x for x in todos if not x.get("oculto")]
     return site
 
 
@@ -189,7 +192,7 @@ PAPEIS_NUM = [("coordenacao", "Coordenação geral"), ("tutoria", "Tutores"), ("
 def estatisticas(site):
     """Contagens da equipe para a página 'Em números' (só números, nenhum dado pessoal)."""
     from collections import Counter
-    pes, est = site["equipe"]["pessoas"], site["estudantes"]
+    pes, est = site["equipe"]["pessoas"], site["estudantes_todos"]
     cor_gat = {g: e["cor"] for e in site["eixos"] for g in e["gats"]}
     eixo_gat = {g: e["curto"] for e in site["eixos"] for g in e["gats"]}
 
@@ -214,8 +217,8 @@ def estatisticas(site):
 
     gats = []
     for g in sorted(cor_gat):
-        membros = [x for x in pes if x.get("gat") == g and x["papel"] != "coordenacao"] + [x for x in est if x["gat"] == g]
-        alunos = [x for x in est if x["gat"] == g]
+        membros = [x for x in pes if x.get("gat") == g and x["papel"] != "coordenacao"] + [x for x in est if x.get("gat") == g]
+        alunos = [x for x in est if x.get("gat") == g]
         cursos = sorted(Counter(curso(x) for x in alunos).items(), key=lambda t: (t[0] == "Não informado", -t[1], t[0]))
         gats.append({"n": g, "cor": cor_gat[g], "eixo": eixo_gat[g], "total": len(membros), "estudantes": len(alunos),
                      "seg": contar(membros), "cursos": cursos,
@@ -246,7 +249,7 @@ def estrutura_equipe(site):
         cards = []
         for g in e["gats"]:
             membros = [x for x in pes if x.get("gat") == g and x["papel"] != "coordenacao"]
-            alunos = [x for x in est if x["gat"] == g]
+            alunos = [x for x in site["estudantes_todos"] if x.get("gat") == g]
             tutores = [x["nome"] for x in membros if x["papel"] == "tutoria"]
             cards.append({"n": g, "total": len(membros) + len(alunos), "estudantes": len(alunos), "tutores": tutores})
         saida.append({"eixo": e, "gats": cards})

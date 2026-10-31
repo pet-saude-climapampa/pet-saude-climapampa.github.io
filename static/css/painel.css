@@ -540,3 +540,5 @@ body{background:var(--fundo-pagina)}
 .docs-mais[open]>summary::before{content:"\2212"}
 .docs-mais>summary span{font-weight:500;color:var(--tinta-2)}
 .docs-mais .docs-lista{margin-top:14px}
+
+.pessoa__avatar--anonimo{opacity:.55}

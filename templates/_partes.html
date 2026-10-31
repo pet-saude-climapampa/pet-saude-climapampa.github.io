@@ -11,7 +11,9 @@
 
 {% macro cartao(pe, root, cor="verde") -%}
 <article class="pessoa cor-{{ cor }}">
-  {% if pe.foto %}
+  {% if pe.anonimo %}
+  <span class="pessoa__avatar pessoa__avatar--anonimo" aria-hidden="true"><svg viewBox="0 0 24 24" width="56" height="56" fill="currentColor"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z"/></svg></span>
+  {% elif pe.foto %}
   <img src="{{ root }}static/img/equipe/{{ pe.foto }}" alt="Foto de {{ pe.nome }}" width="720" height="720" loading="lazy">
   {% else %}
   <span class="pessoa__avatar" aria-hidden="true">{{ pe.nome.split()[0][0] }}{{ pe.nome.split()[-1][0] }}</span>
