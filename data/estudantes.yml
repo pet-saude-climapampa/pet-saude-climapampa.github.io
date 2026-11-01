@@ -72,7 +72,6 @@
   curso: Fisioterapia
   voluntario: true
   foto: e-nadyne-rotta-engroff.jpg
-  oculto: true
 - gat: 2
   nome: Cynthia Marques de Souza Rocha
   curso: Medicina
@@ -164,7 +163,6 @@
   curso: Farmácia
   voluntario: false
   foto: e-agnes-goulart-nunes.jpg
-  oculto: true
 - gat: 4
   nome: Bruno Panciera
   curso: Fisioterapia
@@ -194,7 +192,6 @@
   curso: Medicina
   voluntario: false
   foto: e-raquel-comin-franca.jpg
-  oculto: true
 - gat: 4
   nome: Sara Jalilah Costa Melo
   curso: Medicina
