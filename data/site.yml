@@ -158,7 +158,7 @@ equipe:
     - {id: alexandro,   nome: "Alexandro Gularte Schäfer",    papel: tutoria, funcao: "Tutor",  eixo: 3, gat: 5, foto: alexandro.jpg, lattes: "", campus: Bagé, formacao: "Engenharia Civil e Ciência de Dados", atuacao: "Engenharias"}
     - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto_pendente: alyni.jpg}
     - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto_pendente: ana-thalita.jpg}
-    - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto_pendente: patricia.jpg}
+    - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto: patricia.jpg}
     - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto_pendente: laura.jpg}
     - {id: heitor,      nome: "Heitor da Mata Xavier",        papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 3, lattes: "", formacao: "Medicina", foto: heitor.jpg}
     - {id: raquel,      nome: "Raquel Cristina Braun da Silva",papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 3, lattes: "", formacao: "Fisioterapia"}
