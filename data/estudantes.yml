@@ -98,7 +98,6 @@
   curso: Medicina
   voluntario: false
   foto: e-otavio-felipe-pereira.jpg
-  oculto: true
 - gat: 2
   nome: Peterson Silveira da Silva
   curso: Direito
@@ -157,7 +156,6 @@
   nome: Rebecca Bezerra da Silva
   curso: Direito
   voluntario: false
-  oculto: true
 - gat: 4
   nome: Agnes Goulart Nunes
   curso: Farmácia
@@ -264,7 +262,6 @@
   curso: Engenharia de energia
   voluntario: true
   foto: e-manuela-penner-hubert.jpg
-  oculto: true
 - gat: 5
   nome: Sofia Delatorre Fonseca
   curso: Medicina
