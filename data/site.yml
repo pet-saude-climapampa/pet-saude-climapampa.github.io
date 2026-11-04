@@ -154,7 +154,7 @@ equipe:
     - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto_pendente: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: bruna,       nome: "Bruna Cristiane Furtado Gomes",papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto_pendente: bruna.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: elitiele,    nome: "Elitiele Ortiz dos Santos",    papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: elitiele.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
-    - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto_pendente: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
+    - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
     - {id: alexandro,   nome: "Alexandro Gularte Schäfer",    papel: tutoria, funcao: "Tutor",  eixo: 3, gat: 5, foto: alexandro.jpg, lattes: "", campus: Bagé, formacao: "Engenharia Civil e Ciência de Dados", atuacao: "Engenharias"}
     - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto: alyni.jpg}
     - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto: ana-thalita.jpg}

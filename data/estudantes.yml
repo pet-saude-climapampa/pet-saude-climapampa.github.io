@@ -266,7 +266,6 @@
   curso: Medicina
   voluntario: true
   foto: e-sofia-delatorre-fonseca.jpg
-  oculto: true
 # Sem termo de autorização assinado: conta nos números, não aparece no site. GAT a definir (Eixo 2).
   oculto: true
 - nome: Luis Gustavo Alves
