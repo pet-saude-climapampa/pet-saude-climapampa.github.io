@@ -99,6 +99,12 @@ def carregar_site():
     est = ROOT / "data" / "estudantes.yml"
     todos = (yaml.safe_load(est.read_text(encoding="utf-8")) or []) if est.exists() else []
     # oculto: true = conta nos números, mas não aparece nas páginas da equipe (sem termo de autorização assinado)
+    # ordem alfabética (sem acento, sem diferenciar maiúsculas) nas listas de equipe e de estudantes
+    import unicodedata
+    def _chave(x):
+        return unicodedata.normalize("NFKD", x.get("nome", "")).encode("ascii", "ignore").decode().lower()
+    site["equipe"]["pessoas"].sort(key=_chave)
+    todos.sort(key=_chave)
     site["estudantes_todos"] = todos
     site["estudantes"] = [x for x in todos if not x.get("oculto")]
     return site
