@@ -225,11 +225,10 @@
   curso: Medicina
   voluntario: false
   foto: e-joao-pedro-marchesi-tavares.jpg
-  oculto: true
 - gat: 5
   nome: Leonardo Porto de Bastiani
   curso: Fisioterapia
-  voluntario: false
+  voluntario: true
   foto: e-leonardo-porto-de-bastiani.jpg
 - gat: 5
   nome: Manuella Dutra Bortolazzo
@@ -267,6 +266,7 @@
   curso: Medicina
   voluntario: true
   foto: e-sofia-delatorre-fonseca.jpg
+  oculto: true
 # Sem termo de autorização assinado: conta nos números, não aparece no site. GAT a definir (Eixo 2).
   oculto: true
 - nome: Luis Gustavo Alves
