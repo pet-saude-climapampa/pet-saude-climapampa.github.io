@@ -147,7 +147,7 @@ equipe:
   pessoas:
     - {id: samuel,      nome: "Samuel Salvi Romero",           papel: coordenacao, funcao: "Coordenador geral", foto: samuel.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: camila-pase, nome: "Camila Simonetti Pase Ferrão", papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-pase.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
-    - {id: camila-sissa,nome: "Camila Sissa Antunes",         papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto_pendente: camila-sissa.jpg, lattes: "", campus: Uruguaiana, formacao: "Ciências Sociais", atuacao: "Fisioterapia"}
+    - {id: camila-sissa,nome: "Camila Sissa Antunes",         papel: tutoria, funcao: "Tutora", eixo: 1, gat: 1, foto: camila-sissa.jpg, lattes: "", campus: Uruguaiana, formacao: "Ciências Sociais", atuacao: "Fisioterapia"}
     - {id: shana,       nome: "Shana Hastenpflug Wottrich",   papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: shana.jpg, lattes: "", campus: Uruguaiana, formacao: "Psicologia", atuacao: "Medicina"}
     - {id: vinicia,     nome: "Vinícia Garzella Metz",        papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: vinicia.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
     - {id: suzan,       nome: "Suzan Gonçalves Rosa",         papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: suzan.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Farmácia"}
