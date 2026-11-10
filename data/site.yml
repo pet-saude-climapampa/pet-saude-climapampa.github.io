@@ -151,7 +151,7 @@ equipe:
     - {id: shana,       nome: "Shana Hastenpflug Wottrich",   papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: shana.jpg, lattes: "", campus: Uruguaiana, formacao: "Psicologia", atuacao: "Medicina"}
     - {id: vinicia,     nome: "Vinícia Garzella Metz",        papel: tutoria, funcao: "Tutora", eixo: 1, gat: 2, foto: vinicia.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Medicina"}
     - {id: suzan,       nome: "Suzan Gonçalves Rosa",         papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: suzan.jpg, lattes: "", campus: Uruguaiana, formacao: "Farmácia", atuacao: "Farmácia"}
-    - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto_pendente: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
+    - {id: vanessa,     nome: "Vanessa Alvez Mora da Silva",  papel: tutoria, funcao: "Tutora", eixo: 2, gat: 3, foto: vanessa.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: bruna,       nome: "Bruna Cristiane Furtado Gomes",papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto_pendente: bruna.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: elitiele,    nome: "Elitiele Ortiz dos Santos",    papel: tutoria, funcao: "Tutora", eixo: 2, gat: 4, foto: elitiele.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Medicina"}
     - {id: lisie,       nome: "Lisie Alende Prates",          papel: tutoria, funcao: "Tutora", eixo: 3, gat: 5, foto: lisie.jpg, lattes: "", campus: Uruguaiana, formacao: "Enfermagem", atuacao: "Enfermagem"}
