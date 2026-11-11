@@ -159,7 +159,7 @@ equipe:
     - {id: alyni,       nome: "Alyni Leila Folletto",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Enfermagem", foto: alyni.jpg}
     - {id: ana-thalita, nome: "Ana Thalita Gonçalves Soares", papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 1, lattes: "", formacao: "Farmácia", foto: ana-thalita.jpg}
     - {id: patricia,    nome: "Patrícia Becker Engers",       papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Educação Física", foto: patricia.jpg}
-    - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto_pendente: laura.jpg}
+    - {id: laura,       nome: "Laura Ilarraz Massia",         papel: preceptoria, funcao: "Preceptora", eixo: 1, gat: 2, lattes: "", formacao: "Medicina Veterinária", foto: laura.jpg}
     - {id: heitor,      nome: "Heitor da Mata Xavier",        papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 3, lattes: "", formacao: "Medicina", foto: heitor.jpg}
     - {id: raquel,      nome: "Raquel Cristina Braun da Silva",papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 3, lattes: "", formacao: "Fisioterapia"}
     - {id: jessica,     nome: "Jéssica Alves Corrêa",        papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 4, lattes: "", formacao: "Nutrição", foto: jessica.jpg}
