@@ -166,7 +166,7 @@ equipe:
     - {id: eduardo,     nome: "Eduardo Massoco Rios",                 papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 4, lattes: "", formacao: "Enfermagem", foto: eduardo.jpg}
     - {id: helter,      nome: "Helter Luiz da Rosa Oliveira", papel: preceptoria, funcao: "Preceptor",  eixo: 3, gat: 5, lattes: "", formacao: "Educação Física", foto: helter.jpg}
     - {id: silvia,      nome: "Silvia Muller de Moura Sarmento",       papel: preceptoria, funcao: "Preceptora", eixo: 3, gat: 5, lattes: "", formacao: "Biomedicina", foto: silvia.jpg}
-    - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Enfermagem", foto_pendente: francisco.jpg}
+    - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Enfermagem", foto: francisco.jpg}
     - {id: mariele,     nome: "Mariele Castro Charão",         papel: orientacao, funcao: "Orientadora de serviço", lattes: "", formacao: "Enfermagem"}
     - {id: mariane,     nome: "Mariane Acordi Silveira",       papel: orientacao, funcao: "Orientadora de serviço", lattes: "", formacao: "Nutrição", foto: mariane.jpg}
     - {id: millor,      nome: "Millor Freitas da Silveira",   papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Engenharia Química", foto: millor.jpg}
