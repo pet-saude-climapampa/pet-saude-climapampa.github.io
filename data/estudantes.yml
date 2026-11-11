@@ -240,7 +240,7 @@
   curso: Enfermagem
   voluntario: false
   foto: e-maria-antonia-dutra-fernandes.jpg
-  oculto: true
+  # Autorizacao da foto informada pelo coordenador em 11/11/2026; termo assinado (gov.br) ainda pendente.
 - gat: 5
   nome: Valdir Paz Ribeiro Junior
   curso: Medicina
