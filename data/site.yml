@@ -163,7 +163,7 @@ equipe:
     - {id: heitor,      nome: "Heitor da Mata Xavier",        papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 3, lattes: "", formacao: "Medicina", foto: heitor.jpg}
     - {id: raquel,      nome: "Raquel Cristina Braun da Silva",papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 3, lattes: "", formacao: "Fisioterapia"}
     - {id: jessica,     nome: "Jéssica Alves Corrêa",        papel: preceptoria, funcao: "Preceptora", eixo: 2, gat: 4, lattes: "", formacao: "Nutrição", foto: jessica.jpg}
-    - {id: eduardo,     nome: "Eduardo Massoco Rios",                 papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 4, lattes: "", formacao: "Enfermagem"}
+    - {id: eduardo,     nome: "Eduardo Massoco Rios",                 papel: preceptoria, funcao: "Preceptor",  eixo: 2, gat: 4, lattes: "", formacao: "Enfermagem", foto: eduardo.jpg}
     - {id: helter,      nome: "Helter Luiz da Rosa Oliveira", papel: preceptoria, funcao: "Preceptor",  eixo: 3, gat: 5, lattes: "", formacao: "Educação Física", foto: helter.jpg}
     - {id: silvia,      nome: "Silvia Muller de Moura Sarmento",       papel: preceptoria, funcao: "Preceptora", eixo: 3, gat: 5, lattes: "", formacao: "Biomedicina", foto: silvia.jpg}
     - {id: francisco,   nome: "Francisco Bortoluzzi Neto",      papel: orientacao, funcao: "Orientador de serviço", lattes: "", formacao: "Enfermagem", foto_pendente: francisco.jpg}
