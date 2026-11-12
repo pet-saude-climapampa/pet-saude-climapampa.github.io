@@ -5,7 +5,6 @@
   curso: Medicina
   voluntario: false
   foto: e-alexandre-cavalcante-pinheiro.jpg
-  oculto: true
 - gat: 1
   nome: Maria Eduarda Santos Arouche
   curso: Medicina
@@ -183,7 +182,6 @@
   curso: Direito
   voluntario: false
   foto: e-luiza-martins-loureiro.jpg
-  oculto: true
 - gat: 4
   nome: Raquel Comin Franca
   curso: Medicina
@@ -272,3 +270,4 @@
 - nome: Luísa Mendes Melchuna
   curso: Medicina
   voluntario: true
+  foto: e-luisa-mendes-melchuna.jpg
