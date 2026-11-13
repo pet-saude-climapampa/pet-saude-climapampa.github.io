@@ -62,7 +62,6 @@
   curso: Medicina
   voluntario: true
   foto: e-enzo-augusto-rosa-mafra.jpg
-  oculto: true
 - gat: 1
   nome: Nadyne Rotta Engroff
   curso: Fisioterapia
@@ -155,6 +154,11 @@
   curso: Medicina
   voluntario: true
   foto: e-joao-victor-de-araujo-cassao.jpg
+- gat: 3
+  nome: Luísa Mendes Melchuna
+  curso: Medicina
+  voluntario: true
+  foto: e-luisa-mendes-melchuna.jpg
 - gat: 4
   nome: Agnes Goulart Nunes
   curso: Farmácia
@@ -267,7 +271,3 @@
 - nome: Luis Gustavo Alves
   curso: Farmácia
   voluntario: false
-- nome: Luísa Mendes Melchuna
-  curso: Medicina
-  voluntario: true
-  foto: e-luisa-mendes-melchuna.jpg
