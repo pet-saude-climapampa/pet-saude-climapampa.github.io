@@ -18,6 +18,11 @@ grafico_excluir:
   - Lisie Alende Prates
 # O gráfico de participação só conta projetos que NÃO estão finalizados.
 projetos:
+  - titulo: "Integra ClimaPampa: encontro de saberes e experiências"
+    status: planejado
+    tutor: Lisie Alende Prates
+    descricao: "Encontro de socialização das experiências dos grupos e eixos do PET-Saúde: Clima, com palestra sobre mudanças climáticas e sociedade. Presencial, em 5 de dezembro de 2026, no Salão de Atos do Campus Uruguaiana da Unipampa."
+    # equipe: definir (estudantes ainda não definidos)
   - titulo: "Site do PET-Saúde: Clima (ClimaPampa)"
     tutor: Alexandro Gularte Schäfer
     status: andamento
