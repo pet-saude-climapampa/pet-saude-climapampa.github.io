@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("GAT 5 · Eixo 3", "Participação por integrante", "Número de projetos em que cada integrante do GAT 5 está envolvido, entre os " ~ total_projetos5 ~ " projetos registrados.", "azul") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}equipe/gat-5/projetos/">← Projetos do GAT 5</a></p>
+    <figure class="grafico" aria-labelledby="g5-tit">
+      <figcaption id="g5-tit" class="grafico__tit">Projetos por integrante <span class="grafico__sub">(quantidade de projetos em que a pessoa está na equipe)</span></figcaption>
+      <ol class="barras">
+        {% for it in integrantes5 %}
+        <li class="barras__linha" tabindex="0" title="{{ it.nome }}: {{ it.n }} projeto{{ 's' if it.n != 1 }}{% if it.projetos %} · {{ it.projetos | join('; ') }}{% endif %}">
+          <span class="barras__nome">{{ it.nome }}<small>{{ it.funcao }}</small></span>
+          <span class="barras__trilho" aria-hidden="true"><span class="barras__barra" style="width: {{ (it.n * 100 / maximo5) | round(1) }}%"></span></span>
+          <span class="barras__valor">{{ it.n }}</span>
+        </li>
+        {% endfor %}
+      </ol>
+    </figure>
+
+    <details class="grafico__tabela">
+      <summary>Ver como tabela</summary>
+      <table>
+        <thead><tr><th scope="col">Integrante</th><th scope="col">Função</th><th scope="col">Projetos</th><th scope="col">Quais</th></tr></thead>
+        <tbody>
+          {% for it in integrantes5 %}<tr><th scope="row">{{ it.nome }}</th><td>{{ it.funcao }}</td><td>{{ it.n }}</td><td>{{ it.projetos | join("; ") }}</td></tr>{% endfor %}
+        </tbody>
+      </table>
+    </details>
+
+    <p class="grafico__nota">
+      {% if ocultos5 %}{{ ocultos5 }} estudante{{ 's' if ocultos5 != 1 }} do GAT 5 aguarda{{ 'm' if ocultos5 != 1 }} autorização de divulgação e não aparece{{ 'm' if ocultos5 != 1 }} no gráfico.{% endif %}
+      {% if fora5 %}Participam de projetos, mas não constam como integrantes do GAT 5: {% for nm, pj in fora5.items() %}{{ nm }} ({{ pj | length }} projeto{{ 's' if pj | length != 1 }}){{ ', ' if not loop.last else '.' }}{% endfor %}{% endif %}
+    </p>
+  </div>
+</section>
+{% endblock %}

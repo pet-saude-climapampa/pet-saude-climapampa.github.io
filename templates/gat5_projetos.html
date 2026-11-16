@@ -6,6 +6,16 @@
 <section class="secao secao--curta">
   <div class="wrap">
     <p class="prod-volta"><a href="{{ root }}equipe/gat-5/">← Equipe do GAT 5</a></p>
+    {% if canais_gat5 %}
+    <div class="gat-canais">
+      <h2 class="sub">Canais do grupo</h2>
+      <ul>
+        {% if canais_gat5.whatsapp %}<li><strong>WhatsApp:</strong> {{ canais_gat5.whatsapp }}</li>{% endif %}
+        {% if canais_gat5.slack %}<li><strong>Slack:</strong> {{ canais_gat5.slack }}</li>{% endif %}
+      </ul>
+    </div>
+    {% endif %}
+    <p class="gat-canais__lnk"><a href="{{ root }}equipe/gat-5/participacao/">Ver participação por integrante (gráfico) →</a></p>
     {% for chave, rotulo, vazio in [
       ("andamento", "Em andamento", "Nenhum projeto em andamento registrado."),
       ("planejado", "Planejados", "Nenhum projeto planejado registrado."),

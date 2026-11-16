@@ -309,9 +309,44 @@ def gerar():
         for g in e["gats"]:
             render("equipe_gat.html", f"equipe/gat-{g}/index.html", active="equipe", title=f"Equipe do GAT {g}", eixo=e, gat=g)
     # GAT 5: controle interno de projetos (sem link no menu, noindex)
+    import unicodedata as _ud
     _pj = ROOT / "data" / "gat5_projetos.yml"
-    projetos_gat5 = ((yaml.safe_load(_pj.read_text(encoding="utf-8")) or {}).get("projetos") or []) if _pj.exists() else []
-    render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, noindex=True)
+    _d5 = (yaml.safe_load(_pj.read_text(encoding="utf-8")) or {}) if _pj.exists() else {}
+    projetos_gat5 = _d5.get("projetos") or []
+    canais_gat5 = {k: v for k, v in (_d5.get("canais") or {}).items() if v}
+    def _n(x):
+        return "".join(c for c in _ud.normalize("NFD", x) if _ud.category(c) != "Mn").casefold().strip()
+    # integrantes do GAT 5 (sem estudantes ocultos)
+    extras = {_n(x) for x in (_d5.get("integrantes_extra") or [])}
+    integ = []
+    for pe in site["equipe"]["pessoas"]:
+        if pe.get("gat") == 5 or 5 in (pe.get("gats") or []) or _n(pe["nome"]) in extras:
+            integ.append({"nome": pe["nome"], "funcao": pe.get("funcao", "")})
+    est5 = [e for e in site["estudantes_todos"] if e.get("gat") == 5]
+    for e in est5:
+        if not e.get("oculto"):
+            integ.append({"nome": e["nome"], "funcao": "Estudante" + (" voluntário" if e.get("voluntario") else " bolsista")})
+    ocultos5 = sum(1 for e in est5 if e.get("oculto"))
+    por_nome = {_n(i["nome"]): i for i in integ}
+    for i in integ:
+        i["projetos"] = []
+    fora = {}
+    todos_nomes = {_n(pe["nome"]) for pe in site["equipe"]["pessoas"]} | {_n(e["nome"]) for e in site["estudantes_todos"]}
+    for pr in projetos_gat5:
+        for nm in pr.get("equipe") or []:
+            k = _n(nm)
+            if k in por_nome:
+                por_nome[k]["projetos"].append(pr["titulo"])
+            else:
+                fora.setdefault(nm, []).append(pr["titulo"])
+                if k not in todos_nomes:
+                    print(f"AVISO: '{nm}' (projeto '{pr['titulo']}') não existe na equipe do site.")
+    for i in integ:
+        i["n"] = len(i["projetos"])
+    integ.sort(key=lambda i: (-i["n"], _n(i["nome"])))
+    maximo = max([i["n"] for i in integ] + [1])
+    render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, canais_gat5=canais_gat5, noindex=True)
+    render("gat5_participacao.html", "equipe/gat-5/participacao/index.html", active="equipe", title="Participação por integrante, GAT 5", integrantes5=integ, maximo5=maximo, fora5=fora, ocultos5=ocultos5, total_projetos5=len(projetos_gat5), noindex=True)
     render("equipe_orientadores.html", "equipe/orientadores/index.html", active="equipe", title="Orientação de serviço")
     render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:

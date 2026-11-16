@@ -547,3 +547,22 @@ body{background:var(--fundo-pagina)}
 .gat-interno a:hover,.gat-interno a:focus{opacity:1}
 .prod__meta-txt{font-size:.85rem;color:var(--tinta-2);margin-top:.5em}
 .prod-grade+.sub,.prod-vazio+.sub{margin-top:2em}
+
+/* GAT 5: canais e gráfico de participação (uso interno) */
+.gat-canais{margin:0 0 1.2em}.gat-canais ul{margin:.2em 0 0;padding-left:1.1em}
+.gat-canais__lnk{margin:0 0 1.4em}
+.grafico{margin:0 0 1.6em}
+.grafico__tit{font-weight:700;margin-bottom:.8em}.grafico__sub{font-weight:400;color:var(--tinta-2);font-size:.88rem}
+.barras{list-style:none;margin:0;padding:0}
+.barras__linha{display:grid;grid-template-columns:minmax(150px,260px) 1fr 2.2em;align-items:center;gap:12px;padding:5px 0;border-bottom:1px solid var(--linha)}
+.barras__linha:hover,.barras__linha:focus-visible{background:var(--bruma)}
+.barras__nome{color:var(--tinta);font-size:.95rem;line-height:1.25}
+.barras__nome small{display:block;color:var(--tinta-2);font-size:.78rem}
+.barras__trilho{display:block;height:12px;position:relative}
+.barras__barra{display:block;height:100%;background:var(--verde-esc);border-radius:0 4px 4px 0;min-width:0}
+.barras__valor{color:var(--tinta);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.grafico__tabela{margin:1.2em 0}.grafico__tabela summary{cursor:pointer;font-weight:600}
+.grafico__tabela table{border-collapse:collapse;margin-top:.8em;font-size:.88rem;width:100%}
+.grafico__tabela th,.grafico__tabela td{border-bottom:1px solid var(--linha);padding:6px 8px;text-align:left;vertical-align:top}
+.grafico__nota{color:var(--tinta-2);font-size:.88rem}
+@media (max-width:620px){.barras__linha{grid-template-columns:1fr 2.2em;gap:4px 12px}.barras__trilho{grid-column:1/-1;grid-row:2}.barras__valor{grid-row:1;grid-column:2}}

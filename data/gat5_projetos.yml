@@ -5,6 +5,13 @@
 # A equipe inicial foi deduzida da autoria dos trabalhos submetidos de cada projeto: CONFERIR e ajustar.
 # Só colocar nomes de quem já autorizou a divulgação do nome.
 # ATENÇÃO: a página é pública para quem tiver o link. Não colocar dados pessoais sensíveis nem informações confidenciais.
+# Canais do grupo (aparecem na página de projetos quando preenchidos). Só o NOME do grupo/canal; não colocar link de convite.
+canais:
+  whatsapp: ""   # ex.: "GAT 5 · PET-Saúde Clima"
+  slack: ""      # ex.: "#gat5-pet-clima"
+# Integrantes do GAT 5 que não têm "gat: 5" no cadastro da equipe (ex.: orientadores de serviço)
+integrantes_extra:
+  - Francisco Bortoluzzi Neto
 projetos:
   - titulo: "Site do PET-Saúde: Clima (ClimaPampa)"
     status: andamento
@@ -17,23 +24,40 @@ projetos:
   - titulo: "Geoportal ClimaPampa: Uruguaiana"
     status: andamento
     descricao: "Mapas e camadas territoriais sobre clima, vulnerabilidades socioambientais e saúde em Uruguaiana, para apoiar a vigilância e a decisão no território."
-    # equipe: definir
+    equipe:
+      - Heduardo Witkoski Barcelos da Rocha
+      - Manuela Penner Hubert
     url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
     url_rotulo: "Acessar o geoportal"
   - titulo: "Painéis de indicadores de clima e saúde de Uruguaiana"
     status: andamento
     descricao: "Dashboards interativos com indicadores ambientais, territoriais e epidemiológicos de Uruguaiana, atualizados de forma contínua."
-    # equipe: definir
+    equipe:
+      - Alexandro Gularte Schäfer
     url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
     url_rotulo: "Acessar os painéis"
   - titulo: "Levantamento dos estabelecimentos de saúde de Uruguaiana"
     status: andamento
     descricao: "Levantamento e mapeamento dos estabelecimentos de saúde do município, para compor o geoportal e os painéis."
-    # equipe: definir
+    equipe:
+      - Silvia Muller de Moura Sarmento
+      - Helter Luiz da Rosa Oliveira
+      - Francisco Bortoluzzi Neto
+      - Leonardo Porto de Bastiani
+      - Sofia Delatorre Fonseca
+      - Manuella Dutra Bortolazzo
+      - Julia Dantas Arima
+      - João Pedro Marchesi Tavares
+      - Valdir Paz Ribeiro Junior
   - titulo: "Eventos climáticos em Uruguaiana"
     status: andamento
     descricao: "Registro e análise dos eventos climáticos que afetam o município, como base para os painéis e o geoportal."
-    # equipe: definir
+    equipe:
+      - Silvia Muller de Moura Sarmento
+      - Heduardo Witkoski Barcelos da Rocha
+      - Davi Lopes Lemos
+      - Bruna da Costa Ribeiro
+      - Manuella Dutra Bortolazzo
   - titulo: "Box Lia: letramento interativo em apoio às mulheres"
     status: finalizado
     descricao: "Box educativo para o reconhecimento e o enfrentamento da violência contra as mulheres. Disponível nas versões impressa e digital."
@@ -66,7 +90,6 @@ projetos:
       - Manuella Dutra Bortolazzo
       - Valdir Paz Ribeiro Junior
       - Silvia Muller de Moura Sarmento
-      - Samuel Salvi Romero
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Sífilis em jogo"
