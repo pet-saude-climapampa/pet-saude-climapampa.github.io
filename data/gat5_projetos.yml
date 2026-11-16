@@ -1,0 +1,28 @@
+# Controle interno dos PROJETOS do GAT 5 (não são atividades isoladas).
+# Página: /equipe/gat-5/projetos/  (sem link no menu; só um link discreto no fim da página do GAT 5; não indexada por buscadores).
+# status: andamento | planejado | finalizado
+# Campos: titulo, status, descricao, responsaveis (opcional), periodo (opcional, texto livre), url (opcional), url_rotulo (opcional)
+# ATENÇÃO: a página é pública para quem tiver o link. Não colocar dados pessoais sensíveis nem informações confidenciais.
+projetos:
+  - titulo: "Box Lia: letramento interativo em apoio às mulheres"
+    status: finalizado
+    descricao: "Box educativo para o reconhecimento e o enfrentamento da violência contra as mulheres. Disponível nas versões impressa e digital."
+    url: "https://liaeduca.base44.app/"
+    url_rotulo: "Versão digital"
+  - titulo: "Jogo Vira a Carta"
+    status: andamento
+    descricao: "Jogo de cartas, tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres. Trabalho aceito no 18º SIEPE."
+  - titulo: "Dominó da Dengue"
+    status: andamento
+    descricao: "Jogo educativo para promoção da saúde e prevenção da dengue. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
+  - titulo: "Sífilis em jogo"
+    status: andamento
+    descricao: "Tecnologia educativa para ações de educação em saúde sobre a sífilis. Trabalho submetido à JIICEU."
+  - titulo: "Salve sua Casa"
+    status: andamento
+    descricao: "Jogo de tabuleiro para educação em saúde diante das enchentes. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
+  - titulo: "Portal sobre violência contra mulheres no RS"
+    status: andamento
+    descricao: "Painel interativo para apoiar a compreensão da violência contra mulheres no Rio Grande do Sul."
+    url: "https://alexandrogschafer.github.io/violencia-mulheres-rs/"
+    url_rotulo: "Acessar o portal"

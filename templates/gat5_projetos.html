@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_icons.html" as i %}
+{% import "_partes.html" as p %}
+{% block conteudo %}
+{{ p.cabecalho("GAT 5 · Eixo 3", "Projetos do GAT 5", "Controle interno dos projetos do grupo: em andamento, planejados e finalizados.", "azul") }}
+<section class="secao secao--curta">
+  <div class="wrap">
+    <p class="prod-volta"><a href="{{ root }}equipe/gat-5/">← Equipe do GAT 5</a></p>
+    {% for chave, rotulo, vazio in [
+      ("andamento", "Em andamento", "Nenhum projeto em andamento registrado."),
+      ("planejado", "Planejados", "Nenhum projeto planejado registrado."),
+      ("finalizado", "Finalizados", "Nenhum projeto finalizado registrado.")] %}
+    {% set itens = projetos_gat5 | selectattr("status", "equalto", chave) | list %}
+    <h2 class="sub">{{ rotulo }} <span class="status">{{ itens | length }}</span></h2>
+    {% if itens %}
+    <div class="prod-grade cor-azul">
+      {% for it in itens %}
+      <article class="prod">
+        <h3>{{ it.titulo }}</h3>
+        <p>{{ it.descricao }}</p>
+        {% if it.responsaveis or it.periodo %}<p class="prod__meta-txt">{% if it.responsaveis %}<strong>Responsáveis:</strong> {{ it.responsaveis }}{% endif %}{% if it.responsaveis and it.periodo %} · {% endif %}{% if it.periodo %}<strong>Período:</strong> {{ it.periodo }}{% endif %}</p>{% endif %}
+        {% if it.url %}<div class="prod__links"><a class="btn btn--sec" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.url_rotulo or "Acessar" }} {{ i.icon("externo", 18) }}<span class="sr"> (abre em nova aba)</span></a></div>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="prod-vazio">{{ vazio }}</p>
+    {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

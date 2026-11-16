@@ -308,6 +308,10 @@ def gerar():
     for e in site["eixos"]:
         for g in e["gats"]:
             render("equipe_gat.html", f"equipe/gat-{g}/index.html", active="equipe", title=f"Equipe do GAT {g}", eixo=e, gat=g)
+    # GAT 5: controle interno de projetos (sem link no menu, noindex)
+    _pj = ROOT / "data" / "gat5_projetos.yml"
+    projetos_gat5 = ((yaml.safe_load(_pj.read_text(encoding="utf-8")) or {}).get("projetos") or []) if _pj.exists() else []
+    render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, noindex=True)
     render("equipe_orientadores.html", "equipe/orientadores/index.html", active="equipe", title="Orientação de serviço")
     render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:

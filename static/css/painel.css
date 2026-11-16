@@ -542,3 +542,8 @@ body{background:var(--fundo-pagina)}
 .docs-mais .docs-lista{margin-top:14px}
 
 .pessoa__avatar--anonimo{opacity:.55}
+.gat-interno{margin:18px auto 28px;font-size:.8rem;text-align:right}
+.gat-interno a{color:var(--tinta-2);opacity:.65;text-decoration:underline}
+.gat-interno a:hover,.gat-interno a:focus{opacity:1}
+.prod__meta-txt{font-size:.85rem;color:var(--tinta-2);margin-top:.5em}
+.prod-grade+.sub,.prod-vazio+.sub{margin-top:2em}
