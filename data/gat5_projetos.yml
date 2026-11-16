@@ -1,28 +1,101 @@
 # Controle interno dos PROJETOS do GAT 5 (não são atividades isoladas).
 # Página: /equipe/gat-5/projetos/  (sem link no menu; só um link discreto no fim da página do GAT 5; não indexada por buscadores).
 # status: andamento | planejado | finalizado
-# Campos: titulo, status, descricao, responsaveis (opcional), periodo (opcional, texto livre), url (opcional), url_rotulo (opcional)
+# Campos: titulo, status, descricao, equipe (lista de nomes), responsaveis (opcional), periodo (opcional, texto livre), url (opcional), url_rotulo (opcional)
+# A equipe inicial foi deduzida da autoria dos trabalhos submetidos de cada projeto: CONFERIR e ajustar.
+# Só colocar nomes de quem já autorizou a divulgação do nome.
 # ATENÇÃO: a página é pública para quem tiver o link. Não colocar dados pessoais sensíveis nem informações confidenciais.
 projetos:
+  - titulo: "Site do PET-Saúde: Clima (ClimaPampa)"
+    status: andamento
+    descricao: "Site público do projeto, com apresentação, equipe, agenda, notícias, galeria e produtos. No ar desde outubro de 2026 e atualizado continuamente. Código aberto, com versão arquivada no Zenodo (DOI 10.5281/zenodo.23748574)."
+    equipe:
+      - Alexandro Gularte Schäfer
+      - Davi Lopes Lemos
+    url: "https://pet-saude-climapampa.github.io/"
+    url_rotulo: "Acessar o site"
+  - titulo: "Geoportal ClimaPampa: Uruguaiana"
+    status: andamento
+    descricao: "Mapas e camadas territoriais sobre clima, vulnerabilidades socioambientais e saúde em Uruguaiana, para apoiar a vigilância e a decisão no território."
+    # equipe: definir
+    url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
+    url_rotulo: "Acessar o geoportal"
+  - titulo: "Painéis de indicadores de clima e saúde de Uruguaiana"
+    status: andamento
+    descricao: "Dashboards interativos com indicadores ambientais, territoriais e epidemiológicos de Uruguaiana, atualizados de forma contínua."
+    # equipe: definir
+    url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
+    url_rotulo: "Acessar os painéis"
+  - titulo: "Levantamento dos estabelecimentos de saúde de Uruguaiana"
+    status: andamento
+    descricao: "Levantamento e mapeamento dos estabelecimentos de saúde do município, para compor o geoportal e os painéis."
+    # equipe: definir
+  - titulo: "Eventos climáticos em Uruguaiana"
+    status: andamento
+    descricao: "Registro e análise dos eventos climáticos que afetam o município, como base para os painéis e o geoportal."
+    # equipe: definir
   - titulo: "Box Lia: letramento interativo em apoio às mulheres"
     status: finalizado
     descricao: "Box educativo para o reconhecimento e o enfrentamento da violência contra as mulheres. Disponível nas versões impressa e digital."
     url: "https://liaeduca.base44.app/"
     url_rotulo: "Versão digital"
+    equipe:
+      - Valdir Paz Ribeiro Junior
+      - Maria Antonia Dutra Fernandes
+      - Francisco Bortoluzzi Neto
+      - Davi Lopes Lemos
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
   - titulo: "Jogo Vira a Carta"
     status: andamento
     descricao: "Jogo de cartas, tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres. Trabalho aceito no 18º SIEPE."
+    equipe:
+      - Maria Antonia Dutra Fernandes
+      - Davi Lopes Lemos
+      - Valdir Paz Ribeiro Junior
+      - Francisco Bortoluzzi Neto
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
   - titulo: "Dominó da Dengue"
     status: andamento
     descricao: "Jogo educativo para promoção da saúde e prevenção da dengue. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
+    equipe:
+      - João Pedro Marchesi Tavares
+      - Sofia Delatorre Fonseca
+      - Bruna da Costa Ribeiro
+      - Manuella Dutra Bortolazzo
+      - Valdir Paz Ribeiro Junior
+      - Silvia Muller de Moura Sarmento
+      - Samuel Salvi Romero
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
   - titulo: "Sífilis em jogo"
     status: andamento
     descricao: "Tecnologia educativa para ações de educação em saúde sobre a sífilis. Trabalho submetido à JIICEU."
+    equipe:
+      - Julia Dantas Arima
+      - Leonardo Porto de Bastiani
+      - João Pedro Marchesi Tavares
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
   - titulo: "Salve sua Casa"
     status: andamento
     descricao: "Jogo de tabuleiro para educação em saúde diante das enchentes. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
+    equipe:
+      - Sofia Delatorre Fonseca
+      - João Pedro Marchesi Tavares
+      - Manuella Dutra Bortolazzo
+      - Bruna da Costa Ribeiro
+      - Helter Luiz da Rosa Oliveira
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
   - titulo: "Portal sobre violência contra mulheres no RS"
     status: andamento
     descricao: "Painel interativo para apoiar a compreensão da violência contra mulheres no Rio Grande do Sul."
     url: "https://alexandrogschafer.github.io/violencia-mulheres-rs/"
     url_rotulo: "Acessar o portal"
+    equipe:
+      - Maria Antonia Dutra Fernandes
+      - Heduardo Witkoski Barcelos da Rocha
+      - Alexandro Gularte Schäfer
+      - Lisie Alende Prates
