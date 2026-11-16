@@ -15,7 +15,7 @@
       </ul>
     </div>
     {% endif %}
-    <p class="gat-canais__lnk"><a href="{{ root }}equipe/gat-5/participacao/">Ver participação por integrante (gráfico) →</a></p>
+    {% if mostrar_grafico %}    <p class="gat-canais__lnk"><a href="{{ root }}equipe/gat-5/participacao/">Ver participação por integrante (gráfico) →</a></p>{% endif %}
     {% for chave, rotulo, vazio in [
       ("andamento", "Em andamento", "Nenhum projeto em andamento registrado."),
       ("planejado", "Planejados", "Nenhum projeto planejado registrado."),

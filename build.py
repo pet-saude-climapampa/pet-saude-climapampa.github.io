@@ -351,8 +351,9 @@ def gerar():
     integ = [i for i in integ if _n(i["nome"]) not in excl]
     integ.sort(key=lambda i: (-i["n"], _n(i["nome"])))
     maximo = max([i["n"] for i in integ] + [1])
-    render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, canais_gat5=canais_gat5, mostrar_equipes=bool(_d5.get("mostrar_equipes", False)), noindex=True)
-    render("gat5_participacao.html", "equipe/gat-5/participacao/index.html", active="equipe", title="Participação por integrante, GAT 5", integrantes5=integ, maximo5=maximo, fora5=fora, ocultos5=ocultos5, mostrar_equipes=bool(_d5.get("mostrar_equipes", False)), total_projetos5=sum(1 for x in projetos_gat5 if x.get("status") != "finalizado"), noindex=True)
+    render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, canais_gat5=canais_gat5, mostrar_grafico=bool(_d5.get("mostrar_grafico", False)), mostrar_equipes=bool(_d5.get("mostrar_equipes", False)), noindex=True)
+    if _d5.get("mostrar_grafico", False):
+        render("gat5_participacao.html", "equipe/gat-5/participacao/index.html", active="equipe", title="Participação por integrante, GAT 5", integrantes5=integ, maximo5=maximo, fora5=fora, ocultos5=ocultos5, mostrar_equipes=bool(_d5.get("mostrar_equipes", False)), total_projetos5=sum(1 for x in projetos_gat5 if x.get("status") != "finalizado"), noindex=True)
     render("equipe_orientadores.html", "equipe/orientadores/index.html", active="equipe", title="Orientação de serviço")
     render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:

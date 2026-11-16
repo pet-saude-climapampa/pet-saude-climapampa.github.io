@@ -20,6 +20,8 @@ grafico_excluir:
 # Mostrar os nomes das equipes nos cards de projetos e, no gráfico, quais projetos cada pessoa tem?
 # false = escondido (os dados continuam aqui e o gráfico mantém só as contagens). true = mostrar tudo.
 mostrar_equipes: false
+# Gerar a página do gráfico de participação por integrante (e o link para ela)? false = a página não é publicada.
+mostrar_grafico: false
 projetos:
   - titulo: "Integra ClimaPampa: encontro de saberes e experiências"
     status: planejado
