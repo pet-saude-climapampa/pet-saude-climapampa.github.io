@@ -2,12 +2,12 @@
 {% import "_icons.html" as i %}
 {% import "_partes.html" as p %}
 {% block conteudo %}
-{{ p.cabecalho("GAT 5 · Eixo 3", "Participação por integrante", "Número de projetos em que cada integrante do GAT 5 está envolvido, entre os " ~ total_projetos5 ~ " projetos registrados.", "azul") }}
+{{ p.cabecalho("GAT 5 · Eixo 3", "Participação por integrante", "Número de projetos em andamento ou planejados (" ~ total_projetos5 ~ ") em que cada integrante do GAT 5 está envolvido. Projetos finalizados não são contados.", "azul") }}
 <section class="secao secao--curta">
   <div class="wrap">
     <p class="prod-volta"><a href="{{ root }}equipe/gat-5/projetos/">← Projetos do GAT 5</a></p>
     <figure class="grafico" aria-labelledby="g5-tit">
-      <figcaption id="g5-tit" class="grafico__tit">Projetos por integrante <span class="grafico__sub">(quantidade de projetos em que a pessoa está na equipe)</span></figcaption>
+      <figcaption id="g5-tit" class="grafico__tit">Projetos por integrante <span class="grafico__sub">(projetos em andamento ou planejados; sem os finalizados e sem os tutores)</span></figcaption>
       <ol class="barras">
         {% for it in integrantes5 %}
         <li class="barras__linha" tabindex="0" title="{{ it.nome }}: {{ it.n }} projeto{{ 's' if it.n != 1 }}{% if it.projetos %} · {{ it.projetos | join('; ') }}{% endif %}">

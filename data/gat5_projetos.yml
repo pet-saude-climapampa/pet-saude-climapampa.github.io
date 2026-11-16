@@ -12,8 +12,14 @@ canais:
 # Integrantes do GAT 5 que não têm "gat: 5" no cadastro da equipe (ex.: orientadores de serviço)
 integrantes_extra:
   - Francisco Bortoluzzi Neto
+# Quem NÃO aparece no gráfico de participação (os tutores responsáveis pelos projetos)
+grafico_excluir:
+  - Alexandro Gularte Schäfer
+  - Lisie Alende Prates
+# O gráfico de participação só conta projetos que NÃO estão finalizados.
 projetos:
   - titulo: "Site do PET-Saúde: Clima (ClimaPampa)"
+    tutor: Alexandro Gularte Schäfer
     status: andamento
     descricao: "Site público do projeto, com apresentação, equipe, agenda, notícias, galeria e produtos. No ar desde outubro de 2026 e atualizado continuamente. Código aberto, com versão arquivada no Zenodo (DOI 10.5281/zenodo.23748574)."
     equipe:
@@ -22,6 +28,7 @@ projetos:
     url: "https://pet-saude-climapampa.github.io/"
     url_rotulo: "Acessar o site"
   - titulo: "Geoportal ClimaPampa: Uruguaiana"
+    tutor: Alexandro Gularte Schäfer
     status: andamento
     descricao: "Mapas e camadas territoriais sobre clima, vulnerabilidades socioambientais e saúde em Uruguaiana, para apoiar a vigilância e a decisão no território."
     equipe:
@@ -30,6 +37,7 @@ projetos:
     url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
     url_rotulo: "Acessar o geoportal"
   - titulo: "Painéis de indicadores de clima e saúde de Uruguaiana"
+    tutor: Alexandro Gularte Schäfer
     status: andamento
     descricao: "Dashboards interativos com indicadores ambientais, territoriais e epidemiológicos de Uruguaiana, atualizados de forma contínua."
     equipe:
@@ -37,6 +45,7 @@ projetos:
     url: "https://alexandrogschafer.github.io/uruguaiana-clima-saude/"
     url_rotulo: "Acessar os painéis"
   - titulo: "Levantamento dos estabelecimentos de saúde de Uruguaiana"
+    tutor: Lisie Alende Prates
     status: andamento
     descricao: "Levantamento e mapeamento dos estabelecimentos de saúde do município, para compor o geoportal e os painéis."
     equipe:
@@ -50,6 +59,7 @@ projetos:
       - João Pedro Marchesi Tavares
       - Valdir Paz Ribeiro Junior
   - titulo: "Eventos climáticos em Uruguaiana"
+    tutor: Alexandro Gularte Schäfer
     status: andamento
     descricao: "Registro e análise dos eventos climáticos que afetam o município, como base para os painéis e o geoportal."
     equipe:
@@ -59,6 +69,7 @@ projetos:
       - Bruna da Costa Ribeiro
       - Manuella Dutra Bortolazzo
   - titulo: "Box Lia: letramento interativo em apoio às mulheres"
+    tutor: Lisie Alende Prates
     status: finalizado
     descricao: "Box educativo para o reconhecimento e o enfrentamento da violência contra as mulheres. Disponível nas versões impressa e digital."
     url: "https://liaeduca.base44.app/"
@@ -71,6 +82,7 @@ projetos:
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Jogo Vira a Carta"
+    tutor: Lisie Alende Prates
     status: andamento
     descricao: "Jogo de cartas, tecnologia educacional extensionista para o reconhecimento da violência contra as mulheres. Trabalho aceito no 18º SIEPE."
     equipe:
@@ -81,6 +93,7 @@ projetos:
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Dominó da Dengue"
+    tutor: Lisie Alende Prates
     status: andamento
     descricao: "Jogo educativo para promoção da saúde e prevenção da dengue. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
     equipe:
@@ -93,6 +106,7 @@ projetos:
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Sífilis em jogo"
+    tutor: Lisie Alende Prates
     status: andamento
     descricao: "Tecnologia educativa para ações de educação em saúde sobre a sífilis. Trabalho submetido à JIICEU."
     equipe:
@@ -102,6 +116,7 @@ projetos:
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Salve sua Casa"
+    tutor: Lisie Alende Prates
     status: andamento
     descricao: "Jogo de tabuleiro para educação em saúde diante das enchentes. Trabalhos submetidos ao VI Seminário (Des)Fazendo Saberes na Fronteira e à JIICEU."
     equipe:
@@ -113,6 +128,7 @@ projetos:
       - Alexandro Gularte Schäfer
       - Lisie Alende Prates
   - titulo: "Portal sobre violência contra mulheres no RS"
+    tutor: Alexandro Gularte Schäfer
     status: andamento
     descricao: "Painel interativo para apoiar a compreensão da violência contra mulheres no Rio Grande do Sul."
     url: "https://alexandrogschafer.github.io/violencia-mulheres-rs/"

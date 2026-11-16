@@ -327,14 +327,19 @@ def gerar():
         if not e.get("oculto"):
             integ.append({"nome": e["nome"], "funcao": "Estudante" + (" voluntário" if e.get("voluntario") else " bolsista")})
     ocultos5 = sum(1 for e in est5 if e.get("oculto"))
+    excl = {_n(x) for x in (_d5.get("grafico_excluir") or [])}
     por_nome = {_n(i["nome"]): i for i in integ}
     for i in integ:
         i["projetos"] = []
     fora = {}
     todos_nomes = {_n(pe["nome"]) for pe in site["equipe"]["pessoas"]} | {_n(e["nome"]) for e in site["estudantes_todos"]}
     for pr in projetos_gat5:
+        if pr.get("status") == "finalizado":
+            continue  # o gráfico não conta projetos finalizados
         for nm in pr.get("equipe") or []:
             k = _n(nm)
+            if k in excl:
+                continue
             if k in por_nome:
                 por_nome[k]["projetos"].append(pr["titulo"])
             else:
@@ -343,10 +348,11 @@ def gerar():
                     print(f"AVISO: '{nm}' (projeto '{pr['titulo']}') não existe na equipe do site.")
     for i in integ:
         i["n"] = len(i["projetos"])
+    integ = [i for i in integ if _n(i["nome"]) not in excl]
     integ.sort(key=lambda i: (-i["n"], _n(i["nome"])))
     maximo = max([i["n"] for i in integ] + [1])
     render("gat5_projetos.html", "equipe/gat-5/projetos/index.html", active="equipe", title="Projetos do GAT 5", projetos_gat5=projetos_gat5, canais_gat5=canais_gat5, noindex=True)
-    render("gat5_participacao.html", "equipe/gat-5/participacao/index.html", active="equipe", title="Participação por integrante, GAT 5", integrantes5=integ, maximo5=maximo, fora5=fora, ocultos5=ocultos5, total_projetos5=len(projetos_gat5), noindex=True)
+    render("gat5_participacao.html", "equipe/gat-5/participacao/index.html", active="equipe", title="Participação por integrante, GAT 5", integrantes5=integ, maximo5=maximo, fora5=fora, ocultos5=ocultos5, total_projetos5=sum(1 for x in projetos_gat5 if x.get("status") != "finalizado"), noindex=True)
     render("equipe_orientadores.html", "equipe/orientadores/index.html", active="equipe", title="Orientação de serviço")
     render("equipe_numeros.html", "equipe/em-numeros/index.html", active="equipe_numeros", title="A equipe em números", n=estatisticas(site))
     for cat in site["produtos_categorias"]:
