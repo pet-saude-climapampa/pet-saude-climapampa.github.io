@@ -10,7 +10,7 @@
       <figcaption id="g5-tit" class="grafico__tit">Projetos por integrante <span class="grafico__sub">(projetos em andamento ou planejados; sem os finalizados e sem os tutores)</span></figcaption>
       <ol class="barras">
         {% for it in integrantes5 %}
-        <li class="barras__linha" tabindex="0" title="{{ it.nome }}: {{ it.n }} projeto{{ 's' if it.n != 1 }}{% if it.projetos %} · {{ it.projetos | join('; ') }}{% endif %}">
+        <li class="barras__linha" tabindex="0" title="{{ it.nome }}: {{ it.n }} projeto{{ 's' if it.n != 1 }}{% if mostrar_equipes and it.projetos %} · {{ it.projetos | join('; ') }}{% endif %}">
           <span class="barras__nome">{{ it.nome }}<small>{{ it.funcao }}</small></span>
           <span class="barras__trilho" aria-hidden="true"><span class="barras__barra" style="width: {{ (it.n * 100 / maximo5) | round(1) }}%"></span></span>
           <span class="barras__valor">{{ it.n }}</span>
@@ -22,9 +22,9 @@
     <details class="grafico__tabela">
       <summary>Ver como tabela</summary>
       <table>
-        <thead><tr><th scope="col">Integrante</th><th scope="col">Função</th><th scope="col">Projetos</th><th scope="col">Quais</th></tr></thead>
+        <thead><tr><th scope="col">Integrante</th><th scope="col">Função</th><th scope="col">Projetos</th>{% if mostrar_equipes %}<th scope="col">Quais</th>{% endif %}</tr></thead>
         <tbody>
-          {% for it in integrantes5 %}<tr><th scope="row">{{ it.nome }}</th><td>{{ it.funcao }}</td><td>{{ it.n }}</td><td>{{ it.projetos | join("; ") }}</td></tr>{% endfor %}
+          {% for it in integrantes5 %}<tr><th scope="row">{{ it.nome }}</th><td>{{ it.funcao }}</td><td>{{ it.n }}</td>{% if mostrar_equipes %}<td>{{ it.projetos | join("; ") }}</td>{% endif %}</tr>{% endfor %}
         </tbody>
       </table>
     </details>

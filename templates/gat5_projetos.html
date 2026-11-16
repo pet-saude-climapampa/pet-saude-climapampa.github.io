@@ -29,7 +29,7 @@
         <h3>{{ it.titulo }}</h3>
         <p>{{ it.descricao }}</p>
         {% if it.tutor %}<p class="prod__meta-txt"><strong>Tutor(a) responsável:</strong> {{ it.tutor }}</p>{% endif %}
-        {% if it.equipe %}<p class="prod__meta-txt"><strong>Equipe ({{ it.equipe | length }}):</strong> {{ it.equipe | join("; ") }}.</p>{% endif %}
+        {% if mostrar_equipes and it.equipe %}<p class="prod__meta-txt"><strong>Equipe ({{ it.equipe | length }}):</strong> {{ it.equipe | join("; ") }}.</p>{% endif %}
         {% if it.responsaveis or it.periodo %}<p class="prod__meta-txt">{% if it.responsaveis %}<strong>Responsáveis:</strong> {{ it.responsaveis }}{% endif %}{% if it.responsaveis and it.periodo %} · {% endif %}{% if it.periodo %}<strong>Período:</strong> {{ it.periodo }}{% endif %}</p>{% endif %}
         {% if it.url %}<div class="prod__links"><a class="btn btn--sec" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.url_rotulo or "Acessar" }} {{ i.icon("externo", 18) }}<span class="sr"> (abre em nova aba)</span></a></div>{% endif %}
       </article>

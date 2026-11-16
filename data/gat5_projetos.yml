@@ -17,6 +17,9 @@ grafico_excluir:
   - Alexandro Gularte Schäfer
   - Lisie Alende Prates
 # O gráfico de participação só conta projetos que NÃO estão finalizados.
+# Mostrar os nomes das equipes nos cards de projetos e, no gráfico, quais projetos cada pessoa tem?
+# false = escondido (os dados continuam aqui e o gráfico mantém só as contagens). true = mostrar tudo.
+mostrar_equipes: false
 projetos:
   - titulo: "Integra ClimaPampa: encontro de saberes e experiências"
     status: planejado
